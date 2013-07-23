@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $RESPONSIVE TABLE
+\*------------------------------------*/
+$column-count: 3;
+$column1-header: "DATE";
+$column2-header: "VENUE";
+$column3-header: "CITY";
+
+.table {
+    width: 100%;
+    th {
+        display: none;
+        font-family: $brand-face;
+        font-size: $h2-size;
+        text-align: center;
+        @include breakpoint(medium) {
+            display: table-cell;
+        }
+    }
+    td {
+        display: block;
+        float: right;
+        padding: $base-spacing-unit/2 0;
+        text-align: right;
+        width: 100%;
+        &:before {
+            display: block;
+            float: left;
+            font-family: $brand-face;
+            font-size: $h6-size;
+            line-height: 1;
+            @include breakpoint(medium) {
+                display: none;
+            }
+        }
+        &:first-child:before {
+            content: $column1-header;
+        }
+        &:nth-child(2):before {
+            content: $column2-header;
+        }
+        &:nth-child(3):before {
+            content: $column3-header;
+        }
+        @include breakpoint(medium) {
+            display: table-cell;
+            width: percentage(1/$column-count);
+            float: none;
+            text-align: center;
+        }
+    }
+}

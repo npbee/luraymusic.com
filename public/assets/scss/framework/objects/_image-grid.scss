@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $IMAGE-GRID
+\*------------------------------------*/
+.image-grid {
+    img {
+        @include transition(all 200ms);
+        float: left;
+        width: 100%;
+        height: auto;
+        @include breakpoint(medium) {
+            width: 49%;
+            margin: 0 1% 1% 0;
+        }
+        @include breakpoint(large) {
+            width: 19%;
+            margin: 0 1% 1% 0;
+        }
+    }
+}

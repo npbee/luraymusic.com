@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+.media{
+    display:block;
+    @extend .cf;
+}
+    .media__content{
+        @include breakpoint(medium) {
+            float:left;
+            margin-right:2%;
+            width: 28%;
+        }
+    }
+    /**
+     * Reversed image location (right instead of left).
+     */
+    .media__content--rev{
+        @include breakpoint(medium) {
+            float:right;
+            margin-left:2%;
+            width: 28%;
+        }
+    }
+
+        .media__content content,
+        .media__content--rev content{
+            display:block;
+        }
+
+    .media__text{
+        @include breakpoint(medium) {
+            overflow:hidden;
+            width: 70%;
+            float: right;
+        }
+    }
+
+    .media__text--rev {
+        @include breakpoint(medium) {
+            overflow:hidden;
+            width: 70%;
+            float: left;
+        }
+    }
+        .media__text,
+        .media__text > :last-child{
+            //margin-bottom:0;
+        }

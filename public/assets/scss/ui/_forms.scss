@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+.mailing-list .text-input {
+    width: 100%;
+    @include breakpoint(medium) {
+        width: auto;
+        //min-width: 250px;
+    }
+}
+
+.submit {
+    margin: $base-spacing-unit/4 0;
+}

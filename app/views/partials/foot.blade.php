@@ -1,0 +1,1 @@
+<script async src="assets/js/main.js"></script>

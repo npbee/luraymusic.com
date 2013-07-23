@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+.text-input {
+    @include transition(border 200ms);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    outline: 0;
+    padding: $base-spacing-unit/4;
+    &:focus {
+        border: 1px solid $brand-color;
+    }
+}

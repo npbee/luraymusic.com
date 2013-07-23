@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+.footer {
+    background: $green;
+    font-size: 0.9em;
+    height: 30em;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @include breakpoint(medium) {
+        height: 14em;
+    }
+}
+
+    .footer__content {
+        @extend %cf;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: $base-spacing-unit $base-spacing-unit / 2 0;
+    }
+
+.footer-logo {
+    display: none;
+    @include breakpoint(medium) {
+        display: block;
+        opacity: 0.4;
+        margin: 0 auto;
+        //width: 50%;
+        position: relative;
+        top:$base-spacing-unit;
+    }
+}

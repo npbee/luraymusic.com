@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+
+$open-quote:    \201C;
+$close-quote:   \201D;
+
+/**
+ * Big up @boblet: html5doctor.com/blockquote-q-cite
+ */
+
+
+
+blockquote{
+    quotes:"#{$open-quote}" "#{$close-quote}";
+
+    p:before{
+        content:"#{$open-quote}";
+        content:open-quote;
+    }
+    p:after{
+        content:"";
+        content:no-close-quote;
+    }
+    p:last-of-type:after{
+        content:"#{$close-quote}";
+        content:close-quote;
+    }
+
+    q:before{
+        content:"\2018";
+        content:open-quote;
+    }
+    q:after{
+        content:"\2019";
+        content:close-quote;
+    }
+}
+
+
+/**
+ *
+   <blockquote>
+       <p>Insanity: doing the same thing over and over again and expecting
+       different results.</p>
+       <b class=source>Albert Einstein</b>
+   </blockquote>
+ *
+ */
+blockquote{
+    /**
+     * .4em is roughly equal to the width of the opening “ that we wish to hang.
+     */
+
+    p:last-of-type{
+        margin-bottom:0;
+    }
+}
+
+.source{
+    display:block;
+    text-indent:0;
+    text-align: right;
+    &:before{
+        content:"\2014";
+    }
+}

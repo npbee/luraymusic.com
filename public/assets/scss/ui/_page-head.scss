@@ -1,0 +1,138 @@
+/* ==========================================================================
+   $PAGE-HEAD
+   ========================================================================== */
+.page-head {
+    @extend %cf;
+    background: $black;
+    font-family: $brand-face;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $black;
+    height: $header-height;
+    position: relative;
+    @include breakpoint(medium) {
+            overflow:hidden;
+    }
+    a {
+        text-decoration: none;
+        padding: $base-spacing-unit / 2;
+    }
+}
+
+    .page-head__contents {
+        @include outer-container;
+    }
+
+
+
+
+.site-logo {
+    @extend %giga;
+    float: left;
+    height: 100%;
+    z-index: 3;
+    padding: 0 $base-spacing-unit/2 !important;
+    img {
+        height: 100%;
+        float:left;
+    }
+}
+
+
+
+
+
+
+.nav {
+    background: $black;
+    clear: both;
+    color: $white;
+    @include breakpoint(medium) {
+        background: none;
+        clear: none;
+        //color: $black;
+        float: right;
+    }
+    a {
+        border-top: 1px solid $black-light;
+
+    }
+    a:hover {
+        background: $black-light;
+        color: $orange;
+    }
+    .site-logo {
+        margin-bottom: $base-spacing-unit;
+        @include breakpoint(medium) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+.nav-toggle {
+    position: relative;
+    top:-8px;
+}
+
+.nav-toggle--closed:before,
+.nav-toggle--open:before {
+    color: $white;
+    font-family: icomoon;
+}
+
+.nav-toggle--closed:before {
+    content: "\e000";
+}
+
+.nav-toggle--open:before {
+    content: "\e001";
+}
+
+
+.media .media-nav,
+.albums .albums-nav,
+.tour .tour-nav,
+.contact .contact-nav {
+    color: $orange;
+    background: $black-light;
+    &:hover {
+        background: $white;
+    }
+    @include breakpoint(medium) {
+        background: $white;
+    }
+}
+
+.page-head:after {
+    display: block;
+    font-size: 0.8em;
+    color: $white;
+    position: absolute;
+    left: $base-spacing-unit/2;
+    //bottom: -$base-spacing-unit/2;
+    top: 35px;
+    text-shadow: 0px 1px 3px $black-light;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+.media .page-head:after {
+    content: "MEDIA"
+}
+
+.albums .page-head:after {
+    content: "ALBUMS"
+}
+
+.tour .page-head:after {
+    content: "TOUR"
+}
+
+.contact .page-head:after {
+    content: "CONTACT"
+}
