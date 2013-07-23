@@ -1,7 +1,6 @@
 <?php
 
 class Tourdate extends Eloquent {
-    protected $guarded = array();
-
+    protected $guarded = array('id');
     public static $rules = array();
 }

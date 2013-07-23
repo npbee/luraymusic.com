@@ -16,11 +16,13 @@
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)
-        <tr @if ($tourdate -> review_id) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
-            <td>{{ $tourdate -> date }}</td>
-            <td>{{ $tourdate -> location }}</td>
-            <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
-        </tr>
+            @if($tourdate -> date > date('Y-m-d H:m:s'))
+                <tr @if ($tourdate -> review_text) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
+                    <td>{{ $tourdate -> date }}</td>
+                    <td>{{ $tourdate -> location }}</td>
+                    <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
+                </tr>
+            @endif
         @endforeach
 
     </tbody>

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+/*****
+* Base stuff
+******/
+/****
+* Font sizes
+****/
+/****
+* Spacing
+****/
+/****
+* Breakpoints
+****/
+/****
+* Brand
+****/
+/****
+* Colors
+****/
+/****
+* General Variables
+****/
+/*------------------------------------*\
+    $ADMIN
+\*------------------------------------*/
+.admin-logo {
+  color: #eeeeee;
+  display: inline-block;
+  position: relative;
+  left: -70px;
+  top: 5px; }
+  @media (min-width: 30em) {
+    .admin-logo {
+      padding: 13.5px;
+      position: static;
+      margin-left: -30px; } }
+
+.tour--admin .tour-nav--admin,
+.pics--admin .pics-nav--admin,
+.video--admin .vidoes-nav--admin {
+  color: #dab08f;
+  background: #eeeeee; }

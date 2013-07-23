@@ -11,9 +11,10 @@ class TourController extends BaseController {
      */
     public function Index()
     {
+        $tourdates = Tourdate::orderBy('date')->get();
         return View::make('pages.tour.index')
             ->with('bodyClass', 'tour')
-            ->with('tourdates', Tourdate::all());
+            ->with('tourdates', $tourdates);
     }
 
     public function Archive()
@@ -22,6 +23,7 @@ class TourController extends BaseController {
             ->with('bodyClass', 'tour')
             ->with('tourdates', Tourdate::all());
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -51,7 +53,8 @@ class TourController extends BaseController {
      */
     public function show($id)
     {
-        //
+        return View::make('admin.tour.show')
+            ->with('tourdates', Tourdate::find($id));
     }
 
     /**
@@ -62,7 +65,8 @@ class TourController extends BaseController {
      */
     public function edit($id)
     {
-        //
+        return View::make('admin.tour.edit')
+            ->with('tourdates', Tourdate::find($id));
     }
 
     /**
