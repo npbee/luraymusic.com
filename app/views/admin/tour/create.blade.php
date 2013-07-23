@@ -7,27 +7,27 @@
     {{ Form::open(array('route' => 'admin.tour.store')) }}
 
         {{ Form::label('date', 'Date') }}
-        {{ Form::text('date') }}
+        {{ Form::text('date',null, array('class' => 'text-input')) }}
 
         {{ Form::label('venue', 'Venue') }}
-        {{ Form::text('venue') }}
+        {{ Form::text('venue', null, array('class' => 'text-input')) }}
 
         {{ Form::label('location', 'Location') }}
-        {{ Form::text('location') }}
+        {{ Form::text('location', null, array('class' => 'text-input')) }}
 
         {{ Form::label('support', 'Support') }}
-        {{ Form::text('support') }}
+        {{ Form::text('support', null, array('class' => 'text-input')) }}
 
         {{ Form::label('review_text', 'Review Blurb') }}
-        {{ Form::textarea('review_text') }}
+        {{ Form::textarea('review_text', null, array('class' => 'text-input')) }}
 
         {{ Form::label('review_source', 'Review Source') }}
-        {{ Form::text('review_source') }}
+        {{ Form::text('review_source', null, array('class' => 'text-input')) }}
 
         {{ Form::label('review_link', 'Link to review') }}
-        {{ Form::text('review_link') }}
+        {{ Form::text('review_link', null, array('class' => 'text-input')) }}
 
-        {{ Form::submit('Save') }}
+        {{ Form::submit('Save', array('class' => 'button')) }}
         <a href="{{ URL::route('admin.tour.index') }}">Cancel</a>
 
     {{ Form::close() }}
