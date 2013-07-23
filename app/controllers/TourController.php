@@ -9,16 +9,16 @@ class TourController extends BaseController {
      *
      * @return Response
      */
-    public function getIndex()
+    public function Index()
     {
         return View::make('pages.tour.index')
             ->with('bodyClass', 'tour')
             ->with('tourdates', Tourdate::all());
     }
 
-    public function getPast()
+    public function Archive()
     {
-        return View::make('pages.tour.past')
+        return View::make('pages.tour.archive')
             ->with('bodyClass', 'tour')
             ->with('tourdates', Tourdate::all());
     }

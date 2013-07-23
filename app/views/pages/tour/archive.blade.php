@@ -2,9 +2,10 @@
 
 @section('sub-header')
 
-<a href="{{ URL::route('tour-archive') }}">Tour Archive</a>
+    <a href="{{ URL::route('tour') }}">Upcoming Dates</a>
 
 @stop
+
 
 @section('content')
 
@@ -16,11 +17,13 @@
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)
+        @if($tourdate -> date < date('Y-m-d H:m:s'))
         <tr @if ($tourdate -> review_id) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
             <td>{{ $tourdate -> date }}</td>
             <td>{{ $tourdate -> location }}</td>
             <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
         </tr>
+        @endif
         @endforeach
 
     </tbody>

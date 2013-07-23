@@ -8,6 +8,10 @@
 
         @include('_partials.header')
 
+        <div class="sub-nav">
+            @yield('sub-header')
+        </div>
+
         <section class="main" id="main">
 
             @yield('content')

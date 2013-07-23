@@ -17,6 +17,7 @@ Route::get('media', array('as' => 'media', 'uses' => 'MediaController@index'));
 
 Route::get('albums', array('as' => 'albums', 'uses' => 'AlbumsController@index'));
 
-Route::controller('tour', 'TourController');
+Route::get('tour', array('as' => 'tour', 'uses' => 'TourController@index'));
+Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourController@Archive'));
 
 Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));
