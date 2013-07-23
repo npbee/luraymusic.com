@@ -2,14 +2,18 @@
 
 class TourController extends BaseController {
 
+
+    public $restful = true;
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function getIndex()
     {
-        return View::make('tour')->with('bodyClass', 'tour');
+        return View::make('tour')
+            ->with('bodyClass', 'tour')
+            ->with('tourdates', Tourdate::all());
     }
 
     /**

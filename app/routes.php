@@ -17,6 +17,6 @@ Route::get('media', 'MediaController@index');
 
 Route::get('albums', 'AlbumsController@index');
 
-Route::get('tour', 'TourController@index');
+Route::controller('tour', 'TourController');
 
 Route::get('contact', 'ContactController@index');
