@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', array('as' => 'home', 'uses' => 'IndexController@index'));
 
-Route::get('media', 'MediaController@index');
+Route::get('media', array('as' => 'media', 'uses' => 'MediaController@index'));
 
-Route::get('albums', 'AlbumsController@index');
+Route::get('albums', array('as' => 'albums', 'uses' => 'AlbumsController@index'));
 
 Route::controller('tour', 'TourController');
 
-Route::get('contact', 'ContactController@index');
+Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));

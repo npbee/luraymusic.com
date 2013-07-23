@@ -1,0 +1,1 @@
+{{ HTML::script('assets/js/main.js') }}

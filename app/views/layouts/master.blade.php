@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
-    @include('partials.head')
+    @include('_partials.head')
 
     <body class="{{ $bodyClass }}">
 
     <div class="wrapper" id="wrapper">
 
-        @include('partials.header')
+        @include('_partials.header')
 
         <section class="main" id="main">
 
@@ -20,9 +20,10 @@
     @yield('footer')
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script async src="assets/js/vendor/soundcloud.player.api.js"></script>
-    <script async src="assets/js/vendor/sc-player.js"></script>
-    <script async src="assets/js/main.js"></script>
+    {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
+    {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
+    {{ HTML::script('assets/js/vendor/sc-player.js') }}
+    {{ HTML::script('assets/js/main.js') }}
 
     </body>
 </html>

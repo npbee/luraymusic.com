@@ -34,5 +34,5 @@
 @stop
 
 @section('footer')
-    @include('partials.footer')
+    @include('_partials.footer')
 @stop
