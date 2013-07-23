@@ -715,6 +715,8 @@ blockquote {
     @media (min-width: 30em) {
       .table th {
         display: table-cell; } }
+  .table tr {
+    border-bottom: 1px solid #d9d9d9; }
   .table td {
     display: block;
     float: right;
@@ -1362,3 +1364,34 @@ a.sc-remote-link.playing {
 \*------------------------------------*/
 .media__text p {
   text-align: justify; }
+
+/*------------------------------------*\
+    $TOUR
+\*------------------------------------*/
+.reviewed {
+  cursor: pointer; }
+  .reviewed:after {
+    content: "*";
+    color: #dab08f;
+    font-size: 2em;
+    position: absolute;
+    left: 50px; }
+    @media (min-width: 30em) {
+      .reviewed:after {
+        left: 13.5px; } }
+  .reviewed.active {
+    border-top: 1px solid #333333 !important; }
+
+.tour-review {
+  background: #dab08f;
+  padding: 13.5px;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  display: none; }
+  .tour-review a {
+    text-decoration: none; }
+
+.support {
+  display: block;
+  font-size: 0.7em; }
