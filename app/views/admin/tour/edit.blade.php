@@ -52,7 +52,7 @@
 
     {{ Form::close() }}
 
-    {{ Form::open(array('method' => 'DELETE', 'route' => array('admin.tour.destroy', $tourdate->id ))) }}
+    {{ Form::open(array('method' => 'DELETE', 'route' => array('admin.tour.destroy', $tourdate->id ), 'data-confirm' => 'Are you sure?')) }}
 
         {{ Form::submit('Delete', array('class' => 'delete')) }}
 

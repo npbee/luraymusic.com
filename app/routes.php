@@ -23,8 +23,14 @@ Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourControll
 Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));
 
 
-Route::get('admin', array('as' => 'admin', 'do' => function() {
-    return View::make('admin.index')-> with('bodyClass','admin');
-}));
+Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
+Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'AuthController@getLogin'));
+Route::post('admin/login', array('as' => 'admin.login.post', 'uses' => 'AuthController@postLogin'));
 
-Route::resource('admin/tour', 'AdminTourController');
+Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
+    Route::any('/', array('as' => 'admin', 'do' => function() {
+        return View::make('admin.index')-> with('bodyClass', 'admin');
+    }));
+    Route::resource('tour', 'AdminTourController');
+});
+

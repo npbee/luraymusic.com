@@ -21,6 +21,7 @@ class CreateTourdatesTable extends Migration {
 	$table->text('review_text');
             $table->text('review_source');
 	$table->string('review_link');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -9,7 +9,8 @@
         <ul class="nav site-nav" id="nav">
             <li><a class="tour-nav--admin" href="{{ URL::route('admin.tour.index') }}">Tour Dates</a></li><!--
             --><li><a class="media-nav" href="{{ URL::route('media') }}">Pics</a></li><!--
-            --><li><a class="media-nav" href="{{ URL::route('media') }}">Videos</a></li>
+            --><li><a class="media-nav" href="{{ URL::route('media') }}">Videos</a></li><!--
+            --><li><a class="logout-nav" href="{{ URL::route('admin.logout') }}">Logout</a>
         </ul>
     </div>
 
