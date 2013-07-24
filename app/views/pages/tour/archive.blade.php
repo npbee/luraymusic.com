@@ -18,7 +18,7 @@
         @foreach($tourdates as $tourdate)
             @if($tourdate -> date < date('Y-m-d'))
                 <tr @if ($tourdate -> review_text) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
-                    <td>{{ $tourdate -> date }}</td>
+                    <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
                     <td>{{ $tourdate -> location }}</td>
                     <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
                 </tr>

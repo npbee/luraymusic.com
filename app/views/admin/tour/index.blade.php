@@ -2,16 +2,21 @@
 
 @section('content')
 
+<p>
+    <a class="button" href="{{ URL::route('admin.tour.create') }}">New Tour Date</a>
+</p>
+
 <table class="table">
     <thead>
         <th>DATE</th>
         <th>VENUE</th>
         <th>CITY</th>
+        <th>ADMIN</th>
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)
         <tr @if ($tourdate -> review_id) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
-            <td>{{ $tourdate -> date }}</td>
+            <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
             <td>{{ $tourdate -> location }}</td>
             <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
             <td><a href="{{ URL::route('admin.tour.edit', $tourdate->id ) }}">Edit</a></td>

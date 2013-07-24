@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /*------------------------------------*\
     $SETTINGS
 \*------------------------------------*/
@@ -28,8 +33,9 @@
 .admin-logo {
   color: #eeeeee;
   display: inline-block;
-  position: relative;
-  left: -70px;
+  position: absolute;
+  left: 0;
+  float: left;
   top: 5px; }
   @media (min-width: 30em) {
     .admin-logo {
@@ -37,8 +43,38 @@
       position: static;
       margin-left: -30px; } }
 
+.admin .main {
+  max-width: 900px; }
+
+.admin .button {
+  display: block;
+  padding: 13.5px;
+  text-align: center;
+  width: 100%; }
+
 .tour--admin .tour-nav--admin,
 .pics--admin .pics-nav--admin,
 .video--admin .vidoes-nav--admin {
   color: #dab08f;
   background: #eeeeee; }
+
+/****
+* Forms
+****/
+.form-fields li {
+  clear: both; }
+.form-fields label {
+  display: block; }
+.form-fields .text-input {
+  width: 100%; }
+.form-fields .save {
+  display: block;
+  padding: 27px 0; }
+
+.delete {
+  color: red;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  padding: 27px 0; }

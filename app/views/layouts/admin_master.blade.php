@@ -2,7 +2,7 @@
 <html>
     @include('_partials.head_admin')
 
-    <body class="{{ $bodyClass }}">
+    <body class="admin {{ $bodyClass }}">
 
     <div class="wrapper" id="wrapper">
 
@@ -24,9 +24,7 @@
     @yield('footer')
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
-    {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
-    {{ HTML::script('assets/js/vendor/sc-player.js') }}
+    {{ HTML::script('assets/js/vendor/datepicker.js') }}
     {{ HTML::script('assets/js/main.js') }}
 
     </body>

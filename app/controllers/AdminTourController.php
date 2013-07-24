@@ -104,7 +104,10 @@ class AdminTourController extends BaseController {
      */
     public function destroy($id)
     {
-        //
+        $tourdate = Tourdate::find($id);
+        $tourdate->delete();
+
+        return Redirect::route('admin.tour.index');
     }
 
 }

@@ -6,5 +6,6 @@
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic' rel='stylesheet' type='text/css'>
     {{ HTML::style('assets/css/style.css') }}
     {{ HTML::style('assets/css/admin.css') }}
+    {{ HTML::style('assets/css/datepicker.css') }}
     <link rel="author" href="humans.txt">
 </head>

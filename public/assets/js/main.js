@@ -20,4 +20,10 @@ $(function() {
         }).slideToggle(100);
     });
 
+
+
+
+    //Datepicker
+    $('.datepicker').jdPicker();
+
 });

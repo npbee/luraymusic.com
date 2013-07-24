@@ -23,8 +23,8 @@ Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourControll
 Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));
 
 
-Route::get('admin', function() {
+Route::get('admin', array('as' => 'admin', 'do' => function() {
     return View::make('admin.index')-> with('bodyClass','admin');
-});
+}));
 
 Route::resource('admin/tour', 'AdminTourController');
