@@ -33,17 +33,25 @@ class AdminTourController extends BaseController {
      */
     public function store()
     {
-        $tourdate = new Tourdate;
-        $tourdate->date = Input::get('date');
-        $tourdate->venue = Input::get('venue');
-        $tourdate->location = Input::get('location');
-        $tourdate->support = Input::get('support');
-        $tourdate->review_text = Input::get('review_text');
-        $tourdate->review_source = Input::get('review_source');
-        $tourdate->review_link = Input::get('review_link');
-        $tourdate->save();
+        $input = Input::all();
+        $validation = new Services\Validators\TourdateValidator($input);
+        //$validation = Validator::make($input, ['date' => 'required']);
 
-        return Redirect::route('admin.tour.index');
+        if ($validation -> passes()) {
+            $tourdate = new Tourdate;
+            $tourdate->date = Input::get('date');
+            $tourdate->venue = Input::get('venue');
+            $tourdate->location = Input::get('location');
+            $tourdate->support = Input::get('support');
+            $tourdate->review_text = Input::get('review_text');
+            $tourdate->review_source = Input::get('review_source');
+            $tourdate->review_link = Input::get('review_link');
+            $tourdate->save();
+
+            return Redirect::route('admin.tour.index');
+        }
+
+        return Redirect::back()->withInput()->withErrors($validation->errors);
     }
 
     /**

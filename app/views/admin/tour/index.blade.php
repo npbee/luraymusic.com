@@ -2,10 +2,12 @@
 
 @section('content')
 
-<p>
+<article>
     <a class="button" href="{{ URL::route('admin.tour.create') }}">New Tour Date</a>
-</p>
+</article>
 
+<h1>All Tour Dates:</h1>
+<hr>
 <table class="table">
     <thead>
         <th>DATE</th>

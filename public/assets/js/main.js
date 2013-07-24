@@ -23,7 +23,11 @@ $(function() {
 
 
 
-    //Datepicker
-    $('.datepicker').jdPicker();
+
 
 });
+
+$(window).load(function() {
+        //Datepicker
+    $('.datepicker').glDatePicker();
+})

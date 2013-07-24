@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Add Tour Date:</h1>
+    <h1>Edit Tour Date:</h1>
 
     {{ Form::model($tourdate, array('method' => 'put', 'route' => array('admin.tour.update', $tourdate->id ))) }}
 
