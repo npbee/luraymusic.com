@@ -21,13 +21,10 @@ $(function() {
     });
 
 
-
+    $('.date-select').datepicker({
+        format: "yyyy-mm-dd"
+    });
 
 
 
 });
-
-$(window).load(function() {
-        //Datepicker
-    $('.datepicker').glDatePicker();
-})

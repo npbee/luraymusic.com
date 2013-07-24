@@ -10,7 +10,7 @@
 
             <li>
                 {{ Form::label('date', 'DATE', array('class' => 'beta')) }}
-                {{ Form::text('date',null, array('class' => 'text-input datepicker')) }}
+                {{ Form::text('date',null, array('class' => 'text-input date-select')) }}
             </li>
 
             <li>
