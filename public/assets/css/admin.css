@@ -104,3 +104,12 @@
     margin: 0 auto; }
 .admin--login .nav-toggle--closed:before, .admin--login .nav-toggle--open:before {
   content: ""; }
+
+/****
+* Alerts
+****/
+.alert {
+  padding: 13.5px; }
+
+.alert-success {
+  color: green; }

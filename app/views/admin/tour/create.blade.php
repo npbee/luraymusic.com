@@ -23,22 +23,26 @@
             </li>
 
             <li>
-                {{ Form::label('support', 'SUPPORT', array('class' => 'beta')) }}
+                {{ Form::label('support', 'SUPPORT (Optional)', array('class' => 'beta')) }}
+                <span class="note">If there's a support group enter it here, otherwise leave it blank.</span>
                 {{ Form::text('support', null, array('class' => 'text-input')) }}
             </li>
 
             <li>
-                {{ Form::label('review_text', 'REVIEW BLURB',  array('class' => 'beta')) }}
+                {{ Form::label('review_text', 'REVIEW BLURB (Optional)',  array('class' => 'beta')) }}
+                <span class="note">If there's a review enter the blurb here, otherwise leave it blank.</span>
                 {{ Form::textarea('review_text', null, array('class' => 'text-input')) }}
             </li>
 
             <li>
-                {{ Form::label('review_source', 'REVIEW SOURCE', array('class' => 'beta')) }}
+                {{ Form::label('review_source', 'REVIEW SOURCE (Optional)', array('class' => 'beta')) }}
+                <span class="note">If there's a review enter the source here (just the text not the link), otherwise leave it blank.</span>
                 {{ Form::text('review_source', null, array('class' => 'text-input')) }}
             </li>
 
             <li>
-                {{ Form::label('review_link', 'REVIEW LINK', array('class' => 'beta')) }}
+                {{ Form::label('review_link', 'REVIEW LINK (Optional)', array('class' => 'beta')) }}
+                <span class="note">Enter the actual link to the full review here.</span>
                 {{ Form::text('review_link', null, array('class' => 'text-input')) }}
             </li>
 

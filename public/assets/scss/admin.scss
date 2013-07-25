@@ -111,3 +111,18 @@
         content: "";
     }
 }
+
+
+
+
+/****
+* Alerts
+****/
+.alert {
+    padding: $base-spacing-unit/2;
+}
+
+.alert-success {
+    color: green;
+}
+

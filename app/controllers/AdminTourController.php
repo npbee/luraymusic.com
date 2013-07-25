@@ -1,5 +1,7 @@
 <?php
 
+use Notification;
+
 class AdminTourController extends BaseController {
 
     /**
@@ -47,6 +49,8 @@ class AdminTourController extends BaseController {
             $tourdate->review_source = Input::get('review_source');
             $tourdate->review_link = Input::get('review_link');
             $tourdate->save();
+
+            Notification::success('The page was saved.');
 
             return Redirect::route('admin.tour.index');
         }
@@ -99,6 +103,8 @@ class AdminTourController extends BaseController {
         $tourdate->review_source = Input::get('review_source');
         $tourdate->review_link = Input::get('review_link');
         $tourdate->save();
+
+        Notification::success('The page was saved!');
 
         return Redirect::route('admin.tour.index');
 

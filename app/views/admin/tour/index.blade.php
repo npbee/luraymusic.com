@@ -2,9 +2,12 @@
 
 @section('content')
 
+{{ Notification::showAll() }}
+
 <article>
     <a class="button" href="{{ URL::route('admin.tour.create') }}">New Tour Date</a>
 </article>
+
 
 <h1>All Tour Dates:</h1>
 <hr>
@@ -29,7 +32,7 @@
 
 </table>
 
-<section class="tour-reviews speech-bubble">
+<section class="tour-reviews">
     @foreach($tourdates as $tourdate)
     <blockquote id="review-{{ $tourdate -> id }}" class="tour-review">
         <a href="{{ $tourdate -> review_link }}">
