@@ -141,4 +141,18 @@
 
 
 .sub-nav {
+    @include outer-container;
+    padding: $base-spacing-unit/2 $base-spacing-unit/2 0;
+    text-align: center;
+    li {
+        width: 48%;
+        float: left;
+        @include breakpoint(medium) {
+            width: auto;
+            float: none;
+        }
+    }
+    @include breakpoint(medium) {
+        text-align: right;
+    }
 }

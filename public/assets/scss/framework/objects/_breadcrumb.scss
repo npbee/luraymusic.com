@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+    list-style: none;
+    margin-left: 0;
+    @extend %cf;
+    > li {
+        &,
+        > a {
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+        }
+    }
+    > li + li:before {
+        @include breakpoint(medium) {
+            content:"\002F" "\00A0";
+        }
+    }
+}

@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $SPEECH BUBBLE
+\*------------------------------------*/
+.speech-bubble {
+    position: relative;
+    padding: $base-spacing-unit;
+    background: $white;
+    border-radius: $brand-round;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50px;
+        border-width: 15px 15px 0;
+        border-style: solid;
+        //border-color: $brand-color transparent;
+        display: block;
+        width: 0;
+    }
+}

@@ -15,7 +15,7 @@ $(function() {
                   $rowPosition = $(this).position();
         $(this).toggleClass('active');
         $(review).css({
-            right: "0",
+            left: "0",
             top: $rowPosition.top + $(this).height()
         }).slideToggle(100);
     });

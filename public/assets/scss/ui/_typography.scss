@@ -9,6 +9,10 @@
 @include font-face(icomoon, '/assets/fonts/icomoon/entypo');
 
 
+
+/****
+* Font Icons
+****/
 [data-icon]:before {
     font-family: 'icomoon';
     content: attr(data-icon);
@@ -19,6 +23,7 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
+
 
 
 h1, .alpha,
@@ -32,4 +37,8 @@ h6, .zeta {
 
 a {
     color: inherit;
+}
+
+.current {
+    font-weight: 700;
 }

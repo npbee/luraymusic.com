@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Hello, Shannon!</h1>
+    <h1>Hello, {{ Sentry::getUser()->first_name }}!</h1>
     <p>Welcome to the admin page.  A guide for editing sections is below.</p>
 
     <article>

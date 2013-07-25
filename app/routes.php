@@ -29,7 +29,9 @@ Route::post('admin/login', array('as' => 'admin.login.post', 'uses' => 'AuthCont
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::any('/', array('as' => 'admin', 'do' => function() {
-        return View::make('admin.index')-> with('bodyClass', 'admin');
+        $username = Sentry::getUser()->first_name;
+        return View::make('admin.index')
+            -> with('bodyClass', 'admin');
     }));
     Route::resource('tour', 'AdminTourController');
 });

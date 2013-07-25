@@ -29,7 +29,7 @@
 
 </table>
 
-<section class="tour-reviews">
+<section class="tour-reviews speech-bubble">
     @foreach($tourdates as $tourdate)
     <blockquote id="review-{{ $tourdate -> id }}" class="tour-review">
         <a href="{{ $tourdate -> review_link }}">

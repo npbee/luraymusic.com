@@ -2,7 +2,10 @@
 
 @section('sub-header')
 
-<a href="{{ URL::route('tour') }}">Upcoming Shows</a>
+<ul class="breadcrumbs">
+    <li><a href="{{ URL::route('tour') }}">Upcoming Dates</a></li>
+    <li><a class="current" href="{{ URL::route('tour-archive') }}">Archive</a></li>
+</ul>
 
 @stop
 
@@ -28,6 +31,8 @@
     </tbody>
 
 </table>
+
+<p>* denotes review</p>
 
 <section class="tour-reviews">
     @foreach($tourdates as $tourdate)

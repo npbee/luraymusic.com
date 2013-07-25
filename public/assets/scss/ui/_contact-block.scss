@@ -32,16 +32,18 @@
 .contact-block-big {
     @extend %cf;
     @extend %alpha;
+    text-align: center;
     h1 {
         text-transform: uppercase;
-        @include breakpoint(medium) {
-            float: left;
-        }
+        // @include breakpoint(medium) {
+        //     float: left;
+        // }
     }
     p, form {
         @include breakpoint(medium) {
-            text-align: right;
+            //text-align: right;
             font-size: $base-font-size * 2;
+            margin: 0;
         }
     }
     section {
