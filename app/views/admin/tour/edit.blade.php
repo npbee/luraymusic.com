@@ -44,15 +44,15 @@
             </li>
 
             <li>
-                {{ Form::submit('Save', array('class' => 'button')) }}
-             <a class="save" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
+                {{ Form::submit('Save', array('class' => 'button save')) }}
+                <a class="cancel" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
             </li>
 
         </ul>
 
     {{ Form::close() }}
 
-    {{ Form::open(array('method' => 'DELETE', 'route' => array('admin.tour.destroy', $tourdate->id ), 'data-confirm' => 'Are you sure?')) }}
+    {{ Form::open(array('method' => 'DELETE', 'route' => array('admin.tour.destroy', $tourdate->id ), 'data-confirm' => 'Are you sure you want to delete this?')) }}
 
         {{ Form::submit('Delete', array('class' => 'delete')) }}
 

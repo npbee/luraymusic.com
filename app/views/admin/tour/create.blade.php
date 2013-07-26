@@ -47,8 +47,8 @@
             </li>
 
             <li>
-                {{ Form::submit('Save', array('class' => 'button')) }}
-             <a class="save" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
+                {{ Form::submit('Save', array('class' => 'button save')) }}
+             <a class="cancel" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
             </li>
 
         </ul>

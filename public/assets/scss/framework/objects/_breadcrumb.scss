@@ -14,8 +14,6 @@
         }
     }
     > li + li:before {
-        @include breakpoint(medium) {
-            content:"\002F" "\00A0";
-        }
+        content:"\002F" "\00A0";
     }
 }

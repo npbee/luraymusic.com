@@ -1,13 +1,5 @@
 @extends('layouts.master')
 
-@section('sub-header')
-
-<ul class="breadcrumbs">
-    <li><a class="current" href="{{ URL::route('tour') }}">Upcoming Dates</a></li>
-    <li><a href="{{ URL::route('tour-archive') }}">Archive</a></li>
-</ul>
-
-@stop
 
 @section('content')
 
@@ -32,7 +24,6 @@
 
 </table>
 
-<p>* denotes review</p>
 
 <section class="tour-reviews">
     @foreach($tourdates as $tourdate)
@@ -46,8 +37,20 @@
 
 </section>
 
+<section class="post-content">
+    <p class="smallprint">* denotes review</p>
+    <p>
+        <ul class="breadcrumbs smallprint">
+            <li><a class="current" href="{{ URL::route('tour') }}">Upcoming Dates</a></li>
+            <li><a href="{{ URL::route('tour-archive') }}">Tour Archive</a></li>
+        </ul>
+    </p>
+</section>
+
 
 @stop
+
+
 
 @section('footer')
     @include('_partials.footer')

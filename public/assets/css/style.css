@@ -610,6 +610,23 @@ blockquote {
     content: "\2014"; }
 
 /*------------------------------------*\
+    $SMALLPRINT
+\*------------------------------------*/
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+.smallprint,
+.milli {
+  font-size: 14px;
+  font-size: 0.77778rem;
+  line-height: 1.92857; }
+
+.micro {
+  font-size: 12px;
+  font-size: 0.66667rem;
+  line-height: 2.25; }
+
+/*------------------------------------*\
     $BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
@@ -620,9 +637,8 @@ blockquote {
     display: inline-block;
     *display: inline;
     zoom: 1; }
-  @media (min-width: 30em) {
-    .breadcrumbs > li + li:before {
-      content: "\002F" "\00A0"; } }
+  .breadcrumbs > li + li:before {
+    content: "\002F" "\00A0"; }
 
 /*------------------------------------*\
     $IMAGE-GRID
@@ -894,6 +910,9 @@ body {
 
 article {
   margin-bottom: 54px; }
+
+.post-content p {
+  margin: 0; }
 
 /* ==========================================================================
    $PAGE-HEAD

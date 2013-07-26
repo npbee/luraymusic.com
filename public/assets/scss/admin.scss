@@ -41,9 +41,12 @@
 ****/
 .admin .button {
     display: block;
-    padding: $base-spacing-unit/2;
+    padding: $base-spacing-unit;
     text-align: center;
     width: 100%;
+    @include breakpoint(medium) {
+        width: 50%;
+    }
 }
 
 
@@ -74,7 +77,18 @@
     }
     .save {
         display: block;
-        padding: $base-spacing-unit 0;
+        padding: $base-spacing-unit;
+        float: left;
+    }
+    .cancel {
+        display: block;
+        padding: $base-spacing-unit;
+        text-align: center;
+        width: 100%;
+        float: right;
+        @include breakpoint(medium) {
+            width: 50%;
+        }
     }
 }
 
@@ -82,9 +96,16 @@
     color: red;
     background: none;
     border: none;
+    display: block;
+    margin-top:$base-spacing-unit;
     outline: none;
     text-decoration: underline;
     padding: $base-spacing-unit 0;
+    text-align: center;
+    width: 100%;
+    @include breakpoint(medium) {
+        text-align: left;
+    }
 }
 
 

@@ -58,9 +58,12 @@
 ****/
 .admin .button {
   display: block;
-  padding: 13.5px;
+  padding: 27px;
   text-align: center;
   width: 100%; }
+  @media (min-width: 30em) {
+    .admin .button {
+      width: 50%; } }
 
 .tour--admin .tour-nav--admin,
 .pics--admin .pics-nav--admin,
@@ -79,15 +82,32 @@
   width: 100%; }
 .form-fields .save {
   display: block;
-  padding: 27px 0; }
+  padding: 27px;
+  float: left; }
+.form-fields .cancel {
+  display: block;
+  padding: 27px;
+  text-align: center;
+  width: 100%;
+  float: right; }
+  @media (min-width: 30em) {
+    .form-fields .cancel {
+      width: 50%; } }
 
 .delete {
   color: red;
   background: none;
   border: none;
+  display: block;
+  margin-top: 27px;
   outline: none;
   text-decoration: underline;
-  padding: 27px 0; }
+  padding: 27px 0;
+  text-align: center;
+  width: 100%; }
+  @media (min-width: 30em) {
+    .delete {
+      text-align: left; } }
 
 /****
 * Login screen
