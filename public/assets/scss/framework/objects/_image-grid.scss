@@ -2,7 +2,7 @@
     $IMAGE-GRID
 \*------------------------------------*/
 .image-grid {
-    img {
+    .img {
         @include transition(all 200ms);
         float: left;
         width: 100%;

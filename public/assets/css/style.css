@@ -643,7 +643,7 @@ blockquote {
 /*------------------------------------*\
     $IMAGE-GRID
 \*------------------------------------*/
-.image-grid img {
+.image-grid .img {
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   transition: all 200ms;
@@ -651,11 +651,11 @@ blockquote {
   width: 100%;
   height: auto; }
   @media (min-width: 30em) {
-    .image-grid img {
+    .image-grid .img {
       width: 49%;
       margin: 0 1% 1% 0; } }
   @media (min-width: 60em) {
-    .image-grid img {
+    .image-grid .img {
       width: 19%;
       margin: 0 1% 1% 0; } }
 

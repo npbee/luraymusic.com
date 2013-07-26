@@ -5,16 +5,16 @@
 <article class="photos">
     <h1>PHOTOS</h1>
     <div class="image-grid" id="image-grid">
-        <img src="assets/images/press/1-thumb.jpg" alt="press 1">
-        <img src="assets/images/press/2-thumb.jpg" alt="press 2">
-        <img src="assets/images/show-pics/cameo-gallery/1-thumb.jpg" alt="Cameo Gallery 1">
-        <img src="assets/images/show-pics/cameo-gallery/2-thumb.jpg" alt="Cameo Gallery 2">
-        <img src="assets/images/show-pics/cameo-gallery/3-thumb.jpg" alt="Cameo Gallery 3">
-        <img src="assets/images/show-pics/rock-n-roll-hotel/1-thumb.jpg" alt="Rock & Roll Hotel 1">
-        <img src="assets/images/show-pics/cmj/1-thumb.jpg" alt="CMJ 1">
-        <img src="assets/images/show-pics/camel/1-thumb.jpg" alt="Camel 1">
-        <img src="assets/images/show-pics/camel/2-thumb.jpg" alt="Camel 2">
-        <img src="assets/images/show-pics/camel/3-thumb.jpg" alt="Camel 3">
+        <img class="img" src="assets/images/press/1-thumb.jpg" alt="press 1">
+        <img class="img" src="assets/images/press/2-thumb.jpg" alt="press 2">
+        <img class="img" src="assets/images/show-pics/cameo-gallery/1-thumb.jpg" alt="Cameo Gallery 1">
+        <img class="img" src="assets/images/show-pics/cameo-gallery/2-thumb.jpg" alt="Cameo Gallery 2">
+        <img class="img" src="assets/images/show-pics/cameo-gallery/3-thumb.jpg" alt="Cameo Gallery 3">
+        <img class="img" src="assets/images/show-pics/rock-n-roll-hotel/1-thumb.jpg" alt="Rock & Roll Hotel 1">
+        <img class="img" src="assets/images/show-pics/cmj/1-thumb.jpg" alt="CMJ 1">
+        <img class="img" src="assets/images/show-pics/camel/1-thumb.jpg" alt="Camel 1">
+        <img class="img" src="assets/images/show-pics/camel/2-thumb.jpg" alt="Camel 2">
+        <img class="img" src="assets/images/show-pics/camel/3-thumb.jpg" alt="Camel 3">
     </div>
 </article>
 

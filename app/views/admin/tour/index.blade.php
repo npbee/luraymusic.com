@@ -24,7 +24,8 @@
             <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
             <td>{{ $tourdate -> location }}</td>
             <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
-            <td><a href="{{ URL::route('admin.tour.edit', $tourdate->id ) }}">Edit</a>/<a href="{{ URL::route('tour') }}">View on Site</a></td>
+            <td><a href="{{ URL::route('admin.tour.edit', $tourdate->id ) }}">Edit</a>/<a href="{{ URL::route('tour')
+            }}">View on Site</a></td>
         </tr>
         @endforeach
 
