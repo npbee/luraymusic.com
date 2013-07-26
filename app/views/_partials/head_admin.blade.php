@@ -7,5 +7,6 @@
     {{ HTML::style('assets/css/style.css') }}
     {{ HTML::style('assets/css/admin.css') }}
     {{ HTML::style('assets/css/datepicker.css') }}
+    {{ HTML::style('assets/css/bootstrap-fileupload.css') }}
     <link rel="author" href="humans.txt">
 </head>

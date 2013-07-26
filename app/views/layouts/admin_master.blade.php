@@ -25,6 +25,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     {{ HTML::script('assets/js/vendor/datepicker.js') }}
+    {{ HTML::script('assets/js/vendor/bootstrap-fileupload.min.js') }}
     {{ HTML::script('assets/js/main.js') }}
 
     </body>

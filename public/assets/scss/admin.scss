@@ -41,7 +41,7 @@
 ****/
 .admin .button {
     display: block;
-    padding: $base-spacing-unit;
+    padding: $base-spacing-unit/2 $base-spacing-unit;
     text-align: center;
     width: 100%;
     @include breakpoint(medium) {

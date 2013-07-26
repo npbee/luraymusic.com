@@ -29,7 +29,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
             -> with('bodyClass', 'admin');
     }));
     Route::resource('tour', 'AdminTourController');
-    Route::resource('images', 'AdminImageController');
+    Route::resource('image', 'AdminImageController');
 });
 
 
