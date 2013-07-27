@@ -32,7 +32,6 @@
 .contact-block-big {
     @extend %cf;
     @extend %alpha;
-    text-align: center;
     h1 {
         text-transform: uppercase;
         // @include breakpoint(medium) {
@@ -54,6 +53,15 @@
         margin-bottom: $base-spacing-unit*2;
     }
     .text-input {
-        width: 50%;
+        width: 100%;
+        @include breakpoint(medium) {
+            width: 50%;
+        }
+    }
+    .button {
+        width: 100%;
+        @include breakpoint(medium) {
+            width: auto;
+        }
     }
 }
