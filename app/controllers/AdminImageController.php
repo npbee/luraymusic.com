@@ -34,8 +34,31 @@ class AdminImageController extends BaseController {
     public function store()
     {
 
+        $image = Input::file('image');
+        $title = Input::get('title');
+        $full_path = Image::upload($image, $title);
+        $author = Input::get('author');
+        $data = array(
+            'title' => $title,
+            'full_path' => $full_path,
+            'author' => $author
+        );
 
 
+        Queue::push('ProcessImage', $data);
+
+
+
+        //$hi_path = Image::resize($full_path, 700);
+        //$thumb_path = Image::thumb($hi_path, 300);
+
+        // $pic = New Pic;
+        // $pic->full_path = $full_path;
+        // // $pic->hi_path = $hi_path;
+        // // $pic->thumb_path = $thumb_path;
+        // $pic->save();
+
+        return Redirect::route('admin.image.index');
 
     }
 
@@ -84,3 +107,5 @@ class AdminImageController extends BaseController {
     }
 
 }
+
+

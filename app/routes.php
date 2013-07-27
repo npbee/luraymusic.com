@@ -32,6 +32,3 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::resource('image', 'AdminImageController');
 });
 
-
-
-Route::resource('images', 'ImagesController');

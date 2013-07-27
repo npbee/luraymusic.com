@@ -116,8 +116,6 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'Krucas\Notification\NotificationServiceProvider',
-		'Intervention\Image\ImageServiceProvider'
-
 	),
 
 	/*
@@ -184,7 +182,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Notification' => 'Krucas\Notification\Facades\Notification',
-		'Image' => 'Intervention\Image\Facades\Image'
+		'Image'           => 'App\Facades\ImageFacade',
 
 	),
 

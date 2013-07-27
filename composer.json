@@ -7,7 +7,7 @@
 		"way/generators": "dev-master",
 		"cartalyst/sentry": "2.0.*",
 		"edvinaskrucas/notification": "1.*",
-		"intervention/image": "dev-master"
+		"imagine/Imagine": "v0.4.1"
 	},
 	"autoload": {
 		"classmap": [
@@ -18,7 +18,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
 			"app/helpers",
-			"app/services"
+			"app/services",
+			"app/facades"
 		]
 	},
 	"scripts": {
