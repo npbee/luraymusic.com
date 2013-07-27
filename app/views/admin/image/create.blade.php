@@ -12,7 +12,7 @@
                 {{ Form::label('image', 'Image') }}
 
                 <div class="fileupload fileupload-new" data-provides="fileupload">
-                    <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+                    <div class="fileupload-preview thumbnail">
                         <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image">
                     </div>
                     <div>

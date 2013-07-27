@@ -61,12 +61,9 @@
   padding: 13.5px 27px;
   text-align: center;
   width: 100%; }
-  @media (min-width: 30em) {
-    .admin .button {
-      width: 50%; } }
 
 .tour--admin .tour-nav--admin,
-.pics--admin .pics-nav--admin,
+.images--admin .images-nav--admin,
 .video--admin .vidoes-nav--admin {
   color: #dab08f;
   background: #eeeeee; }
