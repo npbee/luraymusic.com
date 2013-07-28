@@ -137,3 +137,10 @@
 ****/
 .admin .img .edit {
   display: block; }
+
+/****
+* Forgot Password?
+****/
+.forgot {
+  display: block;
+  margin: 13.5px 0; }

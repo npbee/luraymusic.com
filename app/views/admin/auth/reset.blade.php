@@ -11,7 +11,7 @@
 
         <ul class="form-fields">
             <li>
-                {{ Form::label('email', 'Email', array('class' => 'beta')) }}
+                {{ Form::label('email', 'Email:', array('class' => 'beta')) }}
                 {{ Form::text('email', null, array('class' => 'text-input')) }}
             </li>
 
