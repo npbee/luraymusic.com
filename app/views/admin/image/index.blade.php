@@ -4,6 +4,10 @@
 
 {{ Notification::showAll() }}
 
+<article>
+    <a class="button" href="{{ URL::route('admin.image.create') }}">New Image</a>
+</article>
+
 <h1>Current Images:</h1>
 <hr>
 
@@ -13,7 +17,7 @@
         @foreach($pics as $pic)
             <div class="img">
                 <img src="{{ $pic->thumb_path }}" alt="{{ $pic->title }}">
-                <a class="edit text-center">Edit</a>
+                <a class="edit text-center" href="{{ URL::route('admin.image.edit', $pic->id) }}">Edit</a>
             </div>
         @endforeach
     </div>

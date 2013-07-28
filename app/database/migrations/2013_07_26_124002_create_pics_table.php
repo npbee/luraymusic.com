@@ -16,7 +16,6 @@ class CreatePicsTable extends Migration {
             $table->increments('id');
             $table->integer('user_id');
             $table->string('full_path');
-            $table->string('hi_path');
             $table->string('thumb_path');
             $table->string('author');
             $table->string('title');

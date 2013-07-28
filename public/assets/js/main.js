@@ -21,6 +21,22 @@ $(function() {
     });
 
 
+
+
+
+    //lightbox
+    $('.lightbox-trigger').colorbox({
+        scalePhotos: true,
+        maxHeight: "100%",
+        maxWidth: "100%"
+    });
+
+
+
+
+
+
+
     $('.date-select').datepicker({
         format: "yyyy-mm-dd"
     });

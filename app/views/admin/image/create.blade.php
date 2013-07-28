@@ -8,18 +8,19 @@
 
         <ul class="form-fields">
             <li>
-                <div class="control-group">
                 {{ Form::label('image', 'Image') }}
-
                 <div class="fileupload fileupload-new" data-provides="fileupload">
                     <div class="fileupload-preview thumbnail">
-                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image">
+                        <img src="http://www.placehold.it/300x300/EFEFEF/AAAAAA&amp;text=no+image">
                     </div>
                     <div>
-                        <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>{{ Form::file('image') }}</span>
+                        <span class="btn btn-file">
+                            <span class="fileupload-new small-button">Select image</span>
+                            <span class="fileupload-exists small-button">Change</span>
+                            {{ Form::file('image') }}
+                        </span>
                     </div>
                 </div>
-            </div>
             </li>
 
             <li>
@@ -35,6 +36,7 @@
             <li>
                 {{ Form::submit('Save', array('class' => 'button save')) }}
             </li>
+        </ul>
 
     {{ Form::close() }}
 

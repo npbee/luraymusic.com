@@ -2,6 +2,9 @@
 
 @section('content')
 
+{{ Notification::showAll() }}
+
+
     <h1>Edit Tour Date:</h1>
 
     {{ Form::model($tourdate, array('method' => 'put', 'route' => array('admin.tour.update', $tourdate->id ))) }}
@@ -57,6 +60,13 @@
         {{ Form::submit('Delete', array('class' => 'delete')) }}
 
     {{ Form::close() }}
+
+    @if ($errors->any())
+        <h2>Errors</h2>
+        <ul>
+            {{ implode('', $errors->all('<li>:message</li>')) }}
+        </ul>
+    @endif
 
 </section>
 

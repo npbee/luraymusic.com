@@ -21,11 +21,11 @@ body {
 
 .wrapper {
     min-height: 100%;
-    margin-bottom: -10em;
+    margin-bottom: -150px;
     &:after {
         content:"";
         display: block;
-        height: 10em;
+        height: 150px;
     }
 }
 

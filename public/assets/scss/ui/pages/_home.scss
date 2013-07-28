@@ -7,6 +7,11 @@
 
 .home figure {
     text-align: center;
+    z-index: -1;
+    @include breakpoint(medium) {
+      position: relative;
+      top: -100px;
+    }
     img {
         left: 0;
         max-width: 100%;
@@ -38,6 +43,10 @@
             top: $base-spacing-unit*12;
         }
     }
+}
+
+.home h1 {
+    margin: 0;
 }
 
 .home .epsilon {

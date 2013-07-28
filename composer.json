@@ -7,7 +7,9 @@
 		"way/generators": "dev-master",
 		"cartalyst/sentry": "2.0.*",
 		"edvinaskrucas/notification": "1.*",
-		"imagine/Imagine": "v0.4.1"
+		"imagine/Imagine": "v0.4.1",
+		"pda/pheanstalk": "dev-master",
+		"iron-io/iron_mq": "*"
 	},
 	"autoload": {
 		"classmap": [
@@ -19,7 +21,8 @@
 			"app/tests/TestCase.php",
 			"app/helpers",
 			"app/services",
-			"app/facades"
+			"app/facades",
+			"app/queue"
 		]
 	},
 	"scripts": {

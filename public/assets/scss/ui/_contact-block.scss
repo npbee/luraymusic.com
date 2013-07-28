@@ -48,6 +48,10 @@
     section {
         clear: both;
         display: block;
+        @include breakpoint(medium) {
+            @include span-columns(6);
+            clear: none;
+        }
     }
     div {
         margin-bottom: $base-spacing-unit*2;

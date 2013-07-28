@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $LIGHTBOX
+\*------------------------------------*/
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#333, 0.8);
+    text-align: center;
+    .lightbox-content {
+        position: relative;
+    }
+}
+
+    .lightbox--closed {
+        @include animation(scale-down 200ms 1 $ease-out-quad);
+        @include transform(scale(0));
+    }
+    .lightbox--open {
+        @include animation(scale-up 200ms 1 $ease-out-quad);
+    }
+
+@include keyframes(scale-up) {
+    0% {
+        @include transform(scale(0));
+    }
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+@include keyframes(scale-down) {
+    0% {
+        @include transform(scale(1));
+    }
+    100% {
+        @include transform(scale(0));
+    }
+}

@@ -4,12 +4,17 @@
 .footer {
     background: $green;
     font-size: 0.9em;
-    height: 30em;
+    height: 550px;
     overflow: hidden;
     position: relative;
     width: 100%;
     @include breakpoint(medium) {
-        height: 14em;
+        height: 150px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        height: 150px;
     }
 }
 
@@ -21,13 +26,22 @@
     }
 
 .footer-logo {
-    display: none;
+    position: absolute;
+    bottom: $base-spacing-unit;
+    opacity: 0.4;
+    width: 90%;
+    padding:$base-spacing-unit;
     @include breakpoint(medium) {
+        position: static;
         display: block;
-        opacity: 0.4;
         margin: 0 auto;
-        width: 25%;
-        position: relative;
-        top:$base-spacing-unit*2;
+        padding:0;
+        width: 200px;
+        // position: absolute;
+        // width: 150px;
+        // height: 100px;
+        // left: 50%;
+        // top: 50%;
+        // margin: -50px 0 0 -75px;
     }
 }

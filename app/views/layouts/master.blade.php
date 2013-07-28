@@ -23,6 +23,7 @@
     {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
     {{ HTML::script('assets/js/vendor/soundcloud.player.api.js') }}
     {{ HTML::script('assets/js/vendor/sc-player.js') }}
+    {{ HTML::script('assets/js/vendor/jquery.colorbox-min.js') }}
     {{ HTML::script('assets/js/main.js') }}
 
     </body>

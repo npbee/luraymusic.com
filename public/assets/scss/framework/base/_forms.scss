@@ -21,7 +21,7 @@ fieldset{
     border: 1px solid #d9d9d9;
     border-radius: 2px;
     outline: 0;
-    padding: $base-spacing-unit/2;
+    padding: $base-spacing-unit/4 $base-spacing-unit/2;
     &:focus {
         border: 1px solid $brand-color;
     }

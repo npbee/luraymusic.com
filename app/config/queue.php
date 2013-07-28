@@ -36,7 +36,7 @@ return array(
 
 		'beanstalkd' => array(
 			'driver' => 'beanstalkd',
-			'host'   => 'localhost',
+			'host'   => '192.168.11.47',
 			'queue'  => 'default',
 		),
 
