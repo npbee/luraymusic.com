@@ -16,13 +16,11 @@
 <article class="videos">
     <h1>VIDEOS</h1>
 
-    <div class="video-wrapper">
-        <iframe width="560" height="315" src="//www.youtube.com/embed/j9kiGZq2Wy0" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="video-wrapper">
-        <iframe width="560" height="315" src="//www.youtube.com/embed/54gIEBAA3G4" frameborder="0" allowfullscreen></iframe>
-    </div>
+    @foreach($videos as $video)
+        <div class="video-wrapper">
+            {{ $video->embed_code }}
+        </div>
+    @endforeach
 
 </article>
 

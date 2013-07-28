@@ -9,7 +9,6 @@ class PicsTableSeeder extends Seeder {
             DB::table('pics')->insert(array(
                 'user_id' => '1',
                 'full_path' => '/assets/images/show-pics/camel/1-full.jpg',
-                'hi_path' => '/assets/images/show-pics/camel/1-high.jpg',
                 'thumb_path' => '/assets/images/show-pics/camel/1-thumb.jpg',
                 'author' => 'Nick Ball',
                 'title' => 'Camel',
@@ -20,7 +19,6 @@ class PicsTableSeeder extends Seeder {
             DB::table('pics')->insert(array(
                 'user_id' => '1',
                 'full_path' => '/assets/images/show-pics/cameo-gallery/1-full.jpg',
-                'hi_path' => '/assets/images/show-pics/cameo-gallery/1-high.jpg',
                 'thumb_path' => '/assets/images/show-pics/cameo-gallery/1-thumb.jpg',
                 'author' => 'Nick Ball',
                 'title' => 'Cameo Gallery',

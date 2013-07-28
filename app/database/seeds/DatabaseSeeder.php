@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TourDatesSeeder');
 		$this->call('SentrySeeder');
 		$this->call('PicsTableSeeder');
+		$this->call('VideosTableSeeder');
 	}
 
 }

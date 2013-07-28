@@ -10,9 +10,11 @@ class MediaController extends BaseController {
     public function index()
     {
         $images = Pic::all();
+        $videos = Video::all();
         return View::make('media')
             ->with('bodyClass', 'media')
-            ->with('images', $images);
+            ->with('images', $images)
+            ->with('videos', $videos);
     }
 
     /**

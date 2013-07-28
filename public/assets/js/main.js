@@ -28,7 +28,8 @@ $(function() {
     $('.lightbox-trigger').colorbox({
         scalePhotos: true,
         maxHeight: "100%",
-        maxWidth: "100%"
+        maxWidth: "100%",
+        rel: "img"
     });
 
 

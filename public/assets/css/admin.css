@@ -47,6 +47,7 @@
 * Page widths
 ****/
 .admin .main {
+  margin-top: 0;
   max-width: 900px; }
 
 .admin--login .main {
@@ -64,7 +65,7 @@
 
 .tour--admin .tour-nav--admin,
 .images--admin .images-nav--admin,
-.video--admin .vidoes-nav--admin {
+.video--admin .video-nav--admin {
   color: #dab08f;
   background: #eeeeee; }
 
@@ -82,6 +83,7 @@
   padding: 27px;
   float: left; }
 .form-fields .cancel {
+  clear: both;
   display: block;
   padding: 27px;
   text-align: center;
@@ -126,11 +128,24 @@
 * Alerts
 ****/
 .alert {
-  padding-bottom: 27px;
-  font-size: 21.6px; }
+  padding: 13.5px;
+  font-size: 21.6px;
+  background: #d0d8d8;
+  margin-bottom: 13.5px; }
 
 .alert-success {
   color: green; }
+  .alert-success:before {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'icomoon';
+    content: "\e007";
+    padding-right: 10px; }
 
 /****
 * Images

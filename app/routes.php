@@ -34,5 +34,9 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     }));
     Route::resource('tour', 'AdminTourController');
     Route::resource('image', 'AdminImageController');
+    Route::resource('videos', 'AdminVideosController');
 });
 
+
+
+Route::resource('videos', 'VideosController');
