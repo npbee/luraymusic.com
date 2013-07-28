@@ -85,9 +85,10 @@
         padding: $base-spacing-unit;
         text-align: center;
         width: 100%;
-        float: right;
         @include breakpoint(medium) {
-            width: 50%;
+            text-align: left;
+            clear: both;
+            padding-left: 0;
         }
     }
 }
@@ -97,7 +98,6 @@
     background: none;
     border: none;
     display: block;
-    margin-top:$base-spacing-unit;
     outline: none;
     text-decoration: underline;
     padding: $base-spacing-unit 0;
@@ -140,7 +140,8 @@
 * Alerts
 ****/
 .alert {
-    padding: $base-spacing-unit/2;
+    padding-bottom: $base-spacing-unit;
+    font-size: $base-font-size *1.2;
 }
 
 .alert-success {

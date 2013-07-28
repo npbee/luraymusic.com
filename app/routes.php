@@ -22,6 +22,10 @@ Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@inde
 Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
 Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'AuthController@getLogin'));
 Route::post('admin/login', array('as' => 'admin.login.post', 'uses' => 'AuthController@postLogin'));
+Route::get('admin/reset', array('as' => 'admin.reset', 'uses' => 'AuthController@getReset'));
+Route::post('admin/reset', array('as' => 'admin.reset.post', 'uses' => 'AuthController@postReset'));
+Route::get('admin/confirm/{resetCode}', array('as' => 'admin.confirm', 'uses' => 'AuthController@getConfirm'));
+Route::post('admin/confirm/{resetCode}', array('as' =>'admin.confirm.post', 'uses' => 'AuthController@postConfirm'));
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::any('/', array('as' => 'admin', 'do' => function() {

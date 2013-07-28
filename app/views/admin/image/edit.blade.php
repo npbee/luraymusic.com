@@ -8,19 +8,7 @@
 
         <ul class="form-fields">
             <li>
-                {{ Form::label('image', 'Image') }}
-                <div class="fileupload fileupload-exists" data-provides="fileupload">
-                    <div class="fileupload-preview thumbnail">
-                        <img src="{{ $pic->full_path }}">
-                    </div>
-                    <div>
-                        <span class="btn btn-file">
-                            <span class="fileupload-new small-button">Select image</span>
-                            <span class="fileupload-exists small-button">Change</span>
-                            {{ Form::file('image') }}
-                        </span>
-                    </div>
-                </div>
+                <img src="{{ $pic->full_path }}">
             </li>
 
             <li>
@@ -35,6 +23,7 @@
 
             <li>
                 {{ Form::submit('Save', array('class' => 'button save')) }}
+                <a class="cancel" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
             </li>
         </ul>
 
@@ -45,6 +34,8 @@
         {{ Form::submit('Delete', array('class' => 'delete')) }}
 
     {{ Form::close() }}
+
+    <p><span class="gamma">NOTE:</span>  You can only update the author or title for pictures, you can't change the picture that was uploaded.  If you uploaded the wrong picture, just delete it and start over with a new image.</p>
 
 </section>
 

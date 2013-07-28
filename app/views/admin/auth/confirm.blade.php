@@ -2,8 +2,7 @@
 
 @section('content')
 
-{{ Notification::showAll() }}
-
+<h1>Reset Password:</h1>
     {{ Form::open() }}
 
         @if ($errors->has('login'))
@@ -11,22 +10,28 @@
         @endif
 
         <ul class="form-fields">
+            {{ Form::hidden('resetCode', $resetCode )}}
             <li>
                 {{ Form::label('email', 'Email', array('class' => 'beta')) }}
                 {{ Form::text('email', null, array('class' => 'text-input')) }}
             </li>
 
             <li>
-                {{ Form::label('password', 'Password', array('class' => 'beta')) }}
+                {{ Form::label('password', 'New Password', array('class' => 'beta')) }}
                 {{ Form::password('password', array('class' => 'text-input')) }}
-            </li>
 
             <li>
-                {{ Form::submit('Login', array('class' => 'button')) }}
-                <p><a href="{{ URL::route('admin.reset') }}">Forgot Password?</a></p>
+                {{ Form::submit('Reset Password', array('class' => 'button')) }}
             </li>
         </ul>
 
     {{ Form::close() }}
+
+    @if ($errors->any())
+        <h2>Errors</h2>
+        <ul>
+            {{ implode('', $errors->all('<li>:message</li>')) }}
+        </ul>
+    @endif
 
 @stop

@@ -85,18 +85,18 @@
   display: block;
   padding: 27px;
   text-align: center;
-  width: 100%;
-  float: right; }
+  width: 100%; }
   @media (min-width: 30em) {
     .form-fields .cancel {
-      width: 50%; } }
+      text-align: left;
+      clear: both;
+      padding-left: 0; } }
 
 .delete {
   color: red;
   background: none;
   border: none;
   display: block;
-  margin-top: 27px;
   outline: none;
   text-decoration: underline;
   padding: 27px 0;
@@ -126,7 +126,8 @@
 * Alerts
 ****/
 .alert {
-  padding: 13.5px; }
+  padding-bottom: 27px;
+  font-size: 21.6px; }
 
 .alert-success {
   color: green; }

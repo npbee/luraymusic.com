@@ -94,28 +94,16 @@ class AdminImageController extends BaseController {
      */
     public function update($id)
     {
-        $original_image = Input::file('image');
-        $title = Input::get('title');
-        $full_path = Image::upload($original_image, $title);
-        $thumb_path = Image::thumb($full_path, 400);
 
-        $input = Input::all();
-        $validation = new Services\Validators\ImageValidator($input);
-
-        if ($validation -> passes()) {
             $pic = Pic::find($id);
-            $pic->full_path = $full_path;
-            $pic->thumb_path = $thumb_path;
             $pic->author = Input::get('author');
-            $pic->title = $title;
+            $pic->title = Input::get('title');
             $pic->save();
 
             Notification::success('The page was saved.');
 
             return Redirect::route('admin.image.index');
-        }
 
-        return Redirect::back()->withInput()->withErrors($validation->errors);
     }
 
     /**
