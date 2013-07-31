@@ -37,7 +37,7 @@
   left: 0;
   float: left;
   top: 5px; }
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
     .admin-logo {
       padding: 13.5px;
       position: static;
@@ -88,7 +88,7 @@
   padding: 27px;
   text-align: center;
   width: 100%; }
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
     .form-fields .cancel {
       text-align: left;
       clear: both;
@@ -104,7 +104,7 @@
   padding: 27px 0;
   text-align: center;
   width: 100%; }
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
     .delete {
       text-align: left; } }
 

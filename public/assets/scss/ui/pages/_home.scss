@@ -237,9 +237,12 @@ a.sc-remote-link.playing{
 /* controls */
 
 .sc-player .sc-controls{
-    font-size: 1.7em;
+    font-size: 3em;
     z-index: 5000;
     float: left;
+    @include breakpoint(medium) {
+      font-size: 1.7em;
+    }
 }
 
 .sc-player .sc-controls a{

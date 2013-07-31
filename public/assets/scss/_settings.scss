@@ -53,7 +53,7 @@ $line-height-ratio: $base-line-height / $base-font-size;
 
 @mixin breakpoint($point) {
   @if $point == medium {
-    @media (min-width: 30em) { @content; }
+    @media (min-width: 50em) { @content; }
   }
   @else if $point == large {
     @media (min-width: 60em) { @content; }

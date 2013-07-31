@@ -6,7 +6,8 @@
     @extend .cf;
 }
     .media__content{
-        @include breakpoint(medium) {
+        text-align: center;
+        @include breakpoint(large) {
             float:left;
             margin-right:2%;
             width: 28%;
@@ -16,7 +17,7 @@
      * Reversed image location (right instead of left).
      */
     .media__content--rev{
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             float:right;
             margin-left:2%;
             width: 28%;
@@ -29,7 +30,7 @@
         }
 
     .media__text{
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             overflow:hidden;
             width: 70%;
             float: right;
@@ -37,7 +38,7 @@
     }
 
     .media__text--rev {
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             overflow:hidden;
             width: 70%;
             float: left;

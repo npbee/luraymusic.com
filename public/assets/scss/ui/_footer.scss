@@ -29,7 +29,8 @@
     position: absolute;
     bottom: $base-spacing-unit;
     opacity: 0.4;
-    width: 90%;
+    width: 100%;
+    right: 0;
     padding:$base-spacing-unit;
     @include breakpoint(medium) {
         position: static;
