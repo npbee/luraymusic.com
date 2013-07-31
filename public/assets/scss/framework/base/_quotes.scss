@@ -19,8 +19,8 @@ blockquote{
         content:open-quote;
     }
     p:after{
-        content:"";
-        content:no-close-quote;
+        content:"#{$close-quote}";
+        //content:no-close-quote;
     }
     p:last-of-type:after{
         content:"#{$close-quote}";

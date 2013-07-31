@@ -574,8 +574,7 @@ blockquote {
     content: "\201C";
     content: open-quote; }
   blockquote p:after {
-    content: "";
-    content: no-close-quote; }
+    content: "\201D"; }
   blockquote p:last-of-type:after {
     content: "\201D";
     content: close-quote; }
@@ -786,38 +785,6 @@ blockquote {
         width: 33.33333%;
         float: none;
         text-align: center; } }
-
-/*------------------------------------*\
-    $SPEECH BUBBLE
-\*------------------------------------*/
-.speech-bubble {
-  position: relative;
-  padding: 27px;
-  background: #eeeeee;
-  border-radius: 2px; }
-  .speech-bubble:after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 50px;
-    border-width: 15px 15px 0;
-    border-style: solid;
-    display: block;
-    width: 0; }
-
-/*------------------------------------*\
-    $TOOLTIPS
-\*------------------------------------*/
-.tooltip {
-  position: relative; }
-
-.tooltip:hover:after {
-  position: absolute;
-  content: attr(title);
-  top: -200%;
-  left: 0;
-  background: #333;
-  padding: 6.75px; }
 
 /*------------------------------------*\
     $FLUID VIDEOS
@@ -1198,8 +1165,9 @@ a {
     margin: 0; } }
 .contact-block-big .social a {
   display: block;
-  width: 100%;
-  font-size: 72px; }
+  width: 50%;
+  float: left;
+  font-size: 108px; }
   @media (min-width: 30em) {
     .contact-block-big .social a {
       width: auto;
@@ -1222,7 +1190,7 @@ a {
   width: 100%; }
   @media (min-width: 30em) {
     .contact-block-big .text-input {
-      width: 50%; } }
+      width: 70%; } }
 .contact-block-big .button, .contact-block-big .small-button {
   width: 100%; }
   @media (min-width: 30em) {
@@ -1749,8 +1717,9 @@ a.sc-remote-link.playing {
 /*------------------------------------*\
     $ALBUMS
 \*------------------------------------*/
-.media__text p {
-  text-align: justify; }
+@media (min-width: 30em) {
+  .media__text p {
+    text-align: justify; } }
 
 /*------------------------------------*\
     $TOUR

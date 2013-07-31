@@ -40,7 +40,7 @@
             <div class="social">
                 <p class="zeta">Social:</p>
                 <p>
-                    <a class="facebook tooltip" title="facebook" data-icon="&#xe00e;" href="#"><span class="hide">Facebook</span></a>
+                    <a class="facebook" title="facebook" data-icon="&#xe00e;" href="#"><span class="hide">Facebook</span></a>
                     <a class="twitter" title="twitter" data-icon="&#xe00c;" href="#"><span class="hide">Twitter</span></a>
                     <a class="soundcloud" title="soundcloud" data-icon="&#xe00d;" href="#"><span class="hide">Soundcloud</span></a>
                     <a class="youtube" title="youtube" data-icon="&#xe00b;" href="#"><span class="hide">YouTube</span></a>

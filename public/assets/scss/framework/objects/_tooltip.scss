@@ -4,13 +4,36 @@
 
 .tooltip {
     position: relative;
+    background: #333;
+    display: inline-block;
 }
 
-    .tooltip:hover:after {
+    .tooltip:before, .tooltip:after, [data-tooltip]:before, [data-tooltip]:after {
         position: absolute;
-        content: attr(title);
-        top:-200%;
-        left: 0;
+        @include transform(translate3d(0,0,0));
+        visibility: hidden;
+        opacity: 0;
+        z-index:1000000;
+        @include transition(all 200ms ease);
+    }
+
+    .tooltip:hover:before, .tooltip:hover:after, [data-tooltip]:hover:before, [data-tooltip]:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip:before, [data-tooltip]:before {
+        content:"";
+        position: absolute;
+        background: transparent;
+        border: 6px solid transparent;
+        z-index:1000001;
+    }
+
+    .tooltip:after, [data-tooltip]:after {
+        content: attr(data-tooltip);
         background: #333;
+        color: #eeeeee;
         padding: $base-spacing-unit/4;
+        white-space: nowrap;
     }
