@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $TOOLTIPS
+\*------------------------------------*/
+
+.tooltip {
+    position: relative;
+}
+
+    .tooltip:hover:after {
+        position: absolute;
+        content: attr(title);
+        top:-200%;
+        left: 0;
+        background: #333;
+        padding: $base-spacing-unit/4;
+    }

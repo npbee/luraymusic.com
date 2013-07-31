@@ -30,11 +30,11 @@
             <div class="social">
                 <h1>Social</h1>
                 <p>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Soundcloud</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">Bandcamp</a>
+                    <a class="facebook tooltip" title="facebook" data-icon="&#xe00e;" href="#"><span class="hide">Facebook</span></a>
+                    <a class="twitter" title="twitter" data-icon="&#xe00c;" href="#"><span class="hide">Twitter</span></a>
+                    <a class="soundcloud" title="soundcloud" data-icon="&#xe00d;" href="#"><span class="hide">Soundcloud</span></a>
+                    <a class="youtube" title="youtube" data-icon="&#xe00b;" href="#"><span class="hide">YouTube</span></a>
+                    <a class="bandcamp" title="bandcamp" data-icon="&#xe00f;" href="#"><span class="hide">Bandcamp</span></a>
                 </p>
             </div>
         </section>

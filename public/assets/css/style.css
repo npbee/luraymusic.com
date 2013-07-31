@@ -806,6 +806,20 @@ blockquote {
     width: 0; }
 
 /*------------------------------------*\
+    $TOOLTIPS
+\*------------------------------------*/
+.tooltip {
+  position: relative; }
+
+.tooltip:hover:after {
+  position: absolute;
+  content: attr(title);
+  top: -200%;
+  left: 0;
+  background: #333;
+  padding: 6.75px; }
+
+/*------------------------------------*\
     $FLUID VIDEOS
 \*------------------------------------*/
 .video-wrapper {
@@ -1182,6 +1196,14 @@ a {
   .contact-block-big p, .contact-block-big form {
     font-size: 36px;
     margin: 0; } }
+.contact-block-big .social a {
+  display: block;
+  width: 100%;
+  font-size: 72px; }
+  @media (min-width: 30em) {
+    .contact-block-big .social a {
+      width: auto;
+      display: inline-block; } }
 .contact-block-big section {
   clear: both;
   display: block; }
@@ -1206,6 +1228,32 @@ a {
   @media (min-width: 30em) {
     .contact-block-big .button, .contact-block-big .small-button {
       width: auto; } }
+
+/***
+* social
+***/
+.social a {
+  font-size: 36px;
+  padding: 0 6.75px;
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+  transition: color 200ms; }
+
+.facebook:hover {
+  color: #3b5998; }
+
+.twitter:hover {
+  color: #00acee; }
+
+.soundcloud:hover {
+  color: #ff7700; }
+
+.bandcamp:hover {
+  color: #629aa9; }
+
+.youtube:hover {
+  color: #c4302b; }
 
 /*------------------------------------*\
     $COLORBOX
