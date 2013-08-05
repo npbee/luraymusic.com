@@ -6,7 +6,7 @@
     <h1>PHOTOS</h1>
     <div class="image-grid" id="image-grid">
         @foreach($images as $image)
-            <a href="{{ $image->full_path }}" class="lightbox-trigger">
+            <a href="{{ $image->full_path }}" class="lightbox-trigger" title="{{ $image->title }}">
                 <img class="img" src="{{ $image->thumb_path }}" alt="{{ $image->title }}">
             </a>
         @endforeach

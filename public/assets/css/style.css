@@ -646,11 +646,11 @@ blockquote {
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
   transition: all 200ms;
-  float: left;
   width: 100%;
   height: auto; }
   @media (min-width: 50em) {
     .image-grid .img {
+      float: left;
       width: 49%;
       margin: 0 1% 1% 0; } }
   @media (min-width: 60em) {
@@ -841,6 +841,9 @@ blockquote {
 
 .text-center {
   text-align: center; }
+
+.brand-color {
+  color: #dab08f; }
 
 /**
 * UI
@@ -1352,7 +1355,7 @@ a {
 
 #cboxTitle {
   position: absolute;
-  bottom: 4px;
+  bottom: 0;
   left: 0;
   text-align: center;
   width: 100%;
@@ -1375,7 +1378,7 @@ a {
   border: 0;
   padding: 0;
   margin: 0;
-  overflow: visible;
+  overflow: hidden;
   width: auto;
   background: none; }
 
@@ -1490,7 +1493,8 @@ a {
   margin: 0; }
 
 .home .epsilon {
-  margin: 0; }
+  margin: 0;
+  line-height: 1em; }
 
 .home .wrapper:after {
   display: none; }

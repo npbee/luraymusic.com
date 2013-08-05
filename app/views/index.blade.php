@@ -17,7 +17,7 @@
     <figure>
         <img id="album-art" src="assets/images/album_artwork.jpg" alt="Luray album art">
         <figcaption>
-            <h1>LURAY- <span class="italic">THE WILDER</span></h1>
+            <h1>LURAY <span class="brand-color">THE WILDER</span></h1>
             <p class="epsilon">Produced by Sean Carey of Bon Iver</p>
             <p class="epsilon">08.26.12</p>
         </figcaption>
