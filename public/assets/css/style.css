@@ -1109,12 +1109,8 @@ a {
   padding: 27px 13.5px 0; }
 
 .footer-logo {
-  position: absolute;
-  bottom: 27px;
   opacity: 0.4;
-  width: 100%;
-  right: 0;
-  padding: 27px; }
+  right: 0; }
   @media (min-width: 50em) {
     .footer-logo {
       position: static;
@@ -1494,7 +1490,7 @@ a {
 
 .home .epsilon {
   margin: 0;
-  line-height: 1em; }
+  line-height: 1.2em; }
 
 .home .wrapper:after {
   display: none; }
@@ -1746,8 +1742,6 @@ a.sc-remote-link.playing {
     @media (min-width: 50em) {
       .reviewed:after {
         left: 13.5px; } }
-  .reviewed.active {
-    border-top: 1px solid #333333 !important; }
 
 .tour-review {
   background: #333333;

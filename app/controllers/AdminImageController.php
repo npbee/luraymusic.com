@@ -82,7 +82,7 @@ class AdminImageController extends BaseController {
     {
         $pic = Pic::find($id);
         return View::make('admin.image.edit')
-            ->with('bodyClass','image--admin')
+            ->with('bodyClass','images--admin')
             ->with('pic', $pic);
     }
 

@@ -4,13 +4,6 @@
 
     <div class="footer__content contact-block">
 
-        <!-- <section>
-            <div class="booking">
-                <p class="zeta">Booking:</p>
-                <p><a href="mailto:luray@luraymusic.com">luray@luraymusic.com</a></p>
-            </div>
-        </section> -->
-
         <section>
             <div class="mailing-list">
                 <p class="zeta">Mailing list:</p>
@@ -26,15 +19,6 @@
             {{ HTML::image('assets/images/logo.svg', 'logo', array('class' => 'footer-logo'))}}
             <!-- <img class="footer-logo" src="assets/images/logo.svg"> -->
         </section>
-
-
-        <!-- <section class="text-right">
-            <div class="publicity">
-                <p class="zeta">Publicity:</p>
-                <p><a href="http://www.thinkpress.net/index.php/clients/luray">Monica Hopman</a></p>
-                <p><a href="mailto:monica@thinkpress.net">monica@thinkpress.net</a></p>
-            </div>
-        </section> -->
 
         <section>
             <div class="social">
