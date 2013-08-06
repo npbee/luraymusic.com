@@ -35,6 +35,31 @@ $(function() {
 
 
 
+    //Tabs
+    if(window.location.hash) {
+        var hash = window.location.hash.substring(1),
+             currentTab = '#' + hash;
+        $('.tabs__content').removeClass('tab-active');
+        $(currentTab).addClass('tab-active');
+    }
+
+    $('.tabs-nav a').on('click', function(e) {
+        var     target = $(this).attr('href'),
+                  tabContent = $('.tabs__content');
+        tabContent.removeClass('tab-active');
+        $(target).addClass('tab-active');
+        e.preventDefault();
+
+        $('html, body').stop().animate({
+            'scrollTop': $(target).offset().top
+        }, 300, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+
+
+
+
 
 
 

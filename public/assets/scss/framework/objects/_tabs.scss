@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $TABS
+\*------------------------------------*/
+
+.tabs__content {
+    display: none;
+    opacity: 0;
+    position: relative;
+    left: 20px;
+}
+
+.tab-active {
+    display: block;
+    opacity: 1;
+    left: 0;
+    @include animation(tab-in 600ms $ease-out-quad);
+}
+
+@include keyframes(tab-in) {
+    0% {
+        left: 20px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
