@@ -12,7 +12,7 @@
         <tr @if ($tourdate -> review_id) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
             <td>{{ $tourdate -> date }}</td>
             <td>{{ $tourdate -> location }}</td>
-            <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
+            <td><a target="_blank" href="{{ $tourdate -> show_info }}">{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</a></td>
             <td><a href="{{ URL::route('admin.tour.edit', $tourdate->id ) }}">Edit</a></td>
         </tr>
 

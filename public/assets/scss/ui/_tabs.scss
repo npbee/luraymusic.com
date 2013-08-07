@@ -12,15 +12,10 @@
         &:last-child {
             border-right: none;
         }
-        @include breakpoint(medium) {
-            border-right: none;
-            width: 100%;
-            text-align: right;
-        }
     }
     a {
         background: $black;
-        border-bottom: 1px solid $black-light;
+        border-bottom: 1px solid transparent;
         color: $white;
         display: block;
         padding: $base-spacing-unit/2 0;
@@ -31,7 +26,7 @@
         }
         &.tab-nav--active {
             background: $white;
-            border-bottom: 1px solid $grey;
+            border: 1px solid $grey;
             color: $orange;
         }
     }

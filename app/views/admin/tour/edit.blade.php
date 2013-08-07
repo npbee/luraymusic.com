@@ -27,6 +27,12 @@
             </li>
 
             <li>
+                {{ Form::label('show_info', 'SHOW INFO', array('class' => 'beta')) }}
+                <span class="note">Put the link to the show info here.</span>
+                {{ Form::text('show_info', null, array('class' => 'text-input')) }}
+            </li>
+
+            <li>
                 {{ Form::label('support', 'SUPPORT', array('class' => 'beta')) }}
                 {{ Form::text('support', null, array('class' => 'text-input')) }}
             </li>

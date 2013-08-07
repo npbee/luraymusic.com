@@ -18,6 +18,7 @@ class CreateTourdatesTable extends Migration {
 	$table->string('venue');
 	$table->string('location');
 	$table->string('support');
+            $table->string('show_info');
 	$table->text('review_text');
             $table->text('review_source');
 	$table->string('review_link');

@@ -1454,14 +1454,9 @@ a {
     width: 33.33%; }
     .tab-nav ul li:last-child {
       border-right: none; }
-    @media (min-width: 50em) {
-      .tab-nav ul li {
-        border-right: none;
-        width: 100%;
-        text-align: right; } }
   .tab-nav ul a {
     background: #333333;
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid transparent;
     color: #eeeeee;
     display: block;
     padding: 13.5px 0;
@@ -1472,7 +1467,7 @@ a {
         padding: 13.5px; } }
     .tab-nav ul a.tab-nav--active {
       background: #eeeeee;
-      border-bottom: 1px solid #d9d9d9;
+      border: 1px solid #d9d9d9;
       color: #dab08f; }
 
 .tabs__content {

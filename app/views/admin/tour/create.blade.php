@@ -23,6 +23,12 @@
             </li>
 
             <li>
+                {{ Form::label('show_info', 'SHOW INFO', array('class' => 'beta')) }}
+                <span class="note">Put the link to the show info here.</span>
+                {{ Form::text('show_info', null, array('class' => 'text-input')) }}
+            </li>
+
+            <li>
                 {{ Form::label('support', 'SUPPORT (Optional)', array('class' => 'beta')) }}
                 <span class="note">If there's a support group enter it here, otherwise leave it blank.</span>
                 {{ Form::text('support', null, array('class' => 'text-input')) }}

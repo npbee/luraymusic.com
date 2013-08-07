@@ -10,15 +10,27 @@ $(function() {
 
 
     //Tour Dates Review
-    $('.reviewed').on("click", function() {
-        var     review = "#" + $(this).attr("data-review"),
+    $('table tr').on('click', function(e) {
+        if ($(this).hasClass('reviewed')) {
+            var     review = "#" + $(this).attr("data-review"),
                   $rowPosition = $(this).position();
-        $(this).toggleClass('active');
-        $(review).css({
-            left: "0",
-            top: $rowPosition.top + $(this).height()
-        }).slideToggle(100);
+            $(this).toggleClass('active');
+            $(review).css({
+                left: "0",
+                top: $rowPosition.top + $(this).height()
+            }).slideToggle(100);
+            e.preventDefault;
+        }
     });
+    // $('.reviewed').on("click", function() {
+    //     var     review = "#" + $(this).attr("data-review"),
+    //               $rowPosition = $(this).position();
+    //     $(this).toggleClass('active');
+    //     $(review).css({
+    //         left: "0",
+    //         top: $rowPosition.top + $(this).height()
+    //     }).slideToggle(100);
+    // });
 
 
 
@@ -54,18 +66,27 @@ $(function() {
     $('.tab-nav a').on('click', function(e) {
         var     target = $(this).attr('href'),
                   tabContent = $('.tabs__content'),
-                  tabNav = $('.tab-nav a');
+                  tabNav = $('.tab-nav a'),
+                  windowWidth = $(window).width();
         tabContent.removeClass('tab--active');
         tabNav.removeClass('tab-nav--active');
         $(target).addClass('tab--active');
         $(this).addClass('tab-nav--active');
         e.preventDefault();
 
-        $('html, body').stop().animate({
-            'scrollTop': $(target).offset().top
-        }, 300, 'swing', function () {
-            window.location.hash = target;
-        });
+        if ( windowWidth > 700) {
+            $('html, body').stop().animate({
+                'scrollTop': 0
+            }, 300, 'swing', function () {
+                window.location.hash = target;
+            });
+        } else {
+            $('html, body').stop().animate({
+                'scrollTop': $(target).offset().top
+            }, 300, 'swing', function () {
+                window.location.hash = target;
+            });
+        }
     });
 
 

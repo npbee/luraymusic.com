@@ -6,7 +6,6 @@
 
     <div class="media__content">
         <img src="assets/images/album/the-wilder/cover-thumb.jpg">
-        <iframe width="100%" height="385" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F7979835&amp;color=dcb18f&amp;auto_play=false&amp;show_artwork=false"></iframe>
         <nav class="tab-nav">
             <ul>
                 <li><a class="beta tab-nav--active" href="#info">INFO</a></li><!--
@@ -14,6 +13,8 @@
                 --><li><a class="beta" href="#credits">CREDITS</a></li>
             </ul>
         </nav>
+        <iframe width="100%" height="385" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F7979835&amp;color=dcb18f&amp;auto_play=false&amp;show_artwork=false"></iframe>
+
     </div>
 
     <div class="media__text tabs">

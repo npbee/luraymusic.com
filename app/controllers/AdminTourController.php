@@ -44,6 +44,7 @@ class AdminTourController extends BaseController {
             $tourdate->date = Input::get('date');
             $tourdate->venue = Input::get('venue');
             $tourdate->location = Input::get('location');
+            $tourdate->show_info = Input::get('show_info');
             $tourdate->support = Input::get('support');
             $tourdate->review_text = Input::get('review_text');
             $tourdate->review_source = Input::get('review_source');
@@ -98,6 +99,7 @@ class AdminTourController extends BaseController {
         $tourdate->date = Input::get('date');
         $tourdate->venue = Input::get('venue');
         $tourdate->location = Input::get('location');
+        $tourdate->show_info = Input::get('show_info');
         $tourdate->support = Input::get('support');
         $tourdate->review_text = Input::get('review_text');
         $tourdate->review_source = Input::get('review_source');

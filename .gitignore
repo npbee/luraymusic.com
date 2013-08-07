@@ -3,5 +3,5 @@
 composer.phar
 composer.lock
 app/database
-app/config/app
 .DS_Store
+.htaccess
