@@ -38,16 +38,27 @@ $(function() {
     //Tabs
     if(window.location.hash) {
         var hash = window.location.hash.substring(1),
-             currentTab = '#' + hash;
-        $('.tabs__content').removeClass('tab-active');
-        $(currentTab).addClass('tab-active');
+             currentTab = '#' + hash,
+             $tabNav = $('.tab-nav a');
+        $('.tabs__content').removeClass('tab--active');
+        $tabNav.removeClass('tab-nav--active');
+
+        $(currentTab).addClass('tab--active');
+        $('.tab-nav a').each(function() {
+            if ($(this).attr("href") == currentTab) {
+                $(this).addClass('tab-nav--active');
+            }
+        });
     }
 
-    $('.tabs-nav a').on('click', function(e) {
+    $('.tab-nav a').on('click', function(e) {
         var     target = $(this).attr('href'),
-                  tabContent = $('.tabs__content');
-        tabContent.removeClass('tab-active');
-        $(target).addClass('tab-active');
+                  tabContent = $('.tabs__content'),
+                  tabNav = $('.tab-nav a');
+        tabContent.removeClass('tab--active');
+        tabNav.removeClass('tab-nav--active');
+        $(target).addClass('tab--active');
+        $(this).addClass('tab-nav--active');
         e.preventDefault();
 
         $('html, body').stop().animate({

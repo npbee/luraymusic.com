@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    $TABS
+\*------------------------------------*/
+.tab-nav ul {
+    font-family: $brand-face;
+    list-style: none;
+    margin: $base-spacing-unit 0;
+    li {
+        border-right: 1px solid $black-light;
+        display: inline-block;
+        width: 33.33%;
+        &:last-child {
+            border-right: none;
+        }
+        @include breakpoint(medium) {
+            border-right: none;
+            width: 100%;
+            text-align: right;
+        }
+    }
+    a {
+        background: $black;
+        border-bottom: 1px solid $black-light;
+        color: $white;
+        display: block;
+        padding: $base-spacing-unit/2 0;
+        width: 100%;
+        text-decoration: none;
+        @include breakpoint(medium) {
+            padding: $base-spacing-unit/2;
+        }
+        &.tab-nav--active {
+            background: $white;
+            border-bottom: 1px solid $grey;
+            color: $orange;
+        }
+    }
+}
+
+
+.tabs__content {
+    display: none;
+    opacity: 0;
+    position: relative;
+    left: 20px;
+}
+
+.tab--active {
+    display: block;
+    opacity: 1;
+    left: 0;
+    @include animation(tab-in 600ms $ease-out-expo);
+}
+
+@include keyframes(tab-in) {
+    0% {
+        left: 20px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
