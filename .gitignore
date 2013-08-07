@@ -2,6 +2,6 @@
 /vendor
 composer.phar
 composer.lock
-app/database
+app/config/database.php
 .DS_Store
 .htaccess
