@@ -1,6 +1,6 @@
 <?php
 
-use Notification;
+//use Notification;
 
 class AdminTourController extends BaseController {
 
