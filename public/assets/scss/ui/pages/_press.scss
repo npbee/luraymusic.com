@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $PRESS
+\*------------------------------------*/
+.press .main {
+    max-width: 900px;
+}
+
+.press blockquote {
+    border-bottom: 1px solid $grey;
+    padding-bottom: $base-spacing-unit;
+}

@@ -42,6 +42,10 @@
                 <p class="source italic"><a href="http://www.utne.com/utne-reader-music-sampler.aspx#axzz2Y1Xt33Gd">Utne Reader</a></p>
             </blockquote>
 
+            <p>
+                <a href="{{ URL::route('press') }}">Full Press Page</a>
+            </p>
+
             <h2>PURCHASE:</h2>
 
         </section>
