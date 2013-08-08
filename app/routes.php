@@ -18,6 +18,10 @@ Route::get('tour', array('as' => 'tour', 'uses' => 'TourController@index'));
 Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourController@Archive'));
 Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));
 Route::get('press', array('as' => 'press', 'uses' => 'PressController@index'));
+Route::get('downloads/thewilder.zip', function() {
+    $file = 'assets/downloads/thewilder.zip';
+    return Response::download($file);
+});
 
 
 Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
