@@ -23,8 +23,7 @@ blockquote{
         //content:no-close-quote;
     }
     p:last-of-type:after{
-        content:"#{$close-quote}";
-        content:close-quote;
+        content:"";
     }
 
     q:before{

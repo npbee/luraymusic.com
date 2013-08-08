@@ -576,8 +576,7 @@ blockquote {
   blockquote p:after {
     content: "\201D"; }
   blockquote p:last-of-type:after {
-    content: "\201D";
-    content: close-quote; }
+    content: ""; }
   blockquote q:before {
     content: "\2018";
     content: open-quote; }
