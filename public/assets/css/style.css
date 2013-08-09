@@ -1861,6 +1861,6 @@ a.sc-remote-link.playing {
 .press .main {
   max-width: 900px; }
 
-.press blockquote, .press--admin blockquote {
+.press blockquote, .press--admin blockquote, .albums blockquote {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 27px; }

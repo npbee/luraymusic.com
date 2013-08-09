@@ -42,7 +42,7 @@
             <li>
                 {{ Form::label('add_to_album_page', 'ADD TO ALBUM PAGE?', array('class' => 'beta')) }}
                 <span class="note">Do you want to add this to the album page?</span>
-                {{ Form::checkbox('add_to_album_page', 'add_to_album_page') }}
+                {{ Form::checkbox('add_to_album_page', 1, true) }}
             </li>
 
             <li>
