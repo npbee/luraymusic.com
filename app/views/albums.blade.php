@@ -33,15 +33,14 @@
 
             <h2>PRESS:</h2>
 
-            <blockquote class="album-quote">
-                <p>The Wilder is an exquisite collection of post-bluegrass Americana and chamber folk that is both delicately refined and, thanks to the prominence of Carey's rich banjo backing, unpretentiously rustic.</p>
-                <p class="source italic"><a href="http://www.directcurrentmusic.com/music-news-new-music/luray-the-wilder.html">Direct Current Music</a></p>
-            </blockquote>
-
-            <blockquote class="album-quote">
-                <p>Haunting, ephemeral, and just a little rustic...</p>
-                <p class="source italic"><a href="http://www.utne.com/utne-reader-music-sampler.aspx#axzz2Y1Xt33Gd">Utne Reader</a></p>
-            </blockquote>
+            @foreach($quotes as $quote)
+                @if($quote->add_to_album_page == 1)
+                    <blockquote class="album-quote">
+                        <p>{{ $quote->quote }}</p>
+                        <p class="source italic"><a href="{{ $quote->url }}">{{ $quote->source }}</a>
+                    </blockquote>
+                @endif
+            @endforeach
 
             <p>
                 <a href="{{ URL::route('press') }}">Full Press Page</a>

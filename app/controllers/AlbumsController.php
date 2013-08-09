@@ -9,7 +9,10 @@ class AlbumsController extends BaseController {
      */
     public function index()
     {
-        return View::make('albums')->with('bodyClass', 'albums');
+        $quotes = Quote::all();
+        return View::make('albums')
+            ->with('bodyClass', 'albums')
+            ->with('quotes', $quotes);
     }
 
     /**

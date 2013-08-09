@@ -4,6 +4,14 @@
 
 {{ Notification::showAll() }}
 
+     @if ($errors->any())
+        <div class="alert alert-error">
+            <h2>Trouble!</h2>
+            <ul>
+                {{ implode('', $errors->all('<li>:message</li>')) }}
+            </ul>
+        </div>
+    @endif
 
     <h1>Edit Tour Date:</h1>
 
@@ -67,12 +75,6 @@
 
     {{ Form::close() }}
 
-    @if ($errors->any())
-        <h2>Errors</h2>
-        <ul>
-            {{ implode('', $errors->all('<li>:message</li>')) }}
-        </ul>
-    @endif
 
 </section>
 

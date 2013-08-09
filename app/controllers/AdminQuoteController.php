@@ -76,7 +76,10 @@ class AdminQuoteController extends BaseController {
      */
     public function edit($id)
     {
-
+        $quote = Quote::find($id);
+        return View::make('admin.press.edit')
+            ->with('bodyClass','press--admin')
+            ->with('quote', $quote);
     }
 
     /**
@@ -87,7 +90,25 @@ class AdminQuoteController extends BaseController {
      */
     public function update($id)
     {
+        $input = Input::all();
+        $validation = new Services\Validators\QuoteValidator($input);
+        //$validation = Validator::make($input, ['date' => 'required']);
 
+        if ($validation -> passes()) {
+            $quote = Quote::find($id);
+            $quote->quote = Input::get('quote');
+            $quote->source = Input::get('source');
+            $quote->url = Input::get('url');
+            $quote->album = Input::get('album');
+            $quote->add_to_album_page = Input::get('add_to_album_page', false);
+            $quote->save();
+
+            Notification::success('The page was saved.');
+
+            return Redirect::route('admin.press.index');
+        }
+
+        return Redirect::back()->withInput()->withErrors($validation->errors);
 
 
     }
@@ -100,7 +121,10 @@ class AdminQuoteController extends BaseController {
      */
     public function destroy($id)
     {
+        $quote = Quote::find($id);
+        $quote->delete();
 
+        return Redirect::route('admin.press.index');
     }
 
 }

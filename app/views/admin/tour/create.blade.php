@@ -2,6 +2,15 @@
 
 @section('content')
 
+    @if ($errors->any())
+        <div class="alert alert-error">
+            <h2>Trouble!</h2>
+            <ul>
+                {{ implode('', $errors->all('<li>:message</li>')) }}
+            </ul>
+        </div>
+    @endif
+
     <h1>Add Tour Date:</h1>
 
     {{ Form::open(array('route' => 'admin.tour.store')) }}
@@ -60,13 +69,6 @@
         </ul>
 
     {{ Form::close() }}
-
-    @if ($errors->any())
-        <h2>Errors</h2>
-        <ul>
-            {{ implode('', $errors->all('<li>:message</li>')) }}
-        </ul>
-    @endif
 
 </section>
 

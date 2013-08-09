@@ -53,7 +53,8 @@
 
 .tour--admin .tour-nav--admin,
 .images--admin .images-nav--admin,
-.video--admin .video-nav--admin {
+.video--admin .video-nav--admin,
+.press--admin .press-nav--admin {
     color: $orange;
     background: $white;
 }
@@ -144,11 +145,11 @@
 .alert {
     padding: $base-spacing-unit/2;
     font-size: $base-font-size *1.2;
-    background: $green;
     margin-bottom: $base-spacing-unit/2;
 }
 
 .alert-success {
+    background: $green;
     color: green;
     &:before {
         speak: none;
@@ -160,6 +161,23 @@
         -webkit-font-smoothing: antialiased;
         font-family: 'icomoon';
         content: "\e007";
+        padding-right: 10px;
+    }
+}
+
+.alert-error {
+    background: $red;
+    color: red;
+    &:before {
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'icomoon';
+        content: "\e008";
         padding-right: 10px;
     }
 }

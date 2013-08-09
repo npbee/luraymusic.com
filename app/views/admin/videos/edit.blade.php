@@ -2,6 +2,15 @@
 
 @section('content')
 
+    @if ($errors->any())
+        <div class="alert alert-error">
+            <h2>Trouble!</h2>
+            <ul>
+                {{ implode('', $errors->all('<li>:message</li>')) }}
+            </ul>
+        </div>
+    @endif
+
     <h1>Add Video:</h1>
 
     {{ Form::model($video, array('method' => 'put', 'route' => array('admin.videos.update', $video->id ))) }}
@@ -26,13 +35,6 @@
         {{ Form::submit('Delete', array('class' => 'delete')) }}
 
     {{ Form::close() }}
-
-    @if ($errors->any())
-        <h2>Errors</h2>
-        <ul>
-            {{ implode('', $errors->all('<li>:message</li>')) }}
-        </ul>
-    @endif
 
 </section>
 

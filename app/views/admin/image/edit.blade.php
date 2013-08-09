@@ -2,6 +2,15 @@
 
 @section('content')
 
+     @if ($errors->any())
+        <div class="alert alert-error">
+            <h2>Trouble!</h2>
+            <ul>
+                {{ implode('', $errors->all('<li>:message</li>')) }}
+            </ul>
+        </div>
+    @endif
+
     <h1>Edit Image:</h1>
 
     {{ Form::model($pic, array('method' => 'put', 'route' => array('admin.image.update', $pic->id ))) }}

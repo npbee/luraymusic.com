@@ -5,7 +5,7 @@
     max-width: 900px;
 }
 
-.press blockquote {
+.press blockquote, .press--admin blockquote {
     border-bottom: 1px solid $grey;
     padding-bottom: $base-spacing-unit;
 }

@@ -65,7 +65,8 @@
 
 .tour--admin .tour-nav--admin,
 .images--admin .images-nav--admin,
-.video--admin .video-nav--admin {
+.video--admin .video-nav--admin,
+.press--admin .press-nav--admin {
   color: #dab08f;
   background: #eeeeee; }
 
@@ -130,10 +131,10 @@
 .alert {
   padding: 13.5px;
   font-size: 21.6px;
-  background: #d0d8d8;
   margin-bottom: 13.5px; }
 
 .alert-success {
+  background: #d0d8d8;
   color: green; }
   .alert-success:before {
     speak: none;
@@ -145,6 +146,21 @@
     -webkit-font-smoothing: antialiased;
     font-family: 'icomoon';
     content: "\e007";
+    padding-right: 10px; }
+
+.alert-error {
+  background: #ffaaaa;
+  color: red; }
+  .alert-error:before {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'icomoon';
+    content: "\e008";
     padding-right: 10px; }
 
 /****

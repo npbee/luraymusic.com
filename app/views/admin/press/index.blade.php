@@ -14,6 +14,7 @@
 <blockquote class="album-quote">
     <p>{{ $quote->quote }}</p>
     <p class="source italic"><a href="{{ $quote->url }}">{{ $quote->source }}</a></p>
+    <a href="{{ URL::route('admin.press.edit', $quote->id ) }}">Edit</a>
 </blockquote>
 @endforeach
 
