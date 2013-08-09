@@ -9,7 +9,10 @@ class PressController extends BaseController {
      */
     public function index()
     {
-        return View::make('press')->with('bodyClass', 'press');
+        $quotes = Quote::all();
+        return View::make('press')
+            ->with('bodyClass', 'press')
+            ->with('quotes', $quotes);
     }
 
     /**
