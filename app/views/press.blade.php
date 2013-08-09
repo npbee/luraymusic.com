@@ -7,7 +7,7 @@
     @foreach($quotes as $quote)
 
         <blockquote class="album-quote">
-            <p>{{ $quote->source }}</p>
+            <p>{{ $quote->quote }}</p>
             <p class="source italic"><a href="{{ $quote->url }}">{{ $quote->source }}</a></p>
         </blockquote>
 
