@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    $NO JS STYLES
+\*------------------------------------*/
+.no-js .nav-toggle:before {
+    font-family: 'Josefin Sans';
+    content: "MENU";
+    font-size: $base-font-size*2;
+    position: relative;
+    top:-3px;
+}
+
+.no-js .in-page-menu {
+    @extend .gamma;
+    //font-family: $brand-face;
+    list-style: none;
+    margin: 0;
+    text-transform: uppercase;
+    a {
+        display: block;
+        padding: $base-spacing-unit/2 0;
+        text-decoration: none;
+        border-top: 1px solid $grey;
+    }
+    li:last-child a {
+        border-bottom: 1px solid $grey;
+    }
+    @include breakpoint(medium) {
+
+    }
+}
+
+.no-js .tabs__content {
+    display: block;
+    opacity: 1;
+}

@@ -485,7 +485,7 @@ h2, .beta {
   font-size: 2.33333rem;
   line-height: 1.28571; }
 
-h3, .gamma {
+h3, .gamma, .no-js .in-page-menu {
   font-size: 36px;
   font-size: 2rem;
   line-height: 1.5; }
@@ -1072,7 +1072,7 @@ article {
 
 h1, .alpha,
 h2, .beta,
-h3, .gamma,
+h3, .gamma, .no-js .in-page-menu,
 h4, .delta,
 h5, .epsilon,
 h6, .zeta {
@@ -1518,6 +1518,32 @@ a {
   100% {
     left: 0;
     opacity: 1; } }
+
+/*------------------------------------*\
+    $NO JS STYLES
+\*------------------------------------*/
+.no-js .nav-toggle:before {
+  font-family: 'Josefin Sans';
+  content: "MENU";
+  font-size: 36px;
+  position: relative;
+  top: -3px; }
+
+.no-js .in-page-menu {
+  list-style: none;
+  margin: 0;
+  text-transform: uppercase; }
+  .no-js .in-page-menu a {
+    display: block;
+    padding: 13.5px 0;
+    text-decoration: none;
+    border-top: 1px solid #d9d9d9; }
+  .no-js .in-page-menu li:last-child a {
+    border-bottom: 1px solid #d9d9d9; }
+
+.no-js .tabs__content {
+  display: block;
+  opacity: 1; }
 
 /**
 * PAGE-SPECIFIC

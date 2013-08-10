@@ -23,6 +23,12 @@ Route::get('downloads/thewilder.zip', function() {
     return Response::download($file);
 });
 
+//Used for No-JS Navigation
+Route::get('menu', array('as' => 'menu', 'do' => function() {
+    return View::make('menu')
+        ->with('bodyClass', 'menu');
+}));
+
 
 Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
 Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'AuthController@getLogin'));

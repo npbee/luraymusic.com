@@ -3,7 +3,7 @@
     <div class='page-head__contents'>
         <a href="/" class="site-logo" id="site-logo">{{ HTML::image('assets/images/logo.svg') }}</a>
 
-        <a id="nav-toggle" class="nav-toggle nav-toggle--closed"><span class="hide">MENU</span></a>
+        <a id="nav-toggle" class="nav-toggle nav-toggle--closed" href="{{ URL::route('menu') }}"><span class="hide">MENU</span></a>
 
         <ul class="nav site-nav" id="nav">
             <li><a class="news-nav" href="http://news.luraymusic.com">News</a></li><!--
