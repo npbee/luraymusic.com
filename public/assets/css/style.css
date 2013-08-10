@@ -1090,7 +1090,7 @@ a {
 .footer {
   background: #d0d8d8;
   font-size: 0.9em;
-  height: 550px;
+  height: 425px;
   overflow: hidden;
   position: relative;
   width: 100%; }
@@ -1692,7 +1692,10 @@ a.sc-remote-link.playing {
 .sc-player .sc-controls {
   font-size: 3em;
   z-index: 5000;
-  float: left; }
+  float: left;
+  width: 60%;
+  position: relative;
+  left: -20px; }
   @media (min-width: 50em) {
     .sc-player .sc-controls {
       font-size: 1.7em; } }
@@ -1742,10 +1745,13 @@ a.sc-remote-link.playing {
   list-style: none;
   font-size: 1.2em;
   float: right;
-  font-family: LeagueGothic; }
+  width: 40%;
+  font-family: LeagueGothic;
+  margin-top: 12px; }
   @media (min-width: 50em) {
     .sc-player ol.sc-trackslist {
-      float: left; } }
+      float: left;
+      margin-top: 0; } }
 
 .sc-player ol.sc-trackslist li {
   position: absolute;

@@ -13,7 +13,7 @@
                 --><li><a class="beta" href="#credits">CREDITS</a></li>
             </ul>
         </nav>
-        <iframe width="100%" height="385" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F7979835&amp;color=dcb18f&amp;auto_play=false&amp;show_artwork=false"></iframe>
+        <iframe width="100%" height="387" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F7979835&amp;color=dcb18f&amp;auto_play=false&amp;show_artwork=false"></iframe>
 
     </div>
 
@@ -21,7 +21,7 @@
 
         <section id="info" class="tabs__content tab--active">
 
-            <h1>THE WILDER</h1>
+            <h1>THE WILDER (2013)</h1>
 
             <p>Luray is helmed by Washington, D.C.-based singer/songwriter Shannon Carey who creates banjo-inspired indie rock fused with classic country and folk on the debut The Wilder, available on August 27th. Recorded in Eau Claire, Wisconsin with her brother/producer Sean Carey (of S. Carey and Bon Iver), The Wilder became a family affair with the addition of brother Colin Carey (vibes, drums) and husband Gabriel Wisniewski (electric guitar).</p>
 
@@ -60,6 +60,8 @@
         </section>
 
         <section id="lyrics" class="tabs__content lyrics">
+
+            <h1>LYRICS</h1>
 
             <article>
                 <h2 class="gamma">The Wilder</h2>
@@ -318,6 +320,9 @@
         </section>
 
         <section id="credits" class="credits tabs__content">
+
+            <h1>Album Credits</h1>
+
             <article>
                 <p>Banjo, ukulele, vocals: Shannon Carey</p>
                 <p>Keyboard, percussion, vocals, vibes: Sean Carey</p>

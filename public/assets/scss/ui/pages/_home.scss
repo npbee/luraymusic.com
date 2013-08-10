@@ -241,6 +241,9 @@ a.sc-remote-link.playing{
     font-size: 3em;
     z-index: 5000;
     float: left;
+    width: 60%;
+    position: relative;
+    left: -20px;
     @include breakpoint(medium) {
       font-size: 1.7em;
     }
@@ -306,9 +309,12 @@ a.sc-remote-link.playing{
     list-style: none;
     font-size: 1.2em;
     float: right;
+    width: 40%;
     font-family: $brand-face;
+    margin-top: 12px;
     @include breakpoint(medium) {
         float: left;
+        margin-top: 0;
     }
 }
 
