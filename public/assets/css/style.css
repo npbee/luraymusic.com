@@ -1724,7 +1724,8 @@ a.sc-remote-link.playing {
   left: -20px; }
   @media (min-width: 50em) {
     .sc-player .sc-controls {
-      font-size: 1.7em; } }
+      font-size: 1.7em;
+      width: auto; } }
 
 .sc-player .sc-controls a {
   float: left; }
