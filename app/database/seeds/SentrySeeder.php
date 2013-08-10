@@ -6,9 +6,6 @@ class SentrySeeder extends Seeder {
 
     public function run()
     {
-        DB::table('users')->delete();
-        DB::table('groups')->delete();
-        DB::table('users_groups')->delete();
 
         Sentry::getUserProvider()->create(array(
             'email'       => 'nicholaspball@gmail.com',
