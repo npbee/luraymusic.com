@@ -246,6 +246,7 @@ a.sc-remote-link.playing{
     left: -20px;
     @include breakpoint(medium) {
       font-size: 1.7em;
+      width: auto;
     }
 }
 
