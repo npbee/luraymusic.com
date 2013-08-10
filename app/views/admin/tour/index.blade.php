@@ -12,8 +12,8 @@
 <table class="table">
     <thead>
         <th>DATE</th>
-        <th>VENUE</th>
         <th>CITY</th>
+        <th>VENUE</th>
         <th>ADMIN</th>
     </thead>
     <tbody>
