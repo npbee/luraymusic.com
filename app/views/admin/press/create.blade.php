@@ -46,6 +46,12 @@
             </li>
 
             <li>
+                {{ Form::label('is_featured', 'FEATURE THIS QUOTE?', array('class' => 'beta')) }}
+                <span class="note">If you select this box, the quote will be 'featured' and will appear at the very top of the list of press quotes.</span>
+                {{ Form::checkbox('is_featured', 1) }}
+            </li>
+
+            <li>
                 {{ Form::submit('Save', array('class' => 'button save')) }}
              <a class="cancel" href="{{ URL::route('admin.tour.index') }}">Cancel</a>
             </li>

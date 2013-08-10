@@ -770,16 +770,16 @@ blockquote {
       float: left;
       font-family: LeagueGothic;
       font-size: 26px;
-      line-height: 1; }
+      line-height: 1.2; }
       @media (min-width: 50em) {
         .table td:before {
           display: none; } }
     .table td:first-child:before {
       content: "DATE"; }
     .table td:nth-child(2):before {
-      content: "VENUE"; }
-    .table td:nth-child(3):before {
       content: "CITY"; }
+    .table td:nth-child(3):before {
+      content: "VENUE"; }
     @media (min-width: 50em) {
       .table td {
         display: table-cell;

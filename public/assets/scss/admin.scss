@@ -204,3 +204,37 @@
     display: block;
     margin: $base-spacing-unit/2 0;
 }
+
+
+
+
+/****
+* Checkboxes
+****/
+input[type=checkbox] {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid $grey;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: $base-spacing-unit;
+    border-radius: $brand-round;
+    display: block;
+    position: relative;
+    &:active, &:checked:active {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+    }
+    &:checked {
+        //background-color: #e9ecee;
+        border: 1px solid #adb8c0;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+        color: $black;
+    }
+    &:checked:after {
+        content: '\2714';
+        font-size: $base-font-size*3;
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        color: $black;
+    }
+}

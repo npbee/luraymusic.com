@@ -6,8 +6,8 @@
 <table class="table">
     <thead>
         <th>DATE</th>
-        <th>VENUE</th>
         <th>CITY</th>
+        <th>VENUE</th>
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)

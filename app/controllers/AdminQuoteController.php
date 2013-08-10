@@ -46,6 +46,7 @@ class AdminQuoteController extends BaseController {
             $quote->url = Input::get('url');
             $quote->album = Input::get('album');
             $quote->add_to_album_page = Input::get('add_to_album_page', false);
+            $quote->is_featured = Input::get('is_featured', false);
             $quote->save();
 
             Notification::success('The page was saved.');
@@ -101,6 +102,7 @@ class AdminQuoteController extends BaseController {
             $quote->url = Input::get('url');
             $quote->album = Input::get('album');
             $quote->add_to_album_page = Input::get('add_to_album_page', false);
+            $quote->is_featured = Input::get('is_featured', false);
             $quote->save();
 
             Notification::success('The page was saved.');
@@ -123,6 +125,8 @@ class AdminQuoteController extends BaseController {
     {
         $quote = Quote::find($id);
         $quote->delete();
+
+        Notification::success('The record was deleted.');
 
         return Redirect::route('admin.press.index');
     }

@@ -3,8 +3,8 @@
 \*------------------------------------*/
 $column-count: 3;
 $column1-header: "DATE";
-$column2-header: "VENUE";
-$column3-header: "CITY";
+$column2-header: "CITY";
+$column3-header: "VENUE";
 
 .table {
     width: 100%;
@@ -31,7 +31,7 @@ $column3-header: "CITY";
             float: left;
             font-family: $brand-face;
             font-size: $h6-size;
-            line-height: 1;
+            line-height: 1.2;
             @include breakpoint(medium) {
                 display: none;
             }

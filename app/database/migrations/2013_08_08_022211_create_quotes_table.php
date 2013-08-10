@@ -20,6 +20,7 @@ class CreateQuotesTable extends Migration {
             $table->string('album');
             $table->integer('user_id');
             $table->boolean('add_to_album_page');
+            $table->boolean('is_featured');
             $table->timestamps();
         });
     }
