@@ -39,7 +39,7 @@ class AdminImageController extends BaseController {
         $original_image = Input::file('image');
         $title = Input::get('title');
         $full_path = Image::upload($original_image, $title);
-        $thumb_path = Image::thumb($full_path, 400);
+        $thumb_path = Image::thumb($full_path, 600);
 
         $input = Input::all();
         $validation = new Services\Validators\ImageValidator($input);
@@ -117,6 +117,7 @@ class AdminImageController extends BaseController {
         $pic = Pic::find($id);
         $pic->delete();
 
+        Notification::success('The photo was deleted.');
         return Redirect::route('admin.image.index');
     }
 

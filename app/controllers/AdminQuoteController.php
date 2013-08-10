@@ -126,8 +126,7 @@ class AdminQuoteController extends BaseController {
         $quote = Quote::find($id);
         $quote->delete();
 
-        Notification::success('The record was deleted.');
-
+        Notification::success('The quote was deleted.');
         return Redirect::route('admin.press.index');
     }
 

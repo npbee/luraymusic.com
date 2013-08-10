@@ -123,6 +123,7 @@ class AdminTourController extends BaseController {
         $tourdate = Tourdate::find($id);
         $tourdate->delete();
 
+        Notification::success('The tour date was deleted.');
         return Redirect::route('admin.tour.index');
     }
 
