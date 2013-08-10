@@ -38,7 +38,7 @@
             </li>
 
             <li>
-                {{ Form::label('title', 'TITLE', array('class' => 'beta')) }}
+                {{ Form::label('title', 'CAPTION', array('class' => 'beta')) }}
                 {{ Form::text('title', null, array('class' => 'text-input')) }}
             </li>
 

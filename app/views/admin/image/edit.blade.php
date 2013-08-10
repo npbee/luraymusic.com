@@ -44,7 +44,7 @@
 
     {{ Form::close() }}
 
-    <p><span data-icon="&#xe006;">NOTE:</span>  You can only update the author or title for pictures, you can't change the picture that was uploaded.  If you uploaded the wrong picture, just delete it and start over with a new image.</p>
+    <p><span data-icon="&#xe006;">NOTE:</span>  You can only update the author or caption for pictures, you can't change the picture that was uploaded.  If you uploaded the wrong picture, just delete it and start over with a new image.</p>
 
 </section>
 
