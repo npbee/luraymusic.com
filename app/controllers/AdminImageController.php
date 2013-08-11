@@ -119,6 +119,25 @@ class AdminImageController extends BaseController {
     public function sortOrderUpdate()
     {
 
+        $ids = Input::get('id');
+        $sort_orders = Input::get('sort_order');
+        $pics = Pic::find($ids);
+
+        foreach($ids as $id) {
+            $pic = Pic::find($id);
+            $pic->sort_order = Input::get('sort_order_'.$id);
+            $pic->save();
+        }
+
+        //return Response::json($pics);
+
+        Notification::success('The page was saved.');
+
+        return Redirect::route('admin.image.index');
+
+
+
+
 
 
 

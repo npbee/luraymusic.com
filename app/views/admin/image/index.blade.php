@@ -22,9 +22,9 @@
                         <span class="edit">Edit</span>
                 </a>
                 <span>
-                     {{ Form::label('sort_order[]', 'Sort Order:') }}
-                     {{ Form::text('sort_order[]', $pic->sort_order) }}
-                     {{ Form::hidden('id', $pic->id) }}
+                     {{ Form::label('sort_order_'.$pic->id, 'Sort Order:') }}
+                     {{ Form::text('sort_order_'.$pic->id, $pic->sort_order) }}
+                     {{ Form::hidden('id[]', $pic->id) }}
                 </span>
             </div>
         @endforeach
