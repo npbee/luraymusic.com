@@ -111,6 +111,20 @@ class AdminImageController extends BaseController {
     }
 
     /**
+     * Update the sort order of the images
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function sortOrderUpdate()
+    {
+
+
+
+
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id

@@ -24,8 +24,8 @@
                     </div>
                     <div>
                         <span class="btn btn-file">
-                            <span class="fileupload-new small-button">Select image</span>
-                            <span class="fileupload-exists small-button">Change</span>
+                            <span class="fileupload-new button--small">Select image</span>
+                            <span class="fileupload-exists button--small">Change</span>
                             {{ Form::file('image') }}
                         </span>
                     </div>

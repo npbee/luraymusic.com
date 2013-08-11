@@ -38,12 +38,15 @@ Route::post('admin/reset', array('as' => 'admin.reset.post', 'uses' => 'AuthCont
 Route::get('admin/confirm/{resetCode}', array('as' => 'admin.confirm', 'uses' => 'AuthController@getConfirm'));
 Route::post('admin/confirm/{resetCode}', array('as' =>'admin.confirm.post', 'uses' => 'AuthController@postConfirm'));
 
+
+
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::any('/', array('as' => 'admin', 'do' => function() {
         return View::make('admin.index')
             -> with('bodyClass', 'admin');
     }));
     Route::resource('tour', 'AdminTourController');
+    Route::post('image/sort', array('as' => 'admin.image.sort', 'uses' => 'AdminImageController@sortOrderUpdate'));
     Route::resource('image', 'AdminImageController');
     Route::resource('videos', 'AdminVideosController');
     Route::resource('press', 'AdminQuoteController');
