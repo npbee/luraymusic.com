@@ -11,7 +11,7 @@ class AdminImageController extends BaseController {
      */
     public function index()
     {
-        $pics = Pic::all();
+        $pics = Pic::orderBy('sort_order')->get();
         return View::make('admin.image.index')
             ->with('bodyClass', 'images--admin')
             ->with('pics', $pics);
@@ -24,8 +24,11 @@ class AdminImageController extends BaseController {
      */
     public function create()
     {
+        $pic_count = Pic::count();
+        $sort_order = $pic_count + 1;
         return View::make('admin.image.create')
-            ->with('bodyClass', 'images--admin');
+            ->with('bodyClass', 'images--admin')
+            ->with('sort_order', $sort_order);
     }
 
     /**
@@ -50,6 +53,7 @@ class AdminImageController extends BaseController {
             $pic->thumb_path = $thumb_path;
             $pic->author = Input::get('author');
             $pic->title = $title;
+            $pic->sort_order = Input::get('sort_order');
             $pic->save();
 
             Notification::success('The page was saved.');

@@ -19,6 +19,7 @@ class CreatePicsTable extends Migration {
             $table->string('thumb_path');
             $table->string('author');
             $table->string('title');
+            $table->integer('sort_order');
             $table->timestamps();
         });
     }

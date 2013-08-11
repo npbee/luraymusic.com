@@ -9,7 +9,7 @@ class MediaController extends BaseController {
      */
     public function index()
     {
-        $images = Pic::orderBy('created_at', 'desc')->get();
+        $images = Pic::orderBy('sort_order')->get();
         $videos = Video::all();
         return View::make('media')
             ->with('bodyClass', 'media')
