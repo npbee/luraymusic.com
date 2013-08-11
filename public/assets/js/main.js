@@ -4,6 +4,7 @@ $(function() {
     $('.nav-toggle').on('click', function() {
         $("#nav").toggleClass('nav--open');
         $(this).toggleClass("nav-toggle--open");
+        return false;
     });
 
 
@@ -88,23 +89,6 @@ $(function() {
             });
         }
     });
-
-
-
-
-
-
-
-    $('.date-select').datepicker({
-        format: "yyyy-mm-dd"
-    });
-
-    $('form[data-confirm]').submit(function() {
-        if ( !confirm($(this).attr('data-confirm'))) {
-            return false;
-        }
-    });
-
 
 
 });

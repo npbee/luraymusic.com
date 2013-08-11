@@ -28,6 +28,7 @@
     {{ HTML::script('assets/js/vendor/datepicker.js') }}
     {{ HTML::script('assets/js/vendor/bootstrap-fileupload.min.js') }}
     {{ HTML::script('assets/js/main.js') }}
+    {{ HTML::script('assets/js/main-admin.js') }}
 
     </body>
 </html>

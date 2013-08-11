@@ -657,6 +657,9 @@ blockquote {
     .image-grid .img {
       width: 24%;
       margin: 0 1% 1% 0; } }
+.image-grid ul {
+  list-style: none;
+  margin: 0; }
 
 /*------------------------------------*\
     $MEDIA

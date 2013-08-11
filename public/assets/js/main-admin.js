@@ -1,0 +1,138 @@
+$(function() {
+
+    $('.date-select').datepicker({
+        format: "yyyy-mm-dd"
+    });
+
+    $('form[data-confirm]').submit(function() {
+        if ( !confirm($(this).attr('data-confirm'))) {
+            return false;
+        }
+    });
+
+    //Manual Sorting of images
+    $('.move-up').on('click', function() {
+        var     currentEl = $(this).closest('.draggable'),
+                   prevEl = currentEl.prev(),
+                   currentSortOrderEl = $(this).parent().find('.sort-order'),
+                   currentSortOrderVal = parseInt(currentSortOrderEl.val()),
+                   prevSortOrderEl = $(this).parent().prev().find('.sort-order'),
+                   prevSortOrderVal = parseInt(prevSortOrderEl.val());
+
+        currentEl.insertBefore(prevEl).fadeIn();
+
+        if (currentSortOrderVal != 1) {
+            currentSortOrderEl.val(currentSortOrderVal - 1);
+        }
+        prevSortOrderEl.val(prevSortOrderVal + 1);
+    });
+
+    $('.move-down').on('click', function() {
+        var     currentEl = $(this).closest('.draggable'),
+                   nextEl = currentEl.next(),
+                   currentSortOrderEl = $(this).parent().find('.sort-order'),
+                   currentSortOrderVal = parseInt(currentSortOrderEl.val()),
+                   nextSortOrderEl = $(this).parent().next().find('.sort-order'),
+                   nextSortOrderVal = parseInt(nextSortOrderEl.val());
+
+        currentEl.insertAfter(nextEl).fadeIn(300);
+
+        if (currentEl.is(':last-child') ) {
+            currentSortOrderEl.val(currentSortOrderVal);
+        } else {
+            currentSortOrderEl.val(currentSortOrderVal + 1);
+        }
+        nextSortOrderEl.val(nextSortOrderVal - 1);
+    });
+
+});
+
+
+//Handling Draggable Sorting
+var dragSrcEl = null;
+
+function handleDragStart(e) {
+    this.classList.add('dragging');
+
+    dragSrcEl = this;
+
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragOver(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+
+    e.dataTransfer.dropEffect = 'move';
+
+    return false;
+}
+
+function handleDragEnter(e) {
+    this.classList.add('drag-over');
+}
+
+function handleDragLeave(e) {
+    this.classList.remove('drag-over');
+}
+
+function handleDrop(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    }
+
+    if (dragSrcEl != this) {
+        // Set the source column's HTML to the HTML of the column we dropped on.
+        dragSrcEl.innerHTML = this.innerHTML;
+        this.innerHTML = e.dataTransfer.getData('text/html');
+
+        [].forEach.call(cols, function (col) {
+
+            ///turn off classes
+            col.classList.remove('drag-over');
+            col.classList.remove('dragging');
+
+            //get new index of each list item and change value
+            var indexValue = getIndex(col);
+            var sortOrderVal = col.getElementsByClassName('sort-order')[0];
+            sortOrderVal.value = indexValue;
+          });
+
+        //Get index of current item
+        function getIndex(sender)
+        {
+            var aElements = sender.parentNode.parentNode.getElementsByTagName("li");
+            var aElementsLength = aElements.length;
+            var index;
+            for (var i = 0; i < aElementsLength; i++)
+            {
+                if (aElements[i] == sender) //this condition is never true
+                {
+                    index = i;
+                    return index + 1;
+                }
+            }
+        }
+
+      }
+    return false;
+}
+
+function handleDragEnd(e) {
+    [].forEach.call(cols, function (col) {
+        col.classList.remove('drag-over');
+        col.classList.remove('dragging');
+      });
+}
+
+var cols = document.querySelectorAll('.draggable');
+[].forEach.call(cols, function(col) {
+    col.addEventListener('dragstart', handleDragStart, false);
+    col.addEventListener('dragenter', handleDragEnter, false);
+    col.addEventListener('dragover', handleDragOver, false);
+    col.addEventListener('dragleave', handleDragLeave, false);
+    col.addEventListener('dragend', handleDragEnd, false);
+    col.addEventListener('drop', handleDrop, false);
+});
