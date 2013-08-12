@@ -219,7 +219,7 @@ input[type=checkbox] {
 .move {
   cursor: pointer;
   font-size: 0.9em;
-  padding-top: 27px;
+  padding: 13.5px 0;
   -webkit-transition: opacity 200ms;
   -moz-transition: opacity 200ms;
   transition: opacity 200ms; }
