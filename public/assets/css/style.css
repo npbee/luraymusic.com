@@ -1524,6 +1524,16 @@ a {
     opacity: 1; } }
 
 /*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+.sorted {
+  list-style: none;
+  margin: 0; }
+
+.draggable:last-child .move-down {
+  display: none; }
+
+/*------------------------------------*\
     $NO JS STYLES
 \*------------------------------------*/
 .no-js .nav-toggle:before {

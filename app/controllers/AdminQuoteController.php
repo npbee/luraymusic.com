@@ -11,7 +11,7 @@ class AdminQuoteController extends BaseController {
      */
     public function index()
     {
-        $quotes = Quote::all();
+        $quotes = Quote::orderBy('sort_order')->get();
         return View::make('admin.press.index')
             ->with('bodyClass', 'press--admin')
             ->with('quotes', $quotes);
@@ -24,8 +24,11 @@ class AdminQuoteController extends BaseController {
      */
     public function create()
     {
+        $quote_count = Quote::count();
+        $sort_order = $quote_count + 1;
         return View::make('admin.press.create')
-            ->with('bodyClass', 'press--admin');
+            ->with('bodyClass', 'press--admin')
+            ->with('sort_order', $sort_order);
     }
 
     /**
@@ -47,6 +50,7 @@ class AdminQuoteController extends BaseController {
             $quote->album = Input::get('album');
             $quote->add_to_album_page = Input::get('add_to_album_page', false);
             $quote->is_featured = Input::get('is_featured', false);
+            $quote->sort_order = Input::get('sort_order');
             $quote->save();
 
             Notification::success('The page was saved.');
@@ -112,6 +116,31 @@ class AdminQuoteController extends BaseController {
 
         return Redirect::back()->withInput()->withErrors($validation->errors);
 
+
+    }
+
+    /**
+     * Update the sort order of the images
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function sortOrderUpdate()
+    {
+
+        $ids = Input::get('id');
+        $sort_orders = Input::get('sort_order');
+        $quotes = Quote::find($ids);
+
+        foreach($ids as $id) {
+            $quote = Quote::find($id);
+            $quote->sort_order = Input::get('sort_order_'.$id);
+            $quote->save();
+        }
+
+        Notification::success('The page was saved.');
+
+        return Redirect::route('admin.press.index');
 
     }
 

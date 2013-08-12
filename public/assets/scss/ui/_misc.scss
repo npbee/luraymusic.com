@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+.sorted {
+    list-style: none;
+    margin: 0;
+}
+
+.draggable:last-child .move-down {
+    display: none;
+}

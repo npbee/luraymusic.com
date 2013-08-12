@@ -9,7 +9,7 @@ class PressController extends BaseController {
      */
     public function index()
     {
-        $quotes = Quote::all();
+        $quotes = Quote::orderBy('sort_order')->get();
         return View::make('press')
             ->with('bodyClass', 'press')
             ->with('quotes', $quotes);

@@ -266,6 +266,7 @@ input[type=checkbox] {
         opacity: 0.7;
     }
 }
+
 .move-up {
     width: 50%;
     float: left;
@@ -273,4 +274,17 @@ input[type=checkbox] {
 
 .move-down {
     float: right;
+}
+
+
+.inactive, .active {
+    @include transition(opacity 200ms);
+}
+
+.inactive {
+    opacity: 0.2
+}
+
+.active {
+    opacity: 1;
 }

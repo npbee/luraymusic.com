@@ -232,3 +232,14 @@ input[type=checkbox] {
 
 .move-down {
   float: right; }
+
+.inactive, .active {
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  transition: opacity 200ms; }
+
+.inactive {
+  opacity: 0.2; }
+
+.active {
+  opacity: 1; }

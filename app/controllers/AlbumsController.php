@@ -9,7 +9,7 @@ class AlbumsController extends BaseController {
      */
     public function index()
     {
-        $quotes = Quote::all();
+        $quotes = Quote::orderBy('sort_order')->get();
         return View::make('albums')
             ->with('bodyClass', 'albums')
             ->with('quotes', $quotes);

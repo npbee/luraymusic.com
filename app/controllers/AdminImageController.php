@@ -129,17 +129,9 @@ class AdminImageController extends BaseController {
             $pic->save();
         }
 
-        //return Response::json($pics);
-
         Notification::success('The page was saved.');
 
         return Redirect::route('admin.image.index');
-
-
-
-
-
-
 
     }
 

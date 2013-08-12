@@ -14,9 +14,9 @@ $(function() {
     $('.move-up').on('click', function() {
         var     currentEl = $(this).closest('.draggable'),
                    prevEl = currentEl.prev(),
-                   currentSortOrderEl = $(this).parent().find('.sort-order'),
+                   currentSortOrderEl = currentEl.find('.sort-order'),
                    currentSortOrderVal = parseInt(currentSortOrderEl.val()),
-                   prevSortOrderEl = $(this).parent().prev().find('.sort-order'),
+                   prevSortOrderEl = currentEl.prev().find('.sort-order'),
                    prevSortOrderVal = parseInt(prevSortOrderEl.val());
 
         currentEl.insertBefore(prevEl).fadeIn();
@@ -25,24 +25,24 @@ $(function() {
             currentSortOrderEl.val(currentSortOrderVal - 1);
         }
         prevSortOrderEl.val(prevSortOrderVal + 1);
+
+        $('.button').removeClass('inactive').addClass('active');
     });
 
     $('.move-down').on('click', function() {
         var     currentEl = $(this).closest('.draggable'),
                    nextEl = currentEl.next(),
-                   currentSortOrderEl = $(this).parent().find('.sort-order'),
+                   currentSortOrderEl = currentEl.find('.sort-order'),
                    currentSortOrderVal = parseInt(currentSortOrderEl.val()),
-                   nextSortOrderEl = $(this).parent().next().find('.sort-order'),
+                   nextSortOrderEl = currentEl.next().find('.sort-order'),
                    nextSortOrderVal = parseInt(nextSortOrderEl.val());
 
         currentEl.insertAfter(nextEl).fadeIn(300);
 
-        if (currentEl.is(':last-child') ) {
-            currentSortOrderEl.val(currentSortOrderVal);
-        } else {
-            currentSortOrderEl.val(currentSortOrderVal + 1);
-        }
+        currentSortOrderEl.val(currentSortOrderVal + 1);
         nextSortOrderEl.val(nextSortOrderVal - 1);
+
+        $('.button').removeClass('inactive').addClass('active');
     });
 
 });
@@ -53,6 +53,7 @@ var dragSrcEl = null;
 
 function handleDragStart(e) {
     this.classList.add('dragging');
+
 
     dragSrcEl = this;
 
@@ -116,7 +117,11 @@ function handleDrop(e) {
             }
         }
 
+        button.classList.remove('inactive');
+        button.classList.add('active');
+
       }
+
     return false;
 }
 
@@ -127,6 +132,7 @@ function handleDragEnd(e) {
       });
 }
 
+var button = document.getElementById('submit');
 var cols = document.querySelectorAll('.draggable');
 [].forEach.call(cols, function(col) {
     col.addEventListener('dragstart', handleDragStart, false);

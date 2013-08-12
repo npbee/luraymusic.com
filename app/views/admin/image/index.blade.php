@@ -36,7 +36,7 @@
             @endforeach
         </ul>
 
-    {{ Form::submit('Save Sorting Order', array('class' => 'button save')) }}
+    {{ Form::submit('Save Sorting Order', array('class' => 'button save inactive', 'id' => 'submit')) }}
 
     {{ Form::close() }}
 
