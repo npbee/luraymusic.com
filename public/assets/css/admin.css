@@ -112,10 +112,11 @@
 .edit {
   display: block;
   float: left;
-  padding: 13.5px 0; }
+  padding: 13.5px 0 0 0; }
   @media (min-width: 50em) {
     .edit {
-      min-width: 50%; } }
+      min-width: 50%;
+      text-align: left; } }
 
 /****
 * Login screen

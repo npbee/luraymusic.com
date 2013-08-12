@@ -114,9 +114,10 @@
 .edit {
     display: block;
     float: left;
-    padding: $base-spacing-unit/2 0;
+    padding: $base-spacing-unit/2 0 0 0;
     @include breakpoint(medium) {
         min-width: 50%;
+        text-align: left;
     }
 }
 
