@@ -219,7 +219,7 @@ input[type=checkbox] {
 .move {
   cursor: pointer;
   font-size: 0.9em;
-  padding: 13.5px 0;
+  padding-top: 27px;
   -webkit-transition: opacity 200ms;
   -moz-transition: opacity 200ms;
   transition: opacity 200ms; }
@@ -243,3 +243,8 @@ input[type=checkbox] {
 
 .active {
   opacity: 1; }
+
+.admin blockquote:after {
+  content: "";
+  display: table;
+  clear: both; }
