@@ -111,6 +111,15 @@
     }
 }
 
+.edit {
+    display: block;
+    float: left;
+    padding: $base-spacing-unit/2 0;
+    @include breakpoint(medium) {
+        min-width: 50%;
+    }
+}
+
 
 
 
@@ -245,8 +254,6 @@ input[type=checkbox] {
 /****
 * Image sorting
 ****/
-
-
 .dragging {
     opacity: 0.5;
     @include transform(scale(0.8));
@@ -291,9 +298,15 @@ input[type=checkbox] {
 
 
 .admin blockquote {
+    clear: both;
     &:after {
         content: "";
         display: table;
         clear: both;
     }
+}
+
+.sort {
+    float: right;
+    width:300px;
 }

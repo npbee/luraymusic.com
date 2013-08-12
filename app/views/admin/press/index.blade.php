@@ -14,12 +14,15 @@
     <ul class="sorted">
         @foreach($quotes as $quote)
             <li draggable="true" class="draggable">
-                <a href="{{ URL::route('admin.press.edit', $quote->id ) }}">Edit</a>
+                <a class="edit" href="{{ URL::route('admin.press.edit', $quote->id ) }}">Edit</a>
+                <div class="sort">
+                    <span class="move move-up">&uarr; Move up</span>
+                    <span class="move move-down">&darr; Move down</span>
+                </div>
                 <blockquote class="album-quote">
                     <p>{{ $quote->quote }}</p>
                     <p class="source italic"><a href="{{ $quote->url }}">{{ $quote->source }}</a></p>
-                    <span class="move move-up">&uarr; Move up</span>
-                    <span class="move move-down">Move down &darr;</span>
+
                 </blockquote>
 
                  {{ Form::hidden('sort_order_'.$quote->id, $quote->sort_order, array('class' => 'sort-order')) }}

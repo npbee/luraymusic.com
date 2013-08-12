@@ -109,6 +109,14 @@
     .delete {
       text-align: left; } }
 
+.edit {
+  display: block;
+  float: left;
+  padding: 13.5px 0; }
+  @media (min-width: 50em) {
+    .edit {
+      min-width: 50%; } }
+
 /****
 * Login screen
 ****/
@@ -244,7 +252,13 @@ input[type=checkbox] {
 .active {
   opacity: 1; }
 
-.admin blockquote:after {
-  content: "";
-  display: table;
+.admin blockquote {
   clear: both; }
+  .admin blockquote:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.sort {
+  float: right;
+  width: 300px; }
