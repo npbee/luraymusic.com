@@ -10,3 +10,27 @@
 .lyrics p, .credits p {
     margin: 5px 0;
 }
+
+.purchase {
+    list-style: none;
+    margin: 0;
+    li {
+        padding-right: $base-spacing-unit;
+        @include breakpoint(medium) {
+            display: inline-block;
+        }
+    }
+    a {
+        display: block;
+        padding: $base-spacing-unit/2 0;
+    }
+    img {
+        max-width: 70%;
+        @include breakpoint(medium) {
+            max-width: 110px;
+        }
+    }
+    .itunes img {
+        max-width: 100%;
+    }
+}

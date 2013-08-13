@@ -10,6 +10,13 @@
         <th>VENUE</th>
     </thead>
     <tbody>
+        @if ($tourdate_count == 0)
+            <tr>
+                <td></td>
+                <td>There are no upcoming tour dates.</td>
+                <td></td>
+            </tr>
+        @endif
         @foreach($tourdates as $tourdate)
             @if($tourdate -> date > date('Y-m-d H:m:s'))
                     <tr @if ($tourdate -> review_text) class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif data-info="http://google.com">

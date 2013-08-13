@@ -1,7 +1,10 @@
 $(function() {
 
     $('.date-select').datepicker({
-        format: "yyyy-mm-dd"
+        format: "yyyy-mm-dd",
+        autoclose: true
+    }).on('changeDate', function(){
+        $('.datepicker').hide();
     });
 
     $('form[data-confirm]').submit(function() {
@@ -120,6 +123,8 @@ function handleDrop(e) {
         button.classList.remove('inactive');
         button.classList.add('active');
 
+        e.preventDefault();
+
       }
 
     return false;
@@ -130,6 +135,7 @@ function handleDragEnd(e) {
         col.classList.remove('drag-over');
         col.classList.remove('dragging');
       });
+    return false;
 }
 
 var button = document.getElementById('submit');

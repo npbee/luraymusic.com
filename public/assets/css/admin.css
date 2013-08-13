@@ -95,6 +95,9 @@
       clear: both;
       padding-left: 0; } }
 
+.save {
+  clear: both; }
+
 .delete {
   color: red;
   background: none;
@@ -115,22 +118,13 @@
   padding: 13.5px 0 0 0; }
   @media (min-width: 50em) {
     .edit {
+      max-width: 100%;
       min-width: 50%;
       text-align: left; } }
 
 /****
 * Login screen
 ****/
-.admin--login .page-head {
-  height: 200px; }
-.admin--login .site-logo {
-  float: none;
-  display: block;
-  text-align: center; }
-  .admin--login .site-logo img {
-    float: none;
-    display: block;
-    margin: 0 auto; }
 .admin--login .nav-toggle--closed:before, .admin--login .nav-toggle--open:before {
   content: ""; }
 

@@ -31,7 +31,7 @@ h6,.zeta{
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-%giga{
+%giga, .giga{
     @include font-size($giga-size);
 }
 %mega{

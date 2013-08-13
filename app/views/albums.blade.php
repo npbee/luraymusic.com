@@ -8,9 +8,9 @@
         <img src="assets/images/album/the-wilder/cover-thumb.jpg">
         <nav class="tab-nav">
             <ul>
-                <li><a class="beta tab-nav--active" href="#info">INFO</a></li><!--
-                --><li><a class="beta" href="#lyrics">LYRICS</a></li><!--
-                --><li><a class="beta" href="#credits">CREDITS</a></li>
+                <li><a class="gamma tab-nav--active" href="#info">INFO</a></li><!--
+                --><li><a class="gamma" href="#lyrics">LYRICS</a></li><!--
+                --><li><a class="gamma" href="#credits">CREDITS</a></li>
             </ul>
         </nav>
         <noscript>Please enable javascript to hear Luray tracks</noscript>
@@ -58,6 +58,12 @@
             </p>
 
             <h2>PURCHASE:</h2>
+
+            <ul class="purchase">
+                <li><a class="bigcartel" href="#">{{ HTML::image('assets/images/logos/bigcartel.png', 'bigcartel logo')}}</a></li>
+                <li><a class="amazon" href="#">{{ HTML::image('assets/images/logos/amazon.png', 'amazon logo')}}</a></li>
+                <li><a class="itunes" href="#">{{ HTML::image('assets/images/logos/itunes.png', 'itunes logo')}}</a></li>
+            </ul>
 
         </section>
 

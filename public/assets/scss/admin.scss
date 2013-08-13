@@ -96,6 +96,10 @@
     }
 }
 
+.save {
+    clear: both;
+}
+
 .delete {
     color: red;
     background: none;
@@ -116,6 +120,7 @@
     float: left;
     padding: $base-spacing-unit/2 0 0 0;
     @include breakpoint(medium) {
+        max-width: 100%;
         min-width: 50%;
         text-align: left;
     }
@@ -128,19 +133,6 @@
 * Login screen
 ****/
 .admin--login {
-    .page-head {
-        height: 200px;
-    }
-    .site-logo {
-        float: none;
-        display: block;
-        text-align: center;
-        img {
-            float: none;
-            display: block;
-            margin: 0 auto;
-        }
-    }
     .nav-toggle--closed:before, .nav-toggle--open:before {
         content: "";
     }

@@ -512,7 +512,7 @@ h6, .zeta {
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-.site-logo {
+.site-logo, .giga {
   font-size: 96px;
   font-size: 5.33333rem;
   line-height: 1.125; }
@@ -851,6 +851,33 @@ blockquote {
 /**
 * UI
 */
+/*------------------------------------*\
+    $404
+\*------------------------------------*/
+.missing {
+  overflow: hidden; }
+
+.micro {
+  font-size: 12px; }
+
+.center-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  text-align: center; }
+  .center-container h1, .center-container h2, .center-container p {
+    margin: 0; }
+
+.absolute-center {
+  width: 100%;
+  height: 60%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
 /* ==========================================================================
    $PAGE
    ========================================================================== */
@@ -1855,6 +1882,25 @@ a.sc-remote-link.playing {
 
 .lyrics p, .credits p {
   margin: 5px 0; }
+
+.purchase {
+  list-style: none;
+  margin: 0; }
+  .purchase li {
+    padding-right: 27px; }
+    @media (min-width: 50em) {
+      .purchase li {
+        display: inline-block; } }
+  .purchase a {
+    display: block;
+    padding: 13.5px 0; }
+  .purchase img {
+    max-width: 70%; }
+    @media (min-width: 50em) {
+      .purchase img {
+        max-width: 110px; } }
+  .purchase .itunes img {
+    max-width: 100%; }
 
 /*------------------------------------*\
     $TOUR
