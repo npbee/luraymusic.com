@@ -58,8 +58,10 @@
 
     }
     a:hover {
-        background: $black-light;
-        color: $orange;
+        @include breakpoint(medium) {
+            background: $black-light;
+            color: $orange;
+        }
     }
     .site-logo {
         margin-bottom: $base-spacing-unit;
@@ -100,7 +102,9 @@
     color: $orange;
     background: $black-light;
     &:hover {
-        background: $white;
+        @include breakpoint(medium) {
+            background: $white;
+        }
     }
     @include breakpoint(medium) {
         background: $white;
