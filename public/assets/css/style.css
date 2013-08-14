@@ -774,7 +774,9 @@ blockquote {
       float: left;
       font-family: LeagueGothic;
       font-size: 26px;
-      line-height: 1.2; }
+      line-height: 1.3;
+      width: 20%;
+      text-align: left; }
       @media (min-width: 50em) {
         .table td:before {
           display: none; } }

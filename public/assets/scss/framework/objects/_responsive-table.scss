@@ -31,7 +31,9 @@ $column3-header: "VENUE";
             float: left;
             font-family: $brand-face;
             font-size: $h6-size;
-            line-height: 1.2;
+            line-height: 1.3;
+            width: 20%;
+            text-align: left;
             @include breakpoint(medium) {
                 display: none;
             }
