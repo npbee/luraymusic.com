@@ -30,11 +30,11 @@
             <div class="social">
                 <h1>Social</h1>
                 <p>
-                    <a class="facebook tooltip" title="facebook" data-icon="&#xe00e;" href="#"><span class="hide">Facebook</span></a>
-                    <a class="twitter" title="twitter" data-icon="&#xe00c;" href="#"><span class="hide">Twitter</span></a>
-                    <a class="soundcloud" title="soundcloud" data-icon="&#xe00d;" href="#"><span class="hide">Soundcloud</span></a>
-                    <a class="youtube" title="youtube" data-icon="&#xe00b;" href="#"><span class="hide">YouTube</span></a>
-                    <a class="bandcamp" title="bandcamp" data-icon="&#xe00f;" href="#"><span class="hide">Bandcamp</span></a>
+                    <a class="facebook tooltip" title="facebook" data-icon="&#xe00e;" href="https://www.facebook.com/Luraymusic" target="_blank"><span class="hide">Facebook</span></a>
+                    <a class="twitter" title="twitter" data-icon="&#xe00c;" href="https://twitter.com/luray_who" target="_blank"><span class="hide">Twitter</span></a>
+                    <a class="soundcloud" title="soundcloud" data-icon="&#xe00d;" href="https://soundcloud.com/luraymusic" target="_blank"><span class="hide">Soundcloud</span></a>
+                    <a class="youtube" title="youtube" data-icon="&#xe00b;" href="http://www.youtube.com/user/Luraymusic?feature=watch" target="_blank"><span class="hide">YouTube</span></a>
+                    <a class="bandcamp" title="bandcamp" data-icon="&#xe00f;" href="http://luray.bandcamp.com/" target="_blank"><span class="hide">Bandcamp</span></a>
                 </p>
             </div>
         </section>

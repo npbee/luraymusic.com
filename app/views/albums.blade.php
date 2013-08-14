@@ -57,13 +57,13 @@
                 <a href="{{ URL::route('press') }}">Full Press Page</a>
             </p>
 
-            <h2>PURCHASE:</h2>
+            <!-- <h2>PURCHASE:</h2>
 
             <ul class="purchase">
                 <li><a class="bigcartel" href="#">{{ HTML::image('assets/images/logos/bigcartel.png', 'bigcartel logo')}}</a></li>
                 <li><a class="amazon" href="#">{{ HTML::image('assets/images/logos/amazon.png', 'amazon logo')}}</a></li>
                 <li><a class="itunes" href="#">{{ HTML::image('assets/images/logos/itunes.png', 'itunes logo')}}</a></li>
-            </ul>
+            </ul> -->
 
         </section>
 
