@@ -26,6 +26,10 @@
              <a class="cancel" href="{{ URL::route('admin.videos.index') }}">Cancel</a>
             </li>
 
+            <li>
+                {{ Form::hidden('sort_order', $sort_order) }}
+            </li>
+
         </ul>
 
     {{ Form::close() }}

@@ -9,7 +9,7 @@ class AdminVideosController extends BaseController {
      */
     public function index()
     {
-        $videos = Video::all();
+        $videos = Video::orderBy('sort_order')->get();
         return View::make('admin.videos.index')
             ->with('bodyClass', 'video--admin')
             ->with('videos', $videos);
@@ -22,8 +22,11 @@ class AdminVideosController extends BaseController {
      */
     public function create()
     {
+        $video_count = Video::count();
+        $sort_order = $video_count + 1;
         return View::make('admin.videos.create')
-            ->with('bodyClass', 'video--admin');
+            ->with('bodyClass', 'video--admin')
+            ->with('sort_order', $sort_order);
     }
 
     /**
@@ -40,6 +43,7 @@ class AdminVideosController extends BaseController {
         if ($validation -> passes()) {
             $video = new Video;
             $video->embed_code = Input::get('embed_code');
+            $video->sort_order = Input::get('sort_order');
             $video->save();
 
             Notification::success('The video was saved.');
@@ -98,6 +102,29 @@ class AdminVideosController extends BaseController {
         }
 
         return Redirect::back()->withInput()->withErrors($validation->errors);
+    }
+
+    /**
+     * Sort the videos
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function sortOrderUpdate()
+    {
+        $ids = Input::get('id');
+        $sort_orders = Input::get('sort_order');
+        $videos = Video::find($ids);
+
+        foreach($ids as $id) {
+            $quote = Video::find($id);
+            $quote->sort_order = Input::get('sort_order_'.$id);
+            $quote->save();
+        }
+
+        Notification::success('The page was saved.');
+
+        return Redirect::route('admin.videos.index');
     }
 
     /**

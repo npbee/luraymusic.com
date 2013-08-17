@@ -49,6 +49,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::resource('tour', 'AdminTourController');
     Route::post('image/sort', array('as' => 'admin.image.sort', 'uses' => 'AdminImageController@sortOrderUpdate'));
     Route::resource('image', 'AdminImageController');
+    Route::post('videos/sort', array('as' => 'admin.videos.sort', 'uses' => 'AdminVideosController@sortOrderUpdate'));
     Route::resource('videos', 'AdminVideosController');
     Route::post('press/sort', array('as' => 'admin.press.sort', 'uses' => 'AdminQuoteController@sortOrderUpdate'));
     Route::resource('press', 'AdminQuoteController');
