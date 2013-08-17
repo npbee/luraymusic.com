@@ -6,7 +6,7 @@
 
      @if ($errors->any())
         <div class="alert alert-error">
-            <h2>Trouble!</h2>
+            <span class="gamma">Trouble!</span>
             <ul>
                 {{ implode('', $errors->all('<li>:message</li>')) }}
             </ul>

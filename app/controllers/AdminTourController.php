@@ -95,20 +95,28 @@ class AdminTourController extends BaseController {
      */
     public function update($id)
     {
-        $tourdate = Tourdate::find($id);
-        $tourdate->date = Input::get('date');
-        $tourdate->venue = Input::get('venue');
-        $tourdate->location = Input::get('location');
-        $tourdate->show_info = Input::get('show_info');
-        $tourdate->support = Input::get('support');
-        $tourdate->review_text = Input::get('review_text');
-        $tourdate->review_source = Input::get('review_source');
-        $tourdate->review_link = Input::get('review_link');
-        $tourdate->save();
 
-        Notification::success('The page was saved!');
+        $input = Input::all();
+        $validation = new Services\Validators\TourdateValidator($input);
 
-        return Redirect::route('admin.tour.index');
+        if ($validation -> passes()) {
+            $tourdate = Tourdate::find($id);
+            $tourdate->date = Input::get('date');
+            $tourdate->venue = Input::get('venue');
+            $tourdate->location = Input::get('location');
+            $tourdate->show_info = Input::get('show_info');
+            $tourdate->support = Input::get('support');
+            $tourdate->review_text = Input::get('review_text');
+            $tourdate->review_source = Input::get('review_source');
+            $tourdate->review_link = Input::get('review_link');
+            $tourdate->save();
+
+            Notification::success('The page was saved!');
+
+            return Redirect::route('admin.tour.index');
+        }
+
+        return Redirect::back()->withInput()->withErrors($validation->errors);
 
     }
 

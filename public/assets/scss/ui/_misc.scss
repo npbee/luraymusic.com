@@ -9,3 +9,12 @@
 .draggable:last-child .move-down {
     display: none;
 }
+
+
+
+
+.copyright, .feedback {
+    display: block;
+    color: $black-light;
+    margin: $base-spacing-unit auto 0 auto;
+}
