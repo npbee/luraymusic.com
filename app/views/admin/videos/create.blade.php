@@ -27,7 +27,7 @@
             </li>
 
             <li>
-                {{ Form::hidden('sort_order', $sort_order) }}
+                {{-- Form::hidden('sort_order', $sort_order) --}}
             </li>
 
         </ul>

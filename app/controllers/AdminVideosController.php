@@ -9,7 +9,8 @@ class AdminVideosController extends BaseController {
      */
     public function index()
     {
-        $videos = Video::orderBy('sort_order')->get();
+        //$videos = Video::orderBy('sort_order')->get();
+        $videos = Video::all();
         return View::make('admin.videos.index')
             ->with('bodyClass', 'video--admin')
             ->with('videos', $videos);
@@ -43,7 +44,7 @@ class AdminVideosController extends BaseController {
         if ($validation -> passes()) {
             $video = new Video;
             $video->embed_code = Input::get('embed_code');
-            $video->sort_order = Input::get('sort_order');
+            //$video->sort_order = Input::get('sort_order');
             $video->save();
 
             Notification::success('The video was saved.');
