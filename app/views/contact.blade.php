@@ -41,10 +41,6 @@
 
     </div>
 
-@section('footer')
-    @include('_partials.footer-contact')
-@stop
-
 
 
 @stop
