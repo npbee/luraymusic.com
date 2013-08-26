@@ -9,8 +9,8 @@
     text-align: center;
     z-index: -1;
     @include breakpoint(medium) {
-      position: relative;
-      top: -100px;
+      // position: relative;
+      // top: -100px;
     }
     img {
         left: 0;
@@ -199,7 +199,7 @@ a.sc-remote-link.playing{
   width: 100%;
   height: auto;
   position: relative;
-  margin-bottom: 80px;
+  //margin-bottom: 80px;
   float:right;
 }
 
