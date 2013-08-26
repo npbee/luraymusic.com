@@ -33,6 +33,7 @@
             </li>
         @endforeach
     </ul>
+    <a id="reset">Reset</a>
 
 {{ Form::close() }}
 
