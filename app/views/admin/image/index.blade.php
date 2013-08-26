@@ -18,6 +18,9 @@
 <article class="photos">
     <div class="image-grid" id="image-grid">
     {{ Form::open(array('route' => 'admin.image.sort')) }}
+
+    {{ Form::submit('Save Sorting Order', array('class' => 'button save inactive', 'id' => 'submit')) }}
+
         <ul>
             @foreach($pics as $pic)
                 <li draggable="true" class="img draggable">
@@ -35,8 +38,6 @@
                 </li>
             @endforeach
         </ul>
-
-    {{ Form::submit('Save Sorting Order', array('class' => 'button save inactive', 'id' => 'submit')) }}
 
     {{ Form::close() }}
 

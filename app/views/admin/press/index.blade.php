@@ -11,6 +11,9 @@
 <h1>Current Press Quotes:</h1>
 
 {{ Form::open(array('route' => 'admin.press.sort')) }}
+
+    {{ Form::submit('Save Sorting Order', array('class' => 'button save inactive', 'id' => 'submit')) }}
+
     <ul class="sorted">
         @foreach($quotes as $quote)
             <li draggable="true" class="draggable">
@@ -30,8 +33,6 @@
             </li>
         @endforeach
     </ul>
-
-    {{ Form::submit('Save Sorting Order', array('class' => 'button save inactive', 'id' => 'submit')) }}
 
 {{ Form::close() }}
 

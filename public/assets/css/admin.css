@@ -237,15 +237,19 @@ input[type=checkbox] {
   float: right; }
 
 .inactive, .active {
-  -webkit-transition: opacity 200ms;
-  -moz-transition: opacity 200ms;
-  transition: opacity 200ms; }
+  -webkit-transition: opacity 200ms, padding 200ms, max-height 200ms;
+  -moz-transition: opacity 200ms, padding 200ms, max-height 200ms;
+  transition: opacity 200ms, padding 200ms, max-height 200ms; }
 
 .inactive {
-  opacity: 0.2; }
+  opacity: 0.2;
+  max-height: 0;
+  padding: 0 !important; }
 
 .active {
-  opacity: 1; }
+  opacity: 1;
+  padding: inherit;
+  max-height: none; }
 
 .admin blockquote {
   clear: both; }
