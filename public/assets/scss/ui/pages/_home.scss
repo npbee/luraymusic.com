@@ -66,7 +66,9 @@
   text-align: center;
   li {
     padding-right: 0;
-
+    @include breakpoint(medium) {
+      padding:0 $base-spacing-unit;
+    }
   }
 }
 
