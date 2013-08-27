@@ -75,7 +75,7 @@ $(function() {
         $(this).addClass('tab-nav--active');
         e.preventDefault();
 
-        if ( windowWidth > 700) {
+        if ( windowWidth > 1000) {
             $('html, body').stop().animate({
                 'scrollTop': 0
             }, 300, 'swing', function () {
@@ -84,7 +84,7 @@ $(function() {
         } else {
             $('html, body').stop().animate({
                 'scrollTop': $(target).offset().top
-            }, 300, 'swing', function () {
+            }, 600, 'swing', function () {
                 window.location.hash = target;
             });
         }

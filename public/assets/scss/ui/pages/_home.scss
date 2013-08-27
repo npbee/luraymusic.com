@@ -15,12 +15,15 @@
     img {
         left: 0;
         max-width: 100%;
+        width: 100%;
         opacity: 0.2;
         position: fixed;
+
         top: $base-spacing-unit*4;
         z-index: -1;
         @include breakpoint(medium) {
             position: static;
+            width: auto;
         }
         @include breakpoint(large) {
             max-width: 100%;
@@ -87,7 +90,10 @@
   color: #333;
   line-height: 1.6em;
   opacity:.7;
-
+  margin-bottom: $base-spacing-unit;
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
 }
 
 .sc-player a {
@@ -327,9 +333,11 @@ a.sc-remote-link.playing{
     width: 40%;
     font-family: $brand-face;
     margin-top: 12px;
+    text-align: right;
     @include breakpoint(medium) {
         float: left;
         margin-top: 0;
+        text-align: left;
     }
 }
 
