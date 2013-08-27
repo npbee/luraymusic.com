@@ -59,7 +59,7 @@ $line-height-ratio: $base-line-height / $base-font-size;
     @media (min-width: 60em) { @content; }
   }
   @else if $point == super {
-    @media (min-width: 60em)  { @content; }
+    @media (min-width: 80em)  { @content; }
   }
 }
 

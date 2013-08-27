@@ -5,13 +5,13 @@
     <a href="https://soundcloud.com/luraymusic/sets/the-wilder-preview-mastered" class="sc-player"></a>
 
     <blockquote class="album-quote album-quote--1">
-        <p>The Wilder is an exquisite collection of post-bluegrass Americana and chamber folk that is both delicately refined and, thanks to the prominence of Carey's rich banjo backing, unpretentiously rustic.</p>
-        <p class="source italic"><a target="_blank" href="http://www.directcurrentmusic.com/music-news-new-music/luray-the-wilder.html">Direct Current Music</a></p>
+        <p>...the standouts are Carey’s radiant voice, which fluctuates between soothing and soaring, and her melodic banjo strumming.</p>
+        <p class="source italic"><a target="_blank" href="http://www.washingtonpost.com/goingoutguide/luray-album-review-the-wilder/2013/08/22/5411a0fa-0687-11e3-9259-e2aafe5a5f84_story.html">The Washington Post</a></p>
     </blockquote>
 
     <blockquote class="album-quote album-quote--2">
-        <p>...the standouts are Carey’s radiant voice, which fluctuates between soothing and soaring, and her melodic banjo strumming.</p>
-        <p class="source italic"><a target="_blank" href="http://www.washingtonpost.com/goingoutguide/luray-album-review-the-wilder/2013/08/22/5411a0fa-0687-11e3-9259-e2aafe5a5f84_story.html">The Washington Post</a></p>
+        <p>...beautifully lush album.</p>
+        <p class="source italic"><a target="_blank" href="http://www.npr.org/blogs/allsongs/2013/08/26/215800528/new-music-tv-on-the-radio-rokia-traore-lucius-more">NPR</a></p>
     </blockquote>
 
     <figure>

@@ -24,6 +24,9 @@
         }
         @include breakpoint(large) {
             max-width: 100%;
+            //opacity: 0.8;
+        }
+        @include breakpoint(super) {
             opacity: 0.8;
         }
     }
@@ -31,6 +34,7 @@
 
 .home .album-quote {
     clear: both;
+    z-index: 100;
     @include breakpoint(medium) {
         position: absolute;
         max-width: 300px;
@@ -39,7 +43,7 @@
             top: $base-spacing-unit*5;
         }
         &.album-quote--2 {
-            right: $base-spacing-unit*2;
+            right: $base-spacing-unit*6;
             top: $base-spacing-unit*12;
         }
     }
