@@ -1,7 +1,5 @@
 <footer class="footer">
 
-    <a href="#" class="alpha to-top">&uarr; Top</a>
-
     <div class="footer__content contact-block">
 
         <section>

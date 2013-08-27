@@ -18,7 +18,7 @@
         <img id="album-art" src="assets/images/album_artwork.jpg" alt="Luray album art">
         <figcaption>
             <h1>LURAY <span class="brand-color">THE WILDER</span></h1>
-            <p class="epsilon">Out now on iTunes</p>
+            <p class="epsilon">Out now on <a target="_blank" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=662389920">iTunes</a></p>
             <p class="epsilon">Produced by Sean Carey of Bon Iver</p>
         </figcaption>
     </figure>
