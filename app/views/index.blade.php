@@ -21,6 +21,13 @@
             <p class="epsilon">Out now on <a target="_blank" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=662389920">iTunes</a></p>
             <p class="epsilon">Produced by Sean Carey of Bon Iver</p>
         </figcaption>
+
     </figure>
+
+    <ul class="purchase">
+        <li><a class="itunes" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=662389920" target="_blank">{{ HTML::image('assets/images/logos/itunes.png', 'itunes logo')}}</a></li>
+        <li><a target="_blank" class="bigcartel" href="http://luray.bigcartel.com/product/the-wilder-cd">{{ HTML::image('assets/images/logos/bigcartel.png', 'bigcartel logo')}}</a></li>
+        <!-- <li><a class="amazon" href="#">{{ HTML::image('assets/images/logos/amazon.png', 'amazon logo')}}</a></li> -->
+            </ul>
 
 @stop
