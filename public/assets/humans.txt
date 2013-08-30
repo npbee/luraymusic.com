@@ -1,0 +1,15 @@
+
+/* TEAM */
+
+Your title: Nick Ball
+Twitter: @knickoball
+Location: Eau Claire, WI
+
+/* THANKS */
+Entypo, CSSWizardry.
+
+/* SITE */
+Last update: 2013/08/29
+Standards: HTML5, CSS3, Responsive Design, Progressive Enhancement
+Components: Modernizr, jQuery, Laravel, Soundcloud API
+Software: MAMP, Sublime Text 3, Codekit, SASS, Jquery/javascript
