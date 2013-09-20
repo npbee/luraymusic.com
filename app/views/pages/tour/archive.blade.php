@@ -10,12 +10,12 @@
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)
-            @if($tourdate -> date < date('Y-m-d'))
-                <tr @if ($tourdate -> review_text) }} class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif >
-                    <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
-                    <td>{{ $tourdate -> location }}</td>
-                    <td>{{ $tourdate -> venue}}@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
-                </tr>
+                @if($tourdate -> date < date('Y-m-d'))
+                    <tr @if ($tourdate -> review_text) class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif data-info="http://google.com">
+                        <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
+                        <td>{{ $tourdate -> location }}</td>
+                        <td><a target="_blank" href="{{ $tourdate -> show_info }}">{{ $tourdate -> venue}}</a>@if($tourdate -> support) <span class="support">w/ {{ $tourdate -> support }}</span>@endif</td>
+                    </tr>
             @endif
         @endforeach
 

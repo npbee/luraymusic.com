@@ -12,7 +12,8 @@ class TourController extends BaseController {
     public function Index()
     {
         $tourdate_count = Tourdate::count();
-        $tourdates = Tourdate::orderBy('date')->get();
+        $tourdates = Tourdate::orderBy('date', 'asc')->get();
+        //$tourdates = Tourdate::all();
         return View::make('pages.tour.index')
             ->with('bodyClass', 'tour')
             ->with('tourdates', $tourdates)
@@ -21,9 +22,10 @@ class TourController extends BaseController {
 
     public function Archive()
     {
+        $tourdates = Tourdate::orderBy('date', 'desc')->get();
         return View::make('pages.tour.archive')
             ->with('bodyClass', 'tour')
-            ->with('tourdates', Tourdate::all());
+            ->with('tourdates', $tourdates);
     }
 
 
