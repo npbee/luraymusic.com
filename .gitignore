@@ -2,6 +2,7 @@
 /vendor
 composer.phar
 composer.lock
+/app/config/app.php
 /app/config/database.php
 /app/config/database_prod.php
 /public/assets/images/uploads
