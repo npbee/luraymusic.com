@@ -4,7 +4,6 @@ composer.phar
 composer.lock
 /app/config/database.php
 /app/config/database_prod.php
-/app/config/app.php
 /public/assets/images/uploads
 .DS_Store
 .htaccess
