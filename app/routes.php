@@ -20,8 +20,8 @@ Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@inde
 Route::get('press', array('as' => 'press', 'uses' => 'PressController@index'));
 Route::resource('videos', 'VideosController');
 Route::get('downloads/thewilder.zip', function() {
-    $file = 'assets/downloads/thewilder.zip';
-    return Response::download($file);
+    //$file = 'assets/downloads/thewilder.zip';
+    return Redirect::to('http://downloads.luraymusic.com/thewilder.zip');
 });
 
 //Used for No-JS Navigation
