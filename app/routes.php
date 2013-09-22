@@ -46,13 +46,13 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
         return View::make('admin.index')
             -> with('bodyClass', 'admin');
     }));
-    Route::resource('tour', 'AdminTourController');
-    Route::post('image/sort', array('as' => 'admin.image.sort', 'uses' => 'AdminImageController@sortOrderUpdate'));
-    Route::resource('image', 'AdminImageController');
-    Route::post('videos/sort', array('as' => 'admin.videos.sort', 'uses' => 'AdminVideosController@sortOrderUpdate'));
-    Route::resource('videos', 'AdminVideosController');
-    Route::post('press/sort', array('as' => 'admin.press.sort', 'uses' => 'AdminQuoteController@sortOrderUpdate'));
-    Route::resource('press', 'AdminQuoteController');
+    Route::resource('tour', 'Admin\TourController');
+    Route::post('image/sort', array('as' => 'admin.image.sort', 'uses' => 'Admin\ImageController@sortOrderUpdate'));
+    Route::resource('image', 'Admin\ImageController');
+    Route::post('videos/sort', array('as' => 'admin.videos.sort', 'uses' => 'Admin\VideoController@sortOrderUpdate'));
+    Route::resource('videos', 'Admin\VideoController');
+    Route::post('press/sort', array('as' => 'admin.press.sort', 'uses' => 'Admin\QuoteController@sortOrderUpdate'));
+    Route::resource('press', 'Admin\QuoteController');
 });
 
 
