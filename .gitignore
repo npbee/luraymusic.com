@@ -7,4 +7,4 @@ composer.lock
 /app/config/database_prod.php
 /public/assets/images/uploads
 .DS_Store
-.htaccess
+*.htaccess
