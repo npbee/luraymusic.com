@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         @foreach($tourdates as $tourdate)
-                @if($tourdate -> date < date('Y-m-d', strtotime('-1 day')) )
+                @if($tourdate -> date < date('Y-m-d') )
                     <tr @if ($tourdate -> review_text) class="reviewed" data-review="review-{{ $tourdate -> id }}" @endif data-info="http://google.com">
                         <td>{{ DateHelp::formatted_date($tourdate -> date) }}</td>
                         <td>{{ $tourdate -> location }}</td>
