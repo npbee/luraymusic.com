@@ -29,7 +29,7 @@ $app->redirectIfTrailingSlash();
 $env = $app->detectEnvironment(array(
 
 	'local' => array('localhost'),
-            'prod' => array('staging.luraymusic.com', 'luraymusic.com')
+            'prod' => array('staging.v3.luraymusic.com', 'luraymusic.com')
 
 ));
 
