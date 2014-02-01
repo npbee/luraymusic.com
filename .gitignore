@@ -2,9 +2,8 @@
 /vendor
 composer.phar
 composer.lock
-/app/config/app.php
-/app/config/database.php
-/app/config/database_prod.php
+/app/database/seeds/SentrySeeder.php
+/app/config/prod
 /public/assets/images/uploads
 .DS_Store
 *.htaccess
