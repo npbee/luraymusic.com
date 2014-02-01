@@ -4,6 +4,7 @@ composer.phar
 composer.lock
 /app/database/seeds/SentrySeeder.php
 /app/config/prod
+/app/config/app
 /public/assets/images/uploads
 .DS_Store
 *.htaccess
