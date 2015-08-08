@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('localhost'),
+	'local' => array('Nicholass-MacBook-Pro.local'),
             'prod' => array('staging.v3.luraymusic.com', 'luraymusic.com')
 
 ));
