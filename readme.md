@@ -1,4 +1,4 @@
-[http://luraymusic.com/assets/images/logo.svg]
+![logo](http://luraymusic.com/assets/images/logo.svg)
 
 #LURAYMUSIC.com
 
