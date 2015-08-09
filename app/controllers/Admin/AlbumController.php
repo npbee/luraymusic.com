@@ -83,9 +83,11 @@ class AlbumController extends \BaseController {
     public function edit($id)
     {
         $album = \Album::find($id);
+        $quotes = \DB::table('quotes')->where('album_id', '=', $id)->get();
         return \View::make('admin.albums.edit')
             ->with('bodyClass', 'albums--admin')
-            ->with('album', $album);
+            ->with('album', $album)
+            ->with('quotes', $quotes);
     }
 
     /**

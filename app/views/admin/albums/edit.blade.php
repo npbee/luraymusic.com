@@ -72,6 +72,17 @@
             </li>
 
             <li>
+                <h2 class="beta">Associated Press Quotes:</h2>
+                @foreach($quotes as $quote)
+                <blockquote class="album-quote">
+                    <p>{{ $quote->quote }}</p>
+                    <p class="source italic"><a href="{{ $quote->url }}">{{ $quote->source }}</a></p>
+                </blockquote>
+                <a href="{{ URL::route('admin.press.edit', $quote->id) }}">Edit</a>
+                @endforeach
+            </li>
+
+            <li>
                 {{ Form::submit('Save', array('class' => 'button save')) }}
              <a class="cancel" href="{{ URL::route('admin.albums.index') }}">Cancel</a>
             </li>
