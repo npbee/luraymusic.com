@@ -13,8 +13,24 @@
 
     <h1>Edit Album:</h1>
 
-    {{ Form::model($album, array('method' => 'put', 'route' => array('admin.albums.update', $album->id ))) }}
+    {{ Form::model($album, array('method' => 'put', 'route' => array('admin.albums.update', $album->id ), 'files' => 'true' )) }}
         <ul class="form-fields">
+
+            <li>
+                {{ Form::label('image', 'Cover Art', array('class' => 'beta')) }}
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="fileupload-preview thumbnail">
+                        <img src="{{ $album->art_full_path }}">
+                    </div>
+                    <div>
+                        <span class="btn btn-file">
+                            <span class="fileupload-new button--small">Select image</span>
+                            <span class="fileupload-exists button--small">Change</span>
+                            {{ Form::file('image') }}
+                        </span>
+                    </div>
+                </div>
+            </li>
 
             <li>
                 {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}

@@ -290,6 +290,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/database\/migrations\/2015_08_09_161338_add_image_fields_to_albums_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/database\/migrations\/2015_08_09_161338_add_image_fields_to_albums_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/database\/seeds\/DatabaseSeeder.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1690,6 +1699,72 @@
 		"initialSize": 31463,
 		"inputAbbreviatedPath": "\/public\/assets\/images\/show-pics\/rock-n-roll-hotel\/1-thumb.jpg",
 		"outputAbbreviatedPath": "\/public\/assets\/images\/show-pics\/rock-n-roll-hotel\/1-thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/9DoiK7di\/600x600_crop\/photo 1.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46579,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/9DoiK7di\/600x600_crop\/photo 1.JPG",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/9DoiK7di\/600x600_crop\/photo 1.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/9DoiK7di\/photo 1.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 779739,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/9DoiK7di\/photo 1.JPG",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/9DoiK7di\/photo 1.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/DMRdjSis\/600x600_crop\/glass_lake_desktop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24533,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/600x600_crop\/glass_lake_desktop.jpg",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/600x600_crop\/glass_lake_desktop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/DMRdjSis\/glass_lake_desktop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.77149e+06,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/glass_lake_desktop.jpg",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/glass_lake_desktop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/hi\/600x600_crop\/photo 1.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46579,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/hi\/600x600_crop\/photo 1.JPG",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/hi\/600x600_crop\/photo 1.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/hi\/photo 1.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 779739,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/hi\/photo 1.JPG",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/hi\/photo 1.JPG",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

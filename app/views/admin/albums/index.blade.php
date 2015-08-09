@@ -10,16 +10,21 @@
 
 <h1>Current Albums:</h1>
 
-<article class="admin-albums">
+<article class="admin-albums photos">
 
-    @foreach($albums as $album)
-    <div class="admin-albums__album">
-        <a class="edit" href="{{ URL::route('admin.albums.edit', $album->id) }}">
-            <img src="http://www.placehold.it/300x300/EFEFEF/AAAAAA&amp;text=no+image">
-            <h2>Title</h2>
-        </a>
+    <div class="image-grid" id="image-grid">
+        <ul>
+        @foreach($albums as $album)
+            <li class="img">
+                <a class="edit" href="{{ URL::route('admin.albums.edit', $album->id) }}">
+                    <img src="{{ $album->art_thumb_path }}">
+                    <div><em>Title</em></div>
+                    <span class="edit">Edit</span>
+                </a>
+            </li>
+        @endforeach
+        </ul>
     </div>
-    @endforeach
 
 </article>
 

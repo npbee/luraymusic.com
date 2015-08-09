@@ -13,8 +13,24 @@
 
     <h1>Add Album:</h1>
 
-    {{ Form::open(array('route' => 'admin.albums.store')) }}
+    {{ Form::open(array('route' => 'admin.albums.store', 'files' => 'true')) }}
         <ul class="form-fields">
+
+            <li>
+                {{ Form::label('image', 'Image') }}
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="fileupload-preview thumbnail">
+                        <img src="http://www.placehold.it/300x300/EFEFEF/AAAAAA&amp;text=no+image">
+                    </div>
+                    <div>
+                        <span class="btn btn-file">
+                            <span class="fileupload-new button--small">Select image</span>
+                            <span class="fileupload-exists button--small">Change</span>
+                            {{ Form::file('image') }}
+                        </span>
+                    </div>
+                </div>
+            </li>
 
             <li>
                 {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}

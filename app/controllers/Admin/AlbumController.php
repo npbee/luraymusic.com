@@ -38,8 +38,15 @@ class AlbumController extends \BaseController {
         $input = \Input::all();
         $validation = new \Services\Validators\AlbumValidator($input);
 
+        $original_image = \Input::file('image');
+        $full_path = \Image::upload($original_image);
+        $thumb_path = \Image::thumb($full_path, 600);
+
+
         if ($validation -> passes()) {
             $album = new \Album;
+            $album->art_full_path = $full_path;
+            $album->art_thumb_path = $thumb_path;
             $album->description = \Input::get('description');
             $album->audio_embed = \Input::get('audio_embed');
             $album->itunes_link = \Input::get('itunes_link');
@@ -91,9 +98,14 @@ class AlbumController extends \BaseController {
     {
         $input = \Input::all();
         $validation = new \Services\Validators\AlbumValidator($input);
+        $original_image = \Input::file('image');
+        $full_path = \Image::upload($original_image);
+        $thumb_path = \Image::thumb($full_path, 600);
 
         if ($validation -> passes()) {
             $album = \Album::find($id);
+            $album->art_full_path = $full_path;
+            $album->art_thumb_path = $thumb_path;
             $album->description = \Input::get('description');
             $album->audio_embed = \Input::get('audio_embed');
             $album->itunes_link = \Input::get('itunes_link');
