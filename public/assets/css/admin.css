@@ -66,7 +66,8 @@
 .tour--admin .tour-nav--admin,
 .images--admin .images-nav--admin,
 .video--admin .video-nav--admin,
-.press--admin .press-nav--admin {
+.press--admin .press-nav--admin,
+.albums--admin .albums-nav--admin {
   color: #dab08f;
   background: #eeeeee; }
 
@@ -152,7 +153,7 @@
     padding-right: 10px; }
 
 .alert-error {
-  background: #ffaaaa;
+  background: #faa;
   color: red; }
   .alert-error:before {
     speak: none;
@@ -196,14 +197,14 @@ input[type=checkbox] {
   input[type=checkbox]:checked {
     border: 1px solid #adb8c0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-    color: #333333; }
+    color: #333; }
   input[type=checkbox]:checked:after {
     content: '\2714';
     font-size: 54px;
     position: absolute;
     top: 0px;
     left: 5px;
-    color: #333333; }
+    color: #333; }
 
 /****
 * Image sorting
@@ -217,7 +218,7 @@ input[type=checkbox] {
   transform: scale(0.8); }
 
 .drag-over {
-  border: 1px dashed #333333; }
+  border: 1px dashed #333; }
 
 .move {
   cursor: pointer;

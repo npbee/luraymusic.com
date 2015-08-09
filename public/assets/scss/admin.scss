@@ -54,7 +54,8 @@
 .tour--admin .tour-nav--admin,
 .images--admin .images-nav--admin,
 .video--admin .video-nav--admin,
-.press--admin .press-nav--admin {
+.press--admin .press-nav--admin,
+.albums--admin .albums-nav--admin {
     color: $orange;
     background: $white;
 }
@@ -67,7 +68,7 @@
 ****/
 .form-fields {
     li {
-        @extend %cf;
+        @extend %cf !optional;
         clear: both;
         //padding: $base-spacing-unit/2 0;
     }

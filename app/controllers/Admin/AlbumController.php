@@ -13,7 +13,7 @@ class AlbumController extends \BaseController {
     {
         $albums = \Album::orderBy('created_at')->get();
         return \View::make('admin.albums.index')
-            ->with('bodyClass', 'album--admin')
+            ->with('bodyClass', 'albums--admin')
             ->with('albums', $albums);
     }
 
@@ -25,7 +25,7 @@ class AlbumController extends \BaseController {
     public function create()
     {
         return \View::make('admin.albums.create')
-            ->with('bodyClass', 'album--admin');
+            ->with('bodyClass', 'albums--admin');
     }
 
     /**

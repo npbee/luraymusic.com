@@ -11,6 +11,7 @@
             --><li><a class="images-nav--admin" href="{{ URL::route('admin.image.index') }}">IMAGES</a></li><!--
             --><li><a class="video-nav--admin" href="{{ URL::route('admin.videos.index') }}">Videos</a></li><!--
             --><li><a class="press-nav--admin" href="{{ URL::route('admin.press.index') }}">Press</a></li><!--
+            --><li><a class="albums-nav--admin" href="{{ URL::route('admin.albums.index') }}">Albums</a></li><!--
             --><li><a class="logout-nav" href="{{ URL::route('admin.logout') }}">Logout</a>
         </ul>
     </div>
