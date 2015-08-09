@@ -17,7 +17,7 @@
         <ul class="form-fields">
 
             <li>
-                {{ Form::label('image', 'Cover Art', array('class' => 'beta')) }}
+                {{ Form::label('image', 'Cover Art:', array('class' => 'beta')) }}
                 <div class="fileupload fileupload-new" data-provides="fileupload">
                     <div class="fileupload-preview thumbnail">
                         <img src="{{ $album->art_full_path }}">
