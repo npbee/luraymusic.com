@@ -36,7 +36,7 @@
             <li>
                 {{ Form::label('album', 'ALBUM', array('class' => 'beta')) }}
                 <span class="note">Which album is this quote for?</span>
-                {{ Form::select('album', array('the-wilder' => 'The Wilder'), 'The Wilder') }}
+                {{ Form::select('album_id', $album_choices) }}
             </li>
 
             <li>
