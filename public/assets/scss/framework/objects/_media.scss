@@ -4,6 +4,13 @@
 .media{
     display:block;
     @extend .cf;
+
+    margin-bottom: $base-spacing-unit;
+    border-bottom: 1px solid $grey;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
     .media__content{
         text-align: center;

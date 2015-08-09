@@ -2,7 +2,7 @@
    $PAGE-HEAD
    ========================================================================== */
 .page-head {
-    @extend %cf;
+    @extend .cf;
     background: $black;
     font-family: $brand-face;
     font-size: 2em;

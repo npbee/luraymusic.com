@@ -19,7 +19,7 @@
 }
 
     .footer__content {
-        @extend %cf;
+        @extend .cf;
         max-width: 1400px;
         margin: 0 auto;
         padding: $base-spacing-unit $base-spacing-unit / 2 0;

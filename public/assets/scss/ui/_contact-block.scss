@@ -2,7 +2,7 @@
     $CONTACT BLOCK
 \*------------------------------------*/
 .contact-block {
-    @extend %cf;
+    @extend .cf;
     .zeta {
         text-transform: uppercase;
     }
@@ -30,8 +30,8 @@
 }
 
 .contact-block-big {
-    @extend %cf;
-    @extend %alpha;
+    @extend .cf;
+    @extend .alpha;
     h1 {
         text-transform: uppercase;
         // @include breakpoint(medium) {
