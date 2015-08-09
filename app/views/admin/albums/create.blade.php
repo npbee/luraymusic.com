@@ -33,6 +33,11 @@
             </li>
 
             <li>
+                {{ Form::label('title', 'Album Title:', array('class' => 'beta')) }}
+                {{ Form::text('title',null, array('class' => 'text-input ')) }}
+            </li>
+
+            <li>
                 {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}
                 {{ Form::textarea(
                     'description',null, array(

@@ -299,6 +299,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/database\/migrations\/2015_08_09_165043_add_title_to_albums_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/database\/migrations\/2015_08_09_165043_add_title_to_albums_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/database\/seeds\/DatabaseSeeder.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1743,6 +1752,28 @@
 		"initialSize": 1.77149e+06,
 		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/glass_lake_desktop.jpg",
 		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/DMRdjSis\/glass_lake_desktop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/en1iW2Yu\/600x600_crop\/glass_lake_desktop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24533,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/en1iW2Yu\/600x600_crop\/glass_lake_desktop.jpg",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/en1iW2Yu\/600x600_crop\/glass_lake_desktop.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/assets\/images\/uploads\/en1iW2Yu\/glass_lake_desktop.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.77149e+06,
+		"inputAbbreviatedPath": "\/public\/assets\/images\/uploads\/en1iW2Yu\/glass_lake_desktop.jpg",
+		"outputAbbreviatedPath": "\/public\/assets\/images\/uploads\/en1iW2Yu\/glass_lake_desktop.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

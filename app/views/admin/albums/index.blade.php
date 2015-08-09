@@ -18,7 +18,7 @@
             <li class="img">
                 <a class="edit" href="{{ URL::route('admin.albums.edit', $album->id) }}">
                     <img src="{{ $album->art_thumb_path }}">
-                    <div><em>Title</em></div>
+                    <div><em>{{ $album->title }}</em></div>
                     <span class="edit">Edit</span>
                 </a>
             </li>

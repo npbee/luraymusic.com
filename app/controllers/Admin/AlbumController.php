@@ -42,9 +42,9 @@ class AlbumController extends \BaseController {
         $full_path = \Image::upload($original_image);
         $thumb_path = \Image::thumb($full_path, 600);
 
-
         if ($validation -> passes()) {
             $album = new \Album;
+            $album->title = \Input::get('title');
             $album->art_full_path = $full_path;
             $album->art_thumb_path = $thumb_path;
             $album->description = \Input::get('description');
@@ -104,14 +104,19 @@ class AlbumController extends \BaseController {
 
         if ($validation -> passes()) {
             $album = \Album::find($id);
-            $album->art_full_path = $full_path;
-            $album->art_thumb_path = $thumb_path;
+            $album->title = \Input::get('title');
             $album->description = \Input::get('description');
             $album->audio_embed = \Input::get('audio_embed');
             $album->itunes_link = \Input::get('itunes_link');
             $album->big_cartel_link = \Input::get('big_cartel_link');
             $album->lyrics = \Input::get('lyrics');
             $album->credits = \Input::get('credits');
+
+            if ($original_image) {
+                $album->art_full_path = $full_path;
+                $album->art_thumb_path = $thumb_path;
+            }
+
             $album->save();
 
             \Notification::success('The album was saved.');
