@@ -47,6 +47,7 @@ class AlbumController extends \BaseController {
             $album->title = \Input::get('title');
             $album->art_full_path = $full_path;
             $album->art_thumb_path = $thumb_path;
+            $album->release_date = \Input::get('release_date');
             $album->description = \Input::get('description');
             $album->audio_embed = \Input::get('audio_embed');
             $album->itunes_link = \Input::get('itunes_link');
@@ -108,6 +109,7 @@ class AlbumController extends \BaseController {
             $album = \Album::find($id);
             $album->title = \Input::get('title');
             $album->description = \Input::get('description');
+            $album->release_date = \Input::get('release_date');
             $album->audio_embed = \Input::get('audio_embed');
             $album->itunes_link = \Input::get('itunes_link');
             $album->big_cartel_link = \Input::get('big_cartel_link');

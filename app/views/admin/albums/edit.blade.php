@@ -38,6 +38,11 @@
             </li>
 
             <li>
+                {{ Form::label('release_date', 'DATE', array('class' => 'beta')) }}
+                {{ Form::text('release_date',null, array('class' => 'text-input date-select')) }}
+            </li>
+
+            <li>
                 {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}
                 {{ Form::textarea(
                     'description',null, array(
