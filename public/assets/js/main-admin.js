@@ -148,3 +148,27 @@ var cols = document.querySelectorAll('.draggable');
     col.addEventListener('dragend', handleDragEnd, false);
     col.addEventListener('drop', handleDrop, false);
 });
+
+(function() {
+    var $previews = $('[data-preview]');
+
+    $previews.each(function(index, $preview) {
+        var $el = $($preview);
+        $el.on('click', function(e) {
+
+            var sourceId = $el.data('preview');
+            var $source = $('#' + sourceId);
+            var markdownText = $source.val();
+            var $target = $($el.attr('href'));
+
+            $target.html('<p>...loading preview</p>');
+
+            var xhr = $.post('/markdown', {
+                text: markdownText
+            })
+            .done(function(text) {
+                $target.html(text);
+            });
+        });
+    });
+})();

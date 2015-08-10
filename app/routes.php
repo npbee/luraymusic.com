@@ -24,6 +24,8 @@ Route::get('downloads/thewilder.zip', function() {
     return Redirect::to('http://downloads.luraymusic.com/thewilder.zip');
 });
 
+Route::post('markdown', array('as' => 'markdown.parse', 'uses' => 'MarkdownController@parse'));
+
 //Used for No-JS Navigation
 Route::get('menu', array('as' => 'menu', 'do' => function() {
     return View::make('menu')
@@ -53,6 +55,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
     Route::resource('videos', 'Admin\VideoController');
     Route::post('press/sort', array('as' => 'admin.press.sort', 'uses' => 'Admin\QuoteController@sortOrderUpdate'));
     Route::resource('press', 'Admin\QuoteController');
+    Route::resource('albums', 'Admin\AlbumController');
 });
 
 

@@ -48,7 +48,7 @@ body {
 
 
 article {
-    @extend %cf;
+    @extend .cf;
     margin-bottom: $base-spacing-unit*2;
 }
 

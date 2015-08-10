@@ -69,24 +69,29 @@ $(function() {
                   tabContent = $('.tabs__content'),
                   tabNav = $('.tab-nav a'),
                   windowWidth = $(window).width();
+
+        var doNotScroll = $(this).data('do-not-scroll');
+
         tabContent.removeClass('tab--active');
         tabNav.removeClass('tab-nav--active');
         $(target).addClass('tab--active');
         $(this).addClass('tab-nav--active');
         e.preventDefault();
 
-        if ( windowWidth > 1000) {
-            $('html, body').stop().animate({
-                'scrollTop': 0
-            }, 300, 'swing', function () {
-                window.location.hash = target;
-            });
-        } else {
-            $('html, body').stop().animate({
-                'scrollTop': $(target).offset().top
-            }, 600, 'swing', function () {
-                window.location.hash = target;
-            });
+        if (!doNotScroll) {
+            if ( windowWidth > 1000) {
+                $('html, body').stop().animate({
+                    'scrollTop': 0
+                }, 300, 'swing', function () {
+                    window.location.hash = target;
+                });
+            } else {
+                $('html, body').stop().animate({
+                    'scrollTop': $(target).offset().top
+                }, 600, 'swing', function () {
+                    window.location.hash = target;
+                });
+            }
         }
     });
 

@@ -4,8 +4,7 @@ class QuoteValidator extends Validator {
 
     public static $rules = array(
         'quote' => 'required',
-        'source' => 'required',
-        'album' => 'required'
+        'source' => 'required'
     );
 
 }

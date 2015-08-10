@@ -25,11 +25,19 @@ class QuoteController extends \BaseController {
      */
     public function create()
     {
+        $albums = \DB::table('albums')->get();
+
+        $album_choices = array_reduce($albums, function($result, $item) {
+            $result[$item->id] = $item->title;
+            return $result;
+        }, array());
+
         $quote_count = \Quote::count();
         $sort_order = $quote_count + 1;
         return \View::make('admin.press.create')
             ->with('bodyClass', 'press--admin')
-            ->with('sort_order', $sort_order);
+            ->with('sort_order', $sort_order)
+            ->with('album_choices', $album_choices);
     }
 
     /**
@@ -48,7 +56,7 @@ class QuoteController extends \BaseController {
             $quote->quote = \Input::get('quote');
             $quote->source = \Input::get('source');
             $quote->url = \Input::get('url');
-            $quote->album = \Input::get('album');
+            $quote->album_id = \Input::get('album_id');
             $quote->add_to_album_page = \Input::get('add_to_album_page', false);
             $quote->is_featured = \Input::get('is_featured', false);
             $quote->sort_order = \Input::get('sort_order');
@@ -83,9 +91,16 @@ class QuoteController extends \BaseController {
     public function edit($id)
     {
         $quote = \Quote::find($id);
+        $albums = \DB::table('albums')->get();
+        $album_choices = array_reduce($albums, function($result, $item) {
+            $result[$item->id] = $item->title;
+            return $result;
+        }, array());
+
         return \View::make('admin.press.edit')
             ->with('bodyClass','press--admin')
-            ->with('quote', $quote);
+            ->with('quote', $quote)
+            ->with('album_choices', $album_choices);
     }
 
     /**
@@ -105,7 +120,7 @@ class QuoteController extends \BaseController {
             $quote->quote = \Input::get('quote');
             $quote->source = \Input::get('source');
             $quote->url = \Input::get('url');
-            $quote->album = \Input::get('album');
+            $quote->album_id = \Input::get('album_id');
             $quote->add_to_album_page = \Input::get('add_to_album_page', false);
             $quote->is_featured = \Input::get('is_featured', false);
             $quote->save();
