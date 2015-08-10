@@ -47,6 +47,15 @@ $ php artisan migrate --package=cartalyst/sentry
 $ php artisan db:seed
 ```
 
+
+** TODO **
+
+- Clean up javascript
+    - Do the markdown preview better
+- Style cleanup
+- Setup staging database
+
+
 **Local Alias:**  luray
 
 

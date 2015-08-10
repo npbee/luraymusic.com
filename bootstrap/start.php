@@ -26,12 +26,17 @@ $app->redirectIfTrailingSlash();
 |
 */
 
-$env = $app->detectEnvironment(array(
+//$env = $app->detectEnvironment(array(
 
-	'local' => array('Nicholass-MacBook-Pro.local'),
-            'prod' => array('staging.v3.luraymusic.com', 'luraymusic.com')
+	//'local' => array('Nicholass-MacBook-Pro.local'),
+            //'prod' => array('staging.v3.luraymusic.com', 'luraymusic.com')
 
-));
+//));
+
+$env = $app->detectEnvironment(function() {
+
+    return getenv('LARAVEL_ENV') ?: 'local';
+});
 
 /*
 |--------------------------------------------------------------------------
