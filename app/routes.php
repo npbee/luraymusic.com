@@ -24,6 +24,8 @@ Route::get('downloads/thewilder.zip', function() {
     return Redirect::to('http://downloads.luraymusic.com/thewilder.zip');
 });
 
+Route::post('markdown', array('as' => 'markdown.parse', 'uses' => 'MarkdownController@parse'));
+
 //Used for No-JS Navigation
 Route::get('menu', array('as' => 'menu', 'do' => function() {
     return View::make('menu')

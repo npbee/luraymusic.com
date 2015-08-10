@@ -7,7 +7,8 @@
 		"way/generators": "1.0",
 		"cartalyst/sentry": "2.0.*",
 		"edvinaskrucas/notification": "1.*",
-		"imagine/Imagine": "v0.4.1"
+        "imagine/Imagine": "v0.4.1",
+        "erusev/parsedown": "1.5.4"
 	},
     "require-dev": {
         "phpunit/phpunit": "3.7.*"

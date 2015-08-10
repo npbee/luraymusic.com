@@ -28,7 +28,7 @@
 
             <h1>{{ $album->title }} ({{ DateHelp::year($album->release_date) }})</h1>
 
-            {{ $album->description }}
+            {{ Markdown::parse($album->description) }}
 
             <h2>PRESS:</h2>
 
@@ -63,7 +63,7 @@
 
             <h1>LYRICS</h1>
 
-            {{ $album->lyrics }}
+            {{ Markdown::parse($album->lyrics) }}
 
         </section>
 
@@ -71,7 +71,7 @@
 
             <h1>Album Credits</h1>
 
-            {{ $album->credits }}
+            {{ Markdown::parse($album->credits) }}
 
         </section>
 

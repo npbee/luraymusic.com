@@ -44,10 +44,23 @@
 
             <li>
                 {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}
-                {{ Form::textarea(
-                    'description',null, array(
-                        'class' => 'text-input ',
-                        'placeholder' => 'Put the album description here.')) }}
+                <nav class="tab-nav">
+                    <ul>
+                        <li><a data-do-not-scroll=true class="gamma tab-nav--active" href="#markdown-description">Markdown</a></li><!--
+                        --><li><a data-do-not-scroll=true class="gamma" data-preview="description" href="#preview-description">Preview</a></li>
+                    </ul>
+                </nav>
+
+                <div class="tabs__content tab--active" id="markdown-description">
+                    {{ Form::textarea(
+                        'description',null, array(
+                            'class' => 'text-input ',
+                            'placeholder' => 'Put the album description here.')) }}
+                </div>
+
+                <div class="tabs__content markdown-preview" id="preview-description">
+                    Preview
+                </div>
             </li>
 
             <li>

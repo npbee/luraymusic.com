@@ -1579,6 +1579,10 @@ a {
   color: #555;
   margin: 27px auto 0 auto; }
 
+.markdown-preview {
+  background: #fff;
+  padding: 27px; }
+
 /**
 * PAGE-SPECIFIC
 */
