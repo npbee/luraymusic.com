@@ -8,3 +8,5 @@ composer.lock
 /public/assets/images/uploads
 .DS_Store
 *.htaccess
+.codekit-cache
+config.codekit
