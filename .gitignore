@@ -11,3 +11,4 @@ composer.lock
 .codekit-cache
 config.codekit
 /public/assets/js/min/*
+*.sass-cache*
