@@ -32,22 +32,39 @@
 
     <li>
         {{ Form::label('description', 'Album Description:', array('class' => 'beta')) }}
-        <nav class="tab-nav">
-            <ul>
-                <li><a data-do-not-scroll=true class="gamma tab-nav--active" href="#markdown-description">Markdown</a></li><!--
-                --><li><a data-do-not-scroll=true class="gamma" data-preview="description" href="#preview-description">Preview</a></li>
-            </ul>
-        </nav>
+        <div class="tabs two">
+            <nav>
+                <ul>
+                    <li>
+                        <a 
+                            data-do-not-scroll=true 
+                            class="tab--active" 
+                            href="#markdown-description">
+                            Markdown
+                        </a></li><!--
+                    --><li>
+                        <a 
+                            data-do-not-scroll=true 
+                            class="" 
+                            data-preview="description" 
+                            href="#preview-description">
+                            Preview
+                        </a></li>
+                </ul>
+            </nav>
 
-        <div class="tabs__content tab--active" id="markdown-description">
-            {{ Form::textarea(
-                'description',null, array(
-                    'class' => 'text-input ',
-                    'placeholder' => '# My album **is great**!')) }}
-        </div>
+            <div class="tab__content">
+                <section class="tab--active" id="markdown-description">
+                    {{ Form::textarea(
+                        'description',null, array(
+                            'class' => 'text-input ',
+                            'placeholder' => '# My album **is great**!')) }}
+                </section>
 
-        <div class="tabs__content markdown-preview" id="preview-description">
-            Preview
+                <section class="tabs__content markdown-preview" id="preview-description">
+                    Preview
+                </section>
+            </div>
         </div>
 
     </li>
@@ -70,44 +87,52 @@
 
     <li>
         {{ Form::label('lyrics', 'Lyrics:', array('class' => 'beta')) }}
-        <nav class="tab-nav">
-            <ul>
-                <li><a data-do-not-scroll=true class="gamma tab-nav--active" href="#markdown-lyrics">Markdown</a></li><!--
-                --><li><a data-do-not-scroll=true class="gamma" data-preview="lyrics" href="#preview-lyrics">Preview</a></li>
-            </ul>
-        </nav>
+        <div class="tabs two">
+            <nav>
+                <ul>
+                    <li><a data-do-not-scroll=true class="tab--active" href="#markdown-lyrics">Markdown</a></li><!--
+                    --><li><a data-do-not-scroll=true data-preview="lyrics" href="#preview-lyrics">Preview</a></li>
+                </ul>
+            </nav>
 
-        <div class="tabs__content tab--active" id="markdown-lyrics">
-            {{ Form::textarea(
-                'lyrics',null, array(
-                    'class' => 'text-input ',
-                    'placeholder' => '# Track 1')) }}
-        </div>
+            <div class="tab__content">
+                <section class="tab--active" id="markdown-lyrics">
+                    {{ Form::textarea(
+                        'lyrics',null, array(
+                            'class' => 'text-input ',
+                            'placeholder' => '# Track 1')) }}
+                </section>
 
-        <div class="tabs__content markdown-preview" id="preview-lyrics">
-            Preview
+                <section class="markdown-preview" id="preview-lyrics">
+                    Preview
+                </section>
+            </div>
         </div>
 
     </li>
 
     <li>
         {{ Form::label('credits', 'Credits:', array('class' => 'beta')) }}
-        <nav class="tab-nav">
-            <ul>
-                <li><a data-do-not-scroll=true class="gamma tab-nav--active" href="#markdown-credits">Markdown</a></li><!--
-                --><li><a data-do-not-scroll=true class="gamma" data-preview="credits" href="#preview-credits">Preview</a></li>
-            </ul>
-        </nav>
+        <div class="tabs two">
+            <nav>
+                <ul>
+                    <li><a data-do-not-scroll=true class="tab--active" href="#markdown-credits">Markdown</a></li><!--
+                    --><li><a data-do-not-scroll=true data-preview="credits" href="#preview-credits">Preview</a></li>
+                </ul>
+            </nav>
 
-        <div class="tabs__content tab--active" id="markdown-credits">
-            {{ Form::textarea(
-                'credits',null, array(
-                    'class' => 'text-input ',
-                    'placeholder' => '# Credits')) }}
-        </div>
+            <div class="tab__content">
+                <section class="tab--active" id="markdown-credits">
+                    {{ Form::textarea(
+                        'credits',null, array(
+                            'class' => 'text-input ',
+                            'placeholder' => '# Credits')) }}
+                </section>
 
-        <div class="tabs__content markdown-preview" id="preview-credits">
-            Preview
+                <section class="markdown-preview" id="preview-credits">
+                    Preview
+                </section>
+            </div>
         </div>
 
     </li>

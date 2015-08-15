@@ -1,10 +1,101 @@
 /*------------------------------------*\
     $TABS
 \*------------------------------------*/
-.tab-nav ul {
+.tabs {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    nav {
+        background: #fff;
+        text-align: center;
+        ul {
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                margin: 0;
+                vertical-align: middle;
+                &:first-child a {
+                    border-left: none;
+                }
+            }
+        }
+        a {
+            background: $green;
+            border-left: 1px solid $black-light;
+            padding: 0.25em 0 0.5em;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            line-height: 2.5;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-decoration: none;
+            @include transition(color 200ms);
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background: $brand-color;
+                content: '';
+                @include transition(transform 300ms);
+                @include transform(translate3d(0, 150%, 0));
+            }
+            &:hover {
+                color: $brand-color;
+            }
+            span {
+                vertical-align: middle;
+                font-size: 0.75em;
+                font-weight: 700;
+            }
+        }
+        .tab--active {
+            /*color: $brand-color;*/
+            &:after {
+                @include transform(translate3d(0, 0, 0));
+            }
+        }
+    }
+
+}
+
+.tab__content {
+    position: relative;
+    section {
+        display: none;
+        margin: 0 auto;
+    }
+    .tab--active {
+        display: block;
+    }
+}
+
+.tabs.two {
+    nav ul li {
+        width: 50%;
+    }
+}
+
+.tabs.three {
+    nav ul li {
+        width: 33.33%;
+    }
+}
+
+
+/*.tab-nav ul {
     font-family: $brand-face;
     list-style: none;
-    margin: $base-spacing-unit 0;
+    margin: 0;
     li {
         border-right: 1px solid $black-light;
         display: inline-block;
@@ -56,4 +147,4 @@
         //left: 0;
         opacity: 1;
     }
-}
+}*/

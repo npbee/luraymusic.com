@@ -32,55 +32,55 @@ $(function() {
         rel: "img"
     });
 
-    //Tabs
-    if(window.location.hash) {
-        var hash = window.location.hash.substring(1),
-             currentTab = '#' + hash,
-             $tabNav = $('.tab-nav a');
-        $('.tabs__content').removeClass('tab--active');
-        $tabNav.removeClass('tab-nav--active');
+    /**********
+     * $TABS
+     **********/
+    var $tabs = $('.tabs');
 
-        $(currentTab).addClass('tab--active');
-        $('.tab-nav a').each(function() {
-            if ($(this).attr("href") == currentTab) {
-                $(this).addClass('tab-nav--active');
-            }
+    $tabs.on('click', 'a', function(e) {
+        var $link = $(this);
+        var $links = $link.closest('ul').find('a');
+        var targetHref = $link.attr('href');
+        var $target = $(targetHref);
+        var $contents = $target.closest('.tab__content').find('section');
+
+        $links.each(function(index, link) {
+            $(link).removeClass('tab--active');
         });
-    }
 
-    $('.tab-nav a').on('click', function(e) {
-        var     target = $(this).attr('href'),
-                  tabContent = $('.tabs__content'),
-                  tabNav = $('.tab-nav a'),
-                  windowWidth = $(window).width();
+        $contents.each(function(index, content) {
+            $(content).removeClass('tab--active');
+        });
 
-        var doNotScroll = $(this).data('do-not-scroll');
+        $link.addClass('tab--active');
+        $target.addClass('tab--active');
 
-        tabContent.removeClass('tab--active');
-        tabNav.removeClass('tab-nav--active');
-        $(target).addClass('tab--active');
-        $(this).addClass('tab-nav--active');
-        e.preventDefault();
-
-        if (!doNotScroll) {
-            if ( windowWidth > 1000) {
-                $('html, body').stop().animate({
-                    'scrollTop': 0
-                }, 300, 'swing', function () {
-                    window.location.hash = target;
-                });
-            } else {
-                $('html, body').stop().animate({
-                    'scrollTop': $(target).offset().top
-                }, 600, 'swing', function () {
-                    window.location.hash = target;
-                });
-            }
+        if (history.pushState) {
+            history.pushState(null, null, targetHref);
         }
+
+        e.preventDefault();
     });
 
+    if(window.location.hash) {
+        var hash = window.location.hash;
+        var $targetContent = $(hash);
+        var $targetLink = $('[href=' + hash + ']');
+        var $links = $targetLink.closest('ul').find('a');
+        var $contents = $targetContent.closest('.tab__content').find('section');
 
+        $links.each(function(index, link) {
+            $(link).removeClass('tab--active');
+        });
 
+        $contents.each(function(index, content) {
+            $(content).removeClass('tab--active');
+        });
+
+        $targetLink.addClass('tab--active');
+        $targetContent.addClass('tab--active');
+
+    }
 
     //PNG FALLBACK
     if(!Modernizr.svg) {
@@ -88,6 +88,5 @@ $(function() {
             return $(this).attr('src').replace('.svg', '.png');
         });
     }
-
 
 });
