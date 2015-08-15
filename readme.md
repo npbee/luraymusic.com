@@ -55,6 +55,21 @@ $ php artisan db:seed
 - Style cleanup
 - Setup staging database
 
+** CHANGES **
+
+- Make sure to set the environment in .htaccess
+
+```bash
+SetEnv LARAVEL_ENV staging
+```
+
+- Set up staging database
+- Run migrations
+- Update previous quotes with new album_id
+- Add album
+- Clean up JS
+    - vendor bundle
+    - per page bundle with codekit prepends
 
 **Local Alias:**  luray
 

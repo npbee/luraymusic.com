@@ -1,0 +1,5 @@
+// @codekit-prepend "vendor/jquery-1.8.3.min.js"
+// @codekit-prepend "vendor/modernizr.js"
+// @codekit-prepend "vendor/souncloud.player.api.js"
+// @codekit-prepend "vendor/sc-player.js"
+// @codekit-prepend "vendor/jquery.colorbox-min.js"

@@ -23,13 +23,10 @@
 
     @yield('footer')
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    {{ HTML::script('assets/js/vendor/modernizr.js') }}
-    {{ HTML::script('assets/js/vendor/jquery.colorbox-min.js') }}
-    {{ HTML::script('assets/js/vendor/datepicker.js') }}
-    {{ HTML::script('assets/js/vendor/bootstrap-fileupload.min.js') }}
-    {{ HTML::script('assets/js/main.js') }}
-    {{ HTML::script('assets/js/main-admin.js') }}
+    {{ HTML::script('assets/js/min/vendor.js') }}
+    {{ HTML::script('assets/js/min/admin.vendor.js') }}
+    {{ HTML::script('assets/js/min/main.js') }}
+    {{ HTML::script('assets/js/min/admin.js') }}
 
     </body>
 </html>
