@@ -15,26 +15,7 @@
 
     {{ Form::model($pic, array('method' => 'put', 'route' => array('admin.image.update', $pic->id ))) }}
 
-        <ul class="form-fields">
-            <li>
-                <img src="{{ $pic->full_path }}">
-            </li>
-
-            <li>
-                {{ Form::label('author', 'AUTHOR', array('class' => 'beta')) }}
-                {{ Form::text('author', null, array('class' => 'text-input')) }}
-            </li>
-
-            <li>
-                {{ Form::label('title', 'TITLE', array('class' => 'beta')) }}
-                {{ Form::text('title', null, array('class' => 'text-input')) }}
-            </li>
-
-            <li>
-                {{ Form::submit('Save', array('class' => 'button save')) }}
-                <a class="cancel" href="{{ URL::route('admin.image.index') }}">Cancel</a>
-            </li>
-        </ul>
+    @include('admin.image.form')
 
     {{ Form::close() }}
 

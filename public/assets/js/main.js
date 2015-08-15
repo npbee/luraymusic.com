@@ -23,19 +23,6 @@ $(function() {
             e.preventDefault;
         }
     });
-    // $('.reviewed').on("click", function() {
-    //     var     review = "#" + $(this).attr("data-review"),
-    //               $rowPosition = $(this).position();
-    //     $(this).toggleClass('active');
-    //     $(review).css({
-    //         left: "0",
-    //         top: $rowPosition.top + $(this).height()
-    //     }).slideToggle(100);
-    // });
-
-
-
-
 
     //lightbox
     $('.lightbox-trigger').colorbox({
@@ -44,9 +31,6 @@ $(function() {
         maxWidth: "100%",
         rel: "img"
     });
-
-
-
 
     //Tabs
     if(window.location.hash) {

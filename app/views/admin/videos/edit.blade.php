@@ -14,19 +14,8 @@
     <h1>Add Video:</h1>
 
     {{ Form::model($video, array('method' => 'put', 'route' => array('admin.videos.update', $video->id ))) }}
-        <ul class="form-fields">
 
-            <li>
-                {{ Form::label('embed_code', 'VIDEO EMBED CODE:', array('class' => 'beta')) }}
-                {{ Form::textarea('embed_code',null, array('class' => 'text-input ')) }}
-            </li>
-
-            <li>
-                {{ Form::submit('Save', array('class' => 'button save')) }}
-             <a class="cancel" href="{{ URL::route('admin.videos.index') }}">Cancel</a>
-            </li>
-
-        </ul>
+    @include('admin.videos.form')
 
     {{ Form::close() }}
 

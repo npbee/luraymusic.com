@@ -48,108 +48,105 @@ $(function() {
         $('.button').removeClass('inactive').addClass('active');
     });
 
-});
+    //Handling Draggable Sorting
+    var dragSrcEl = null;
+
+    function handleDragStart(e) {
+        this.classList.add('dragging');
 
 
-//Handling Draggable Sorting
-var dragSrcEl = null;
+        dragSrcEl = this;
 
-function handleDragStart(e) {
-    this.classList.add('dragging');
-
-
-    dragSrcEl = this;
-
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/html', this.innerHTML);
-}
-
-function handleDragOver(e) {
-    if (e.preventDefault) {
-        e.preventDefault();
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/html', this.innerHTML);
     }
 
-    e.dataTransfer.dropEffect = 'move';
-
-    return false;
-}
-
-function handleDragEnter(e) {
-    this.classList.add('drag-over');
-}
-
-function handleDragLeave(e) {
-    this.classList.remove('drag-over');
-}
-
-function handleDrop(e) {
-    if (e.stopPropagation) {
-        e.stopPropagation();
-    }
-
-    if (dragSrcEl != this) {
-        // Set the source column's HTML to the HTML of the column we dropped on.
-        dragSrcEl.innerHTML = this.innerHTML;
-        this.innerHTML = e.dataTransfer.getData('text/html');
-
-        [].forEach.call(cols, function (col) {
-
-            ///turn off classes
-            col.classList.remove('drag-over');
-            col.classList.remove('dragging');
-
-            //get new index of each list item and change value
-            var indexValue = getIndex(col);
-            var sortOrderVal = col.getElementsByClassName('sort-order')[0];
-            sortOrderVal.value = indexValue;
-          });
-
-        //Get index of current item
-        function getIndex(sender)
-        {
-            var aElements = sender.parentNode.parentNode.getElementsByTagName("li");
-            var aElementsLength = aElements.length;
-            var index;
-            for (var i = 0; i < aElementsLength; i++)
-            {
-                if (aElements[i] == sender) //this condition is never true
-                {
-                    index = i;
-                    return index + 1;
-                }
-            }
+    function handleDragOver(e) {
+        if (e.preventDefault) {
+            e.preventDefault();
         }
 
-        button.classList.remove('inactive');
-        button.classList.add('active');
+        e.dataTransfer.dropEffect = 'move';
 
-        e.preventDefault();
+        return false;
+    }
 
-      }
+    function handleDragEnter(e) {
+        this.classList.add('drag-over');
+    }
 
-    return false;
-}
+    function handleDragLeave(e) {
+        this.classList.remove('drag-over');
+    }
 
-function handleDragEnd(e) {
-    [].forEach.call(cols, function (col) {
-        col.classList.remove('drag-over');
-        col.classList.remove('dragging');
-      });
-    return false;
-}
+    function handleDrop(e) {
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        }
 
-var button = document.getElementById('submit');
-var cols = document.querySelectorAll('.draggable');
-[].forEach.call(cols, function(col) {
-    col.addEventListener('dragstart', handleDragStart, false);
-    col.addEventListener('dragenter', handleDragEnter, false);
-    col.addEventListener('dragover', handleDragOver, false);
-    col.addEventListener('dragleave', handleDragLeave, false);
-    col.addEventListener('dragend', handleDragEnd, false);
-    col.addEventListener('drop', handleDrop, false);
-});
+        if (dragSrcEl != this) {
+            // Set the source column's HTML to the HTML of the column we dropped on.
+            dragSrcEl.innerHTML = this.innerHTML;
+            this.innerHTML = e.dataTransfer.getData('text/html');
 
-(function() {
+            [].forEach.call(cols, function (col) {
+
+                ///turn off classes
+                col.classList.remove('drag-over');
+                col.classList.remove('dragging');
+
+                //get new index of each list item and change value
+                var indexValue = getIndex(col);
+                var sortOrderVal = col.getElementsByClassName('sort-order')[0];
+                sortOrderVal.value = indexValue;
+            });
+
+            //Get index of current item
+            function getIndex(sender)
+            {
+                var aElements = sender.parentNode.parentNode.getElementsByTagName("li");
+                var aElementsLength = aElements.length;
+                var index;
+                for (var i = 0; i < aElementsLength; i++)
+                {
+                    if (aElements[i] == sender) //this condition is never true
+                    {
+                        index = i;
+                        return index + 1;
+                    }
+                }
+            }
+
+            button.classList.remove('inactive');
+            button.classList.add('active');
+
+            e.preventDefault();
+
+        }
+
+        return false;
+    }
+
+    function handleDragEnd(e) {
+        [].forEach.call(cols, function (col) {
+            col.classList.remove('drag-over');
+            col.classList.remove('dragging');
+        });
+        return false;
+    }
+
+    var button = document.getElementById('submit');
+    var cols = document.querySelectorAll('.draggable');
+    [].forEach.call(cols, function(col) {
+        col.addEventListener('dragstart', handleDragStart, false);
+        col.addEventListener('dragenter', handleDragEnter, false);
+        col.addEventListener('dragover', handleDragOver, false);
+        col.addEventListener('dragleave', handleDragLeave, false);
+        col.addEventListener('dragend', handleDragEnd, false);
+        col.addEventListener('drop', handleDrop, false);
+    });
+
+
     var $previews = $('[data-preview]');
 
     $previews.each(function(index, $preview) {
@@ -171,4 +168,5 @@ var cols = document.querySelectorAll('.draggable');
             });
         });
     });
-})();
+
+});
