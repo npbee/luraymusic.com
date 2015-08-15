@@ -10,3 +10,4 @@ composer.lock
 *.htaccess
 .codekit-cache
 config.codekit
+/public/assets/js/min/*
