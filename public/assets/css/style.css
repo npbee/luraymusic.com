@@ -786,7 +786,7 @@ blockquote {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .breadcrumbs:after, .media:after, article:after, .page-head:after, .contact-block:after, .contact-block-big:after, .player-controls:after {
+.cf:after, .breadcrumbs:after, .media:after, article:after, .page-head:after, .contact-block-big:after, .player-controls:after {
   content: "";
   display: table;
   clear: both; }
@@ -1179,7 +1179,6 @@ footer {
 .input-combo {
   font-size: 0.8em; }
   .input-combo .text-input {
-    background: #ebebeb;
     padding: 6.75px;
     height: 35px;
     border-radius: 2px 0 0 2px;
@@ -1193,29 +1192,21 @@ footer {
 /*------------------------------------*\
     $CONTACT BLOCK
 \*------------------------------------*/
+.contact-block p {
+  margin-bottom: 0; }
+.contact-block .contact-block__header {
+  text-transform: uppercase;
+  margin-bottom: 5px; }
 .contact-block .zeta {
   text-transform: uppercase; }
 .contact-block section {
-  margin-bottom: 54px; }
+  margin-bottom: 27px; }
   @media (min-width: 50em) {
     .contact-block section {
-      display: block;
-      float: left;
-      margin-right: 2.3576515979%;
-      width: 31.7615656014%;
-      margin-bottom: 27px; }
-      .contact-block section:last-child {
-        margin-right: 0; } }
-@media (min-width: 50em) {
-  .contact-block section:last-child {
-    text-align: right; } }
-.contact-block p {
-  margin-bottom: 6.75px; }
-  @media (min-width: 50em) {
-    .contact-block p {
-      margin-bottom: 0; } }
-.contact-block div {
-  margin-bottom: 27px; }
+      display: inline-block;
+      vertical-align: top;
+      width: 30%;
+      margin-right: 3.33%; } }
 
 .contact-block-big h1 {
   text-transform: uppercase; }
@@ -1263,7 +1254,6 @@ footer {
 ***/
 .social a {
   font-size: 36px;
-  padding: 0 6.75px;
   text-decoration: none;
   -webkit-transition: color 200ms;
   -moz-transition: color 200ms;

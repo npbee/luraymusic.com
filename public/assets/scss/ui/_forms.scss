@@ -13,7 +13,6 @@ $combo-height: 35px;
 .input-combo {
     font-size: 0.8em;
     .text-input {
-        background: darken($white, 1%);
         padding: $base-spacing-unit/4;
         height: $combo-height;
         border-radius: $brand-round 0 0 $brand-round;
