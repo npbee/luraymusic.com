@@ -160,7 +160,7 @@ $(function() {
 
             $target.html('<p>...loading preview</p>');
 
-            var xhr = $.post('/markdown', {
+            var xhr = $.post('/admin/markdown', {
                 text: markdownText
             })
             .done(function(text) {
