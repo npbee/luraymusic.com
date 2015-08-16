@@ -1,12 +1,10 @@
 <header class="page-head" id="page-head">
 
-    <div class='page-head__contents'>
-        <a href="/" class="site-logo" id="site-logo">{{ HTML::image('assets/images/logo.svg') }}</a>
-        <a class="admin-logo" href="{{ URL::route('admin') }}">ADMIN</a>
-
-        <a id="nav-toggle" class="nav-toggle nav-toggle--closed"><span class="hide">MENU</span></a>
-
-
-    </div>
+    <nav class="admin-nav">
+        <div class='nav__left'>
+            <a href="/" data-page="admin" class="site-logo" id="site-logo">{{ HTML::image('assets/images/logo.svg') }}</a><!--
+            --><a id="nav-toggle" class="nav-toggle nav-toggle--closed"></a>
+        </div>
+    </nav>
 
 </header>

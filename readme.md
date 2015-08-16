@@ -93,9 +93,3 @@ $ php artisan migrate --env=staging
 ```bash
 SetEnv LARAVEL_ENV staging
 ```
-
-**TODO**:
-- Filepicker previews
-- Admin on login page
-- Datepicker z-index on tabs
-- "Home" on index page for mobile

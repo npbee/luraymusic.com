@@ -2,7 +2,7 @@
 
     <nav>
         <div class="nav__left">
-            <a href="/" data-page="{{ $bodyClass }}" class="site-logo" id="site-logo">{{ HTML::image('assets/images/logo.svg') }}</a><!--
+            <a href="/" data-page="{{ CurrentPage::get() }}" class="site-logo" id="site-logo">{{ HTML::image('assets/images/logo.svg') }}</a><!--
             --><a id="nav-toggle" class="nav-toggle nav-toggle--closed" href="{{ URL::route('menu') }}"></a>
         </div><!--
 

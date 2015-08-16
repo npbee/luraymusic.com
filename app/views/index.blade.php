@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-{{ App::environment(); }}
-
 @section('content')
 
     <a href="https://soundcloud.com/luraymusic/sets/the-wilder-preview-mastered" class="sc-player"></a>
