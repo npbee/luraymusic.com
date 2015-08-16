@@ -3,8 +3,8 @@
 composer.phar
 composer.lock
 /app/database/seeds/SentrySeeder.php
-/app/config/prod
-/app/config/app
+/app/config/production/*
+/app/config/staging/*
 /public/assets/images/uploads
 .DS_Store
 *.htaccess
