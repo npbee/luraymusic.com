@@ -64,13 +64,13 @@ $ php composer.phar selfupdate
 - Update composer dependencies
 
 ```bash
-$ php composer.phar update
+$ php composer.phar update --no-dev
 ```
 
 - Install any new dependencies
 
 ```bash
-$ php composer.phar install
+$ php composer.phar install --no-dev
 ```
 
 - Run migrations and seeders with env set:
