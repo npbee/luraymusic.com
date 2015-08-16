@@ -778,6 +778,29 @@ blockquote {
   padding: 6.75px 13.5px;
   text-decoration: none; }
 
+.ribbon {
+  background: #FEEFB3;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: none;
+  color: #9F6000;
+  border-top: 1px solid #9F6000;
+  border-bottom: 1px solid #9F6000;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 6.75px 0; }
+  @media (min-width: 50em) {
+    .ribbon {
+      position: fixed;
+      bottom: 25px;
+      left: -50px;
+      width: 200px;
+      box-shadow: 0 0 10px #888;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); } }
+
 /*------------------------------------*\
     $CLEARFIX
 \*------------------------------------*/
@@ -982,9 +1005,9 @@ article {
   padding: 0 13.5px; }
   .site-logo:after {
     content: attr(data-page);
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 13.5px; }
+    position: absolute;
+    padding-left: 13.5px;
+    top: 6px; }
   @media (min-width: 50em) {
     .site-logo:after {
       display: none; } }
@@ -1036,9 +1059,6 @@ article {
     .contact .contact-nav {
       background: #eeeeee;
       color: #333; } }
-
-.admin-nav .site-logo:after {
-  display: inline-block; }
 
 /* ==========================================================================
    $TYPOGRAPHY

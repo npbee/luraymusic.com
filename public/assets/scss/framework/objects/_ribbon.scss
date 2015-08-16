@@ -1,0 +1,19 @@
+.ribbon {
+    background: $yellow;
+    font-family: $body-face;
+    text-transform: none;
+    color: $brown;
+    border-top: 1px solid $brown;
+    border-bottom: 1px solid $brown;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: $base-spacing-unit/4 0;
+    @include breakpoint(medium) {
+        position: fixed;
+        bottom: 25px;
+        left: -50px;
+        width: 200px;
+        box-shadow: 0 0 10px #888;
+        @include transform(rotate(45deg));
+    }
+}
