@@ -2,13 +2,27 @@
     $FORMS
 \*------------------------------------*/
 .mailing-list .text-input {
-    width: 100%;
-    @include breakpoint(medium) {
-        width: auto;
-        min-width: 250px;
-    }
 }
 
 .submit {
     margin: $base-spacing-unit/4 0;
+}
+
+$combo-height: 35px;
+
+.input-combo {
+    font-size: 0.8em;
+    .text-input {
+        background: darken($white, 1%);
+        padding: $base-spacing-unit/4;
+        height: $combo-height;
+        border-radius: $brand-round 0 0 $brand-round;
+        width: 75%;
+    }
+    .button {
+        width: 25%;
+        margin: 0;
+        height: $combo-height;
+        border-radius: 0 $brand-round $brand-round 0;
+    }
 }

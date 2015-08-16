@@ -486,7 +486,7 @@ h2, .beta {
   font-size: 2.3333333333rem;
   line-height: 1.2857142857; }
 
-h3, .gamma, .no-js .in-page-menu {
+h3, .gamma {
   font-size: 36px;
   font-size: 2rem;
   line-height: 1.5; }
@@ -513,7 +513,7 @@ h6, .zeta {
  * A series of classes for setting massive type; for use in heroes, mastheads,
  * promos, etc.
  */
-.site-logo, .giga {
+.giga {
   font-size: 96px;
   font-size: 5.3333333333rem;
   line-height: 1.125; }
@@ -705,54 +705,6 @@ blockquote {
     width: 70%;
     float: left; } }
 
-/* ==========================================================================
-   $RESPONSIVE-NAV
-   ========================================================================== */
-.nav-toggle {
-  float: right;
-  -webkit-transition: margin-right 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  -moz-transition: margin-right 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  transition: margin-right 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53); }
-  @media (min-width: 50em) {
-    .nav-toggle {
-      display: none; } }
-
-.nav {
-  list-style: none;
-  margin: 0;
-  max-height: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 75px;
-  width: 100%;
-  z-index: 2;
-  -webkit-transition: max-height 400ms cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: max-height 400ms cubic-bezier(0.19, 1, 0.22, 1);
-  transition: max-height 400ms cubic-bezier(0.19, 1, 0.22, 1); }
-  .nav a {
-    display: block;
-    width: 100%; }
-  @media (min-width: 50em) {
-    .nav {
-      position: static;
-      margin-right: auto;
-      max-height: 800px;
-      height: auto;
-      width: auto; }
-      .nav > li,
-      .nav > li > a {
-        display: inline-block;
-        *display: inline;
-        width: auto;
-        zoom: 1; } }
-
-.nav--open {
-  max-height: 1000px; }
-
-@media (min-width: 50em) {
-  .nav .site-logo {
-    display: none; } }
-
 /*------------------------------------*\
     $RESPONSIVE TABLE
 \*------------------------------------*/
@@ -834,7 +786,7 @@ blockquote {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .breadcrumbs:after, .media:after, article:after, .page-head:after, .footer__content:after, .contact-block:after, .contact-block-big:after, .player-controls:after {
+.cf:after, .breadcrumbs:after, .media:after, article:after, .page-head:after, .contact-block:after, .contact-block-big:after, .player-controls:after {
   content: "";
   display: table;
   clear: both; }
@@ -861,29 +813,38 @@ blockquote {
 /*------------------------------------*\
     $NO JS STYLES
 \*------------------------------------*/
-.no-js .nav-toggle:before {
-  font-family: 'Josefin Sans';
-  content: "MENU";
-  font-size: 36px;
-  position: relative;
-  top: -3px; }
+/*.no-js .nav-toggle:before {
+    font-family: 'Josefin Sans';
+    content: "MENU";
+    font-size: $base-font-size*2;
+    position: relative;
+    top:-3px;
+}
 
 .no-js .in-page-menu {
-  list-style: none;
-  margin: 0;
-  text-transform: uppercase; }
-  .no-js .in-page-menu a {
-    display: block;
-    padding: 13.5px 0;
-    text-decoration: none;
-    border-top: 1px solid #d9d9d9; }
-  .no-js .in-page-menu li:last-child a {
-    border-bottom: 1px solid #d9d9d9; }
+    @extend .gamma;
+    //font-family: $brand-face;
+    list-style: none;
+    margin: 0;
+    text-transform: uppercase;
+    a {
+        display: block;
+        padding: $base-spacing-unit/2 0;
+        text-decoration: none;
+        border-top: 1px solid $grey;
+    }
+    li:last-child a {
+        border-bottom: 1px solid $grey;
+    }
+    @include breakpoint(medium) {
+
+    }
+}
 
 .no-js .tabs__content {
-  display: block;
-  opacity: 1; }
-
+    display: block;
+    opacity: 1;
+}*/
 /*------------------------------------*\
     $404
 \*------------------------------------*/
@@ -969,66 +930,86 @@ article {
 .page-head {
   background: #333;
   font-family: LeagueGothic;
-  font-size: 2em;
+  font-weight: 300;
+  font-size: 1.5em;
   text-transform: uppercase;
-  color: #333;
-  height: 75px;
-  position: relative; }
-  @media (min-width: 50em) {
-    .page-head {
-      overflow: hidden; } }
+  color: #d9d9d9;
+  overflow: hidden; }
+  .page-head nav {
+    *zoom: 1;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto; }
+    .page-head nav:before, .page-head nav:after {
+      content: " ";
+      display: table; }
+    .page-head nav:after {
+      clear: both; }
   .page-head a {
-    text-decoration: none;
-    padding: 13.5px; }
+    text-decoration: none; }
 
-.page-head__contents {
-  *zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto; }
-  .page-head__contents:before, .page-head__contents:after {
-    content: " ";
-    display: table; }
-  .page-head__contents:after {
-    clear: both; }
+@media (min-width: 50em) {
+  .nav__left,
+  .nav__right {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50%; } }
+
+.nav__right {
+  text-align: right; }
+  .nav__right ul {
+    list-style: none;
+    margin: 0;
+    text-align: left;
+    height: 0; }
+    .nav__right ul.nav--open {
+      height: auto; }
+    @media (min-width: 50em) {
+      .nav__right ul {
+        height: auto;
+        text-align: right; } }
+    @media (min-width: 50em) {
+      .nav__right ul li {
+        display: inline-block; } }
+    .nav__right ul a {
+      display: block;
+      line-height: 60px;
+      padding: 0 13.5px; }
 
 .site-logo {
-  float: left;
-  height: 100%;
-  z-index: 3;
-  padding: 0 13.5px !important; }
+  display: inline-block;
+  width: 50%;
+  padding: 0 13.5px; }
+  .site-logo:after {
+    content: attr(data-page);
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 13.5px; }
+  @media (min-width: 50em) {
+    .site-logo:after {
+      display: none; } }
   .site-logo img {
-    float: left; }
-
-.nav {
-  background: #333;
-  clear: both;
-  color: #eeeeee; }
-  @media (min-width: 50em) {
-    .nav {
-      background: none;
-      clear: none;
-      float: right; } }
-  .nav a {
-    border-top: 1px solid #555; }
-  @media (min-width: 50em) {
-    .nav a:hover {
-      background: #555;
-      color: #dab08f; } }
-  .nav .site-logo {
-    margin-bottom: 27px; }
-    @media (min-width: 50em) {
-      .nav .site-logo {
-        margin-bottom: 0; } }
+    max-height: 60px;
+    vertical-align: middle; }
 
 .nav-toggle {
-  position: relative;
-  top: -8px; }
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  line-height: 60px;
+  text-align: right;
+  padding: 0 13.5px;
+  /*float: right;*/
+  /*@include transition(margin-right 200ms $ease-in-quad);*/ }
+  @media (min-width: 50em) {
+    .nav-toggle {
+      display: none; } }
 
 .nav-toggle--closed:before,
 .nav-toggle--open:before {
   color: #eeeeee;
-  font-family: icomoon; }
+  font-family: icomoon;
+  display: inline-block; }
 
 .nav-toggle--closed:before {
   content: "\e000"; }
@@ -1053,54 +1034,8 @@ article {
     .albums .albums-nav,
     .tour .tour-nav,
     .contact .contact-nav {
-      background: #eeeeee; } }
-
-.page-head:after {
-  display: block;
-  font-size: 0.8em;
-  color: #eeeeee;
-  position: absolute;
-  left: 13.5px;
-  top: 35px;
-  text-shadow: 0px 1px 3px #555; }
-  @media (min-width: 50em) {
-    .page-head:after {
-      display: none; } }
-
-.media .page-head:after {
-  content: "MEDIA"; }
-
-.albums .page-head:after {
-  content: "ALBUMS"; }
-
-.tour .page-head:after {
-  content: "TOUR"; }
-
-.contact .page-head:after {
-  content: "CONTACT"; }
-
-.sub-nav {
-  *zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 13.5px 13.5px 0;
-  text-align: center; }
-  .sub-nav:before, .sub-nav:after {
-    content: " ";
-    display: table; }
-  .sub-nav:after {
-    clear: both; }
-  .sub-nav li {
-    width: 48%;
-    float: left; }
-    @media (min-width: 50em) {
-      .sub-nav li {
-        width: auto;
-        float: none; } }
-  @media (min-width: 50em) {
-    .sub-nav {
-      text-align: right; } }
+      background: #eeeeee;
+      color: #333; } }
 
 /* ==========================================================================
    $TYPOGRAPHY
@@ -1135,7 +1070,7 @@ article {
 
 h1, .alpha, .contact-block-big,
 h2, .beta,
-h3, .gamma, .no-js .in-page-menu,
+h3, .gamma,
 h4, .delta,
 h5, .epsilon,
 h6, .zeta {
@@ -1150,49 +1085,110 @@ a {
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-.footer {
-  background: #d0d8d8;
-  font-size: 0.9em;
-  height: 425px;
-  overflow: hidden;
-  position: relative;
-  width: 100%; }
-  @media (min-width: 50em) {
-    .footer {
-      height: 150px; } }
-  .footer:after {
-    content: "";
-    display: block;
-    height: 150px; }
+/*.footer {
+    background: $green;
+    font-size: 0.9em;
+    [>height: 425px;<]
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @include breakpoint(medium) {
+        [>height: 150px;<]
+    }
+    &:after {
+        content: "";
+        display: block;
+        [>height: 150px;<]
+    }
+}
 
-.footer__content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 27px 13.5px 0; }
+    .footer__content {
+        [>@extend .cf;<]
+        max-width: 1400px;
+        margin: 0 auto;
+        [>padding: $base-spacing-unit $base-spacing-unit / 2 0;<]
+    }
 
 .footer-logo {
-  opacity: 0.4;
-  right: 0; }
+    opacity: 0.4;
+    right: 0;
+    @include breakpoint(medium) {
+        position: static;
+        display: block;
+        margin: 0 auto;
+        padding:0;
+        width: 200px;
+        // position: absolute;
+        // width: 150px;
+        // height: 100px;
+        // left: 50%;
+        // top: 50%;
+        // margin: -50px 0 0 -75px;
+    }
+}*/
+footer {
+  background: #333;
+  color: #eeeeee;
+  padding: 27px 0;
+  text-align: center; }
+  footer .footer__content {
+    *zoom: 1;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto; }
+    footer .footer__content:before, footer .footer__content:after {
+      content: " ";
+      display: table; }
+    footer .footer__content:after {
+      clear: both; }
+  footer .footer__header {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #d9d9d9; }
+  footer .footer-logo {
+    opacity: 0.5;
+    vertical-align: middle; }
+  footer section {
+    padding: 0 13.5px; }
   @media (min-width: 50em) {
-    .footer-logo {
-      position: static;
-      display: block;
+    footer .mailing-list {
       margin: 0 auto;
-      padding: 0;
-      width: 200px; } }
+      max-width: 400px; } }
+  footer .social {
+    display: block;
+    padding-bottom: 27px;
+    text-align: center;
+    width: 100%; }
+    footer .social a {
+      display: inline-block;
+      font-size: 1.5em;
+      vertical-align: middle;
+      padding: 0 3px; }
+      footer .social a:before {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -3px; }
 
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
-.mailing-list .text-input {
-  width: 100%; }
-  @media (min-width: 50em) {
-    .mailing-list .text-input {
-      width: auto;
-      min-width: 250px; } }
-
 .submit {
   margin: 6.75px 0; }
+
+.input-combo {
+  font-size: 0.8em; }
+  .input-combo .text-input {
+    background: #ebebeb;
+    padding: 6.75px;
+    height: 35px;
+    border-radius: 2px 0 0 2px;
+    width: 75%; }
+  .input-combo .button, .input-combo .button--small {
+    width: 25%;
+    margin: 0;
+    height: 35px;
+    border-radius: 0 2px 2px 0; }
 
 /*------------------------------------*\
     $CONTACT BLOCK
@@ -2044,3 +2040,5 @@ a.sc-remote-link.playing {
 .press blockquote, .press--admin blockquote, .albums blockquote {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 27px; }
+
+/*# sourceMappingURL=style.css.map */

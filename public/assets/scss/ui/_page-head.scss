@@ -5,85 +5,96 @@
     @extend .cf;
     background: $black;
     font-family: $brand-face;
-    font-size: 2em;
+    font-weight: 300;
+    font-size: 1.5em;
     text-transform: uppercase;
-    color: $black;
-    height: $header-height;
-    position: relative;
-    @include breakpoint(medium) {
-            overflow:hidden;
+    color: $grey;
+    overflow: hidden;
+    nav {
+        @include outer-container;
     }
     a {
         text-decoration: none;
-        padding: $base-spacing-unit / 2;
     }
 }
 
-    .page-head__contents {
-        @include outer-container;
+.nav__left, 
+.nav__right {
+    @include breakpoint(medium) {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 50%;
     }
+}
 
-
+.nav__right  {
+    text-align: right;
+    ul {
+        list-style: none;
+        margin: 0;
+        text-align: left;
+        height: 0;
+        &.nav--open {
+            height: auto;
+        }
+        @include breakpoint(medium) {
+            height: auto;
+            text-align: right;
+        }
+        li {
+            @include breakpoint(medium) {
+                display: inline-block;
+            }
+        }
+        a {
+            display: block;
+            line-height: $header-height;
+            padding: 0 $base-spacing-unit/2;
+        }
+    }
+}
 
 
 .site-logo {
-    @extend %giga;
-    float: left;
-    height: 100%;
-    z-index: 3;
-    padding: 0 $base-spacing-unit/2 !important;
-    img {
-        //height: 100%;
-        float:left;
+    display: inline-block;
+    width: 50%;
+    padding: 0 $base-spacing-unit/2;
+    &:after {
+        content: attr(data-page);
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: $base-spacing-unit/2;
     }
-}
-
-
-
-
-
-
-.nav {
-    background: $black;
-    clear: both;
-    color: $white;
     @include breakpoint(medium) {
-        background: none;
-        clear: none;
-        //color: $black;
-        float: right;
-    }
-    a {
-        border-top: 1px solid $black-light;
-
-    }
-    a:hover {
-        @include breakpoint(medium) {
-            background: $black-light;
-            color: $orange;
+        &:after {
+            display: none;
         }
     }
-    .site-logo {
-        margin-bottom: $base-spacing-unit;
-        @include breakpoint(medium) {
-            margin-bottom: 0;
-        }
+    img {
+        max-height: $header-height;
+        vertical-align: middle;
     }
 }
-
-
-
-
 
 .nav-toggle {
-    position: relative;
-    top:-8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    line-height: $header-height;
+    text-align: right;
+    padding: 0 $base-spacing-unit/2;
+    /*float: right;*/
+    /*@include transition(margin-right 200ms $ease-in-quad);*/
+    @include breakpoint(medium) {
+        display: none;
+    }
 }
 
 .nav-toggle--closed:before,
 .nav-toggle--open:before {
     color: $white;
     font-family: icomoon;
+    display: inline-block;
 }
 
 .nav-toggle--closed:before {
@@ -94,7 +105,7 @@
     content: "\e001";
 }
 
-
+// Active Navigation
 .media .media-nav,
 .albums .albums-nav,
 .tour .tour-nav,
@@ -108,55 +119,6 @@
     }
     @include breakpoint(medium) {
         background: $white;
-    }
-}
-
-.page-head:after {
-    display: block;
-    font-size: 0.8em;
-    color: $white;
-    position: absolute;
-    left: $base-spacing-unit/2;
-    //bottom: -$base-spacing-unit/2;
-    top: 35px;
-    text-shadow: 0px 1px 3px $black-light;
-    @include breakpoint(medium) {
-        display: none;
-    }
-}
-
-.media .page-head:after {
-    content: "MEDIA"
-}
-
-.albums .page-head:after {
-    content: "ALBUMS"
-}
-
-.tour .page-head:after {
-    content: "TOUR"
-}
-
-.contact .page-head:after {
-    content: "CONTACT"
-}
-
-
-
-
-.sub-nav {
-    @include outer-container;
-    padding: $base-spacing-unit/2 $base-spacing-unit/2 0;
-    text-align: center;
-    li {
-        width: 48%;
-        float: left;
-        @include breakpoint(medium) {
-            width: auto;
-            float: none;
-        }
-    }
-    @include breakpoint(medium) {
-        text-align: right;
+        color: $black;
     }
 }
