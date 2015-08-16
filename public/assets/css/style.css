@@ -1037,6 +1037,9 @@ article {
       background: #eeeeee;
       color: #333; } }
 
+.admin-nav .site-logo:after {
+  display: inline-block; }
+
 /* ==========================================================================
    $TYPOGRAPHY
    ========================================================================== */
@@ -1512,9 +1515,13 @@ footer {
         margin: 0;
         vertical-align: middle; }
         .tabs nav ul li:first-child a {
-          border-left: none; }
+          border-left: none;
+          border-radius: 2px 0 0 2px; }
+        .tabs nav ul li:last-child a {
+          border-radius: 0 2px 2px 0; }
     .tabs nav a {
-      background: #d0d8d8;
+      background: #333;
+      color: #d9d9d9;
       border-left: 1px solid #555;
       padding: 0.25em 0 0.5em;
       display: block;
@@ -1551,7 +1558,8 @@ footer {
         font-size: 0.75em;
         font-weight: 700; }
     .tabs nav .tab--active {
-      /*color: $brand-color;*/ }
+      background: #333;
+      color: #dab08f; }
       .tabs nav .tab--active:after {
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);

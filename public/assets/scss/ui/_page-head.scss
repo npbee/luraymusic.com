@@ -122,3 +122,9 @@
         color: $black;
     }
 }
+
+.admin-nav {
+    .site-logo:after {
+        display: inline-block;
+    }
+}
