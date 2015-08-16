@@ -1,12 +1,12 @@
 <ul class="form-fields">
     <li>
-        {{ Form::label('image', 'Image') }}
+        {{ Form::label('image', 'Image:', array('class' => 'beta')) }}
         <div class="fileupload fileupload-new" data-provides="fileupload">
             <div class="fileupload-preview thumbnail">
                 @if (isset($pic)) 
-                <img src="{{ $pic->full_path }}">
+                <img id="img" src="{{ $pic->full_path }}">
                 @else
-                <img src="http://www.placehold.it/300x300/EFEFEF/AAAAAA&amp;text=no+image">
+                <img id="img" src="http://www.placehold.it/600x600/EFEFEF/AAAAAA&amp;text=no+image">
                 @endif
             </div>
             <div>
@@ -20,12 +20,12 @@
     </li>
 
     <li>
-        {{ Form::label('author', 'AUTHOR', array('class' => 'beta')) }}
+        {{ Form::label('author', 'Author:', array('class' => 'beta')) }}
         {{ Form::text('author', null, array('class' => 'text-input', 'placeholder' => 'The author')) }}
     </li>
 
     <li>
-        {{ Form::label('title', 'CAPTION', array('class' => 'beta')) }}
+        {{ Form::label('title', 'Caption:', array('class' => 'beta')) }}
         {{ Form::text('title', null, array('class' => 'text-input', 'placeholder' => 'Luray in action')) }}
     </li>
 

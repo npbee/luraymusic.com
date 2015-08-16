@@ -169,4 +169,21 @@ $(function() {
         });
     });
 
+    function readUrl(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    var $fileInput = $('input[type="file"]');
+    $fileInput.on('change', function(e) {
+        readUrl(this);
+    });
+
 });

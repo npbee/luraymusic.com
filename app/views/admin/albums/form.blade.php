@@ -5,9 +5,9 @@
         <div class="fileupload fileupload-new" data-provides="fileupload">
             <div class="fileupload-preview thumbnail">
                 @if (isset($album))
-                <img src="{{ $album->art_full_path }}">
+                <img id="img" src="{{ $album->art_full_path }}">
                 @else
-                <img src="http://www.placehold.it/300x300/EFEFEF/AAAAAA&amp;text=no+image">
+                <img id="img" src="http://www.placehold.it/600x600/EFEFEF/AAAAAA&amp;text=no+image">
                 @endif
             </div>
             <div>

@@ -20,6 +20,7 @@
   border-radius: 4px;
   width: 400px;
   max-width: 90%;
+  z-index: 2;
   /*.dow {
     border-top: 1px solid #ddd !important;
   }*/

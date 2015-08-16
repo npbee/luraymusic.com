@@ -94,25 +94,8 @@ $ php artisan migrate --env=staging
 SetEnv LARAVEL_ENV staging
 ```
 
-- Set up staging database
-- Run migrations
-- Update previous quotes with new album_id
-- Add album
-- Clean up JS
-    - vendor bundle
-    - per page bundle with codekit prepends
-
-**Local Alias:**  luray
-
-
-
-__Build:__
-
-* Commit to master
-* git push origin master
-* git push origin github
-* sshluray
-* cd staging.v3
-* git pull origin master
-* cd public_html
-* git pull origin masterc
+**TODO**:
+- Filepicker previews
+- Admin on login page
+- Datepicker z-index on tabs
+- "Home" on index page for mobile

@@ -15,7 +15,7 @@
 
     {{ Form::model($album, array('method' => 'put', 'route' => array('admin.albums.update', $album->id ), 'files' => 'true' )) }}
 
-        @include('admin.albums.form');
+        @include('admin.albums.form')
 
     {{ Form::close() }}
 
