@@ -830,6 +830,15 @@ blockquote {
 .brand-color {
   color: #dab08f; }
 
+/*------------------------------------*\
+    $POSITION HELPERS
+\*------------------------------------*/
+.fixed {
+  position: fixed; }
+
+.margin-bottom {
+  margin-bottom: 27px !important; }
+
 /**
 * UI
 */

@@ -7,7 +7,7 @@
 
     <div class="media__content">
         <img src="{{ $album->art_thumb_path }}">
-        <div class="tabs three">
+        <div class="tabs three margin-bottom">
             <nav>
                 <ul>
                     <li><a class="tab--active" href="#info">INFO</a></li><!--
