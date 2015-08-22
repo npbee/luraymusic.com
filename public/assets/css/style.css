@@ -1417,22 +1417,20 @@ footer {
   padding: 50px;
   border: 1px solid #ccc; }
 
-#cboxLoadedContent {
-  margin-bottom: 28px; }
-
 #cboxTitle {
   position: absolute;
   bottom: 0;
   left: 0;
   text-align: center;
   width: 100%;
-  color: #949494; }
+  color: #333;
+  background: rgba(238, 238, 238, 0.6); }
 
 #cboxCurrent {
   position: absolute;
   bottom: 0;
   right: 5px;
-  color: #949494; }
+  color: #333; }
 
 #cboxLoadingOverlay {
   background: url(images/loading_background.png) no-repeat center center; }

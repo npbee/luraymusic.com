@@ -81,11 +81,6 @@ $ php artisan migrate --env=staging
 
 ** TODO **
 
-- Clean up javascript
-    - Do the markdown preview better
-- Style cleanup
-- Setup staging database
-
 ** CHANGES **
 
 - Make sure to set the environment in .htaccess

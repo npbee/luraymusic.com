@@ -35,16 +35,28 @@
     #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
     #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
     #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
-    #cboxContent{background:#fff; overflow:hidden;}
+    #cboxContent {
+        background:#fff; 
+        overflow:hidden;
+    }
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{margin-bottom:28px;}
-        #cboxTitle{position:absolute; bottom:0; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxLoadedContent{
+        }
+        #cboxTitle{
+            position:absolute; 
+            bottom:0; 
+            left:0; 
+            text-align:center; 
+            width:100%;
+            color: $black;
+            background: rgba($white, 0.6);
+        }
         #cboxCurrent{
             position:absolute;
             bottom:0;
             right: 5px;
-            color:#949494;
+            color: $black;
         }
         #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
         #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
