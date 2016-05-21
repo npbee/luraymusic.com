@@ -13,7 +13,7 @@ $(function() {
     var handledTypes = ['photo', 'video', 'text'];
 
     function renderDate(post) {
-        var date = new Date(post.date);
+        var date = new Date(post.timestamp * 1000);
         var month = date.getMonth() + 1;
         var day = date.getDate();
         var year = date.getFullYear();
