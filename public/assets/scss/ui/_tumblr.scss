@@ -21,6 +21,11 @@
     text-align: right;
 }
 
+.post_player {
+    iframe {
+        max-width: 100%;
+    }
+}
 
 .post {
     margin-bottom: $base-spacing-unit * 2;
@@ -29,5 +34,8 @@
         max-width: 100%;
         height: auto;
         margin: 0 auto $base-spacing-unit;
+    }
+    a {
+        word-wrap: break-word;
     }
 }
