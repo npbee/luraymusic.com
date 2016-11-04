@@ -12,13 +12,18 @@
 */
 
 Route::get('/', array('as' => 'home', 'uses' => 'IndexController@index'));
-Route::get('media', array('as' => 'media', 'uses' => 'MediaController@index'));
-Route::get('albums', array('as' => 'albums', 'uses' => 'AlbumsController@index'));
-Route::get('tour', array('as' => 'tour', 'uses' => 'TourController@index'));
-Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourController@Archive'));
-Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index'));
-Route::get('press', array('as' => 'press', 'uses' => 'PressController@index'));
-Route::resource('videos', 'VideosController');
+/* Route::get('media', array('as' => 'media', 'uses' => 'MediaController@index')); */
+/* Route::get('albums', array('as' => 'albums', 'uses' => 'AlbumsController@index')); */
+/* Route::get('tour', array('as' => 'tour', 'uses' => 'TourController@index')); */
+/* Route::get('tour/archive', array('as' => 'tour-archive', 'uses' => 'TourController@Archive')); */
+/* Route::get('contact', array('as' => 'contact', 'uses' => 'ContactController@index')); */
+/* Route::get('press', array('as' => 'press', 'uses' => 'PressController@index')); */
+
+Route::get('/{route}', function() {
+    return Redirect::to('/');
+})->where('route', '(media|albums|tour|contact|press|videos)');
+
+/* Route::resource('videos', 'VideosController'); */
 Route::get('downloads/thewilder.zip', function() {
     //$file = 'assets/downloads/thewilder.zip';
     return Redirect::to('http://downloads.luraymusic.com/thewilder.zip');
