@@ -25,11 +25,11 @@
             </a>
             <a class="bandcamp" title="Bandcamp" href="http://luray.bandcamp.com/" target="_blank">
                 <span class="hide">Bandcamp</span>
-                <?php echo file_get_contents("assets/images/logos/bandcamp.svg") ?>
+                <?php echo file_get_contents("assets/images/logos/note.svg") ?>
             </a>
             <a class="bigcartel" title="Bigcartel" href="http://luray.bigcartel.com/" target="_blank">
                 <span class="hide">Big Cartel</span>
-                <?php echo file_get_contents("assets/images/logos/bigcartel.svg") ?>
+                <?php echo file_get_contents("assets/images/logos/shopping-cart.svg") ?>
             </a>
         </section>
     </body>

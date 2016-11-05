@@ -970,12 +970,8 @@ body {
 .bigcartel:hover svg {
   fill: #222222; }
 
-.bandcamp svg {
-  stroke: #eeeeee;
-  fill: #eeeeee; }
 .bandcamp:hover svg {
-  fill: #629aa9;
-  stroke: #629aa9; }
+  fill: #629aa9; }
 
 .facebook:hover svg {
   fill: #3b5998; }

@@ -72,13 +72,13 @@ body {
 
 .bandcamp {
     svg {
-        stroke: $white;
-        fill: $white;
+        // stroke: $white;
+        // fill: $white;
     }
     &:hover {
         svg {
             fill: #629aa9;
-            stroke: #629aa9;
+            // stroke: #629aa9;
         }
     }
 }
