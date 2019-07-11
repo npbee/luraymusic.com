@@ -1,13 +1,4 @@
-/bootstrap/compiled.php
-/vendor
-composer.phar
-composer.lock
-/app/database/seeds/SentrySeeder.php
-/app/config/production/*
-/app/config/staging/*
-/public/assets/images/uploads
 .DS_Store
-*.htaccess
-.codekit-cache
-config.codekit
-*.sass-cache*
+yarn.lock
+dist
+.cache
