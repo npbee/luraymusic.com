@@ -9,8 +9,8 @@ $space-lg: 2rem;
 $space-xl: 4rem;
 $space-xxl: 8rem;
 $space-xxxl: 16rem;
-$peach: #FBBC9E;
-$yellow:#fbdca5;
+$peach: #fbbc9e;
+$yellow: #fbdca5;
 $grey-yellow: hsl(47, 15%, 60%);
 $grey-900: #222222;
 $grey-800: #3b3b3b;
@@ -59,9 +59,9 @@ a {
   color: $grey-700;
   font-weight: $fw-semibold;
   text-decoration: none;
-  line-height: .95;
+  line-height: 0.95;
   border-bottom: 2px solid $yellow;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
   letter-spacing: 0.01em;
 }
 
@@ -184,6 +184,10 @@ footer img {
   width: 130px;
 }
 
+.footer-youtube {
+  width: 100px;
+}
+
 /**
  * Primary sections
  */
@@ -244,20 +248,20 @@ footer img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: hsl(47, 23%, 32%);
-  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-  transition: all .15s ease;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s ease;
   height: 50px;
 }
 
 .link-button:active {
-  box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
+  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
+    0 3px 7px -3px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
 
 .link-button:hover {
   transform: translateY(-1px);
 }
-
 
 table {
   width: 100%;
@@ -359,6 +363,7 @@ table td {
   .footer-spotify,
   .footer-apple,
   .footer-bandcamp,
+  .footer-youtube,
   .footer-big-cartel {
     width: 75px;
   }
