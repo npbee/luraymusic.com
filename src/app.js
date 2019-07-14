@@ -66,11 +66,8 @@ function buildRow(event) {
   return row;
 }
 
-function formatDate(datetime) {
-  const date = new Date(datetime);
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const year = date.getFullYear();
+function formatDate(dateString) {
+  const [year, month, day] = dateString.split(/\D/).map(s => parseInt(s));
 
   return `${month}/${day}/${year}`;
 }
