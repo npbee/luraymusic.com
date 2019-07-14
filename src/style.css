@@ -240,7 +240,7 @@ footer img {
  */
 .link-button {
   background-color: $yellow;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 1px;
@@ -348,12 +348,14 @@ table td {
     width: $content-width;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: nowrap;
   }
 
   footer a {
     margin-left: 24px;
     margin-right: 24px;
     width: auto;
+    padding: $space-md;
   }
 
   footer img {
@@ -493,6 +495,18 @@ table td {
 /**
  * Utils
  */
+.lh-copy {
+  line-height: 1.5;
+}
+
+.measure {
+  max-width: 30em;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -1357,5 +1371,9 @@ table td {
   }
   .lh-copy-ns {
     line-height: 1.5;
+  }
+
+  .w-auto-ns {
+    width: auto;
   }
 }
