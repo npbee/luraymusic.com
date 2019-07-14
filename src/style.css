@@ -1,7 +1,7 @@
 $header-height: 60px;
 $footer-height: 60px;
 $content-width: 1000px;
-$breakpoint: 600px;
+$breakpoint: 700px;
 $space-xs: 0.25rem;
 $space-sm: 0.5rem;
 $space-md: 1rem;
@@ -306,7 +306,7 @@ table td {
   color: $grey-700;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: $breakpoint) {
   main {
     position: fixed;
     /* width: 100%; */
@@ -964,7 +964,7 @@ table td {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $breakpoint) {
   .pa0-ns {
     padding: 0;
   }
