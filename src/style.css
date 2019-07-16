@@ -5,6 +5,7 @@ $breakpoint: 700px;
 $space-xs: 0.25rem;
 $space-sm: 0.5rem;
 $space-md: 1rem;
+$space-ml: 1.5rem;
 $space-lg: 2rem;
 $space-xl: 4rem;
 $space-xxl: 8rem;
@@ -375,10 +376,16 @@ table td {
   }
 
   footer a {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: $space-ml;
+    margin-right: $space-ml;
     width: auto;
     padding: $space-md;
+  }
+
+  footer a:nth-last-child(1),
+  footer a:nth-last-child(2) {
+    margin-left: $space-sm;
+    margin-right: $space-sm;
   }
 
   footer img {
