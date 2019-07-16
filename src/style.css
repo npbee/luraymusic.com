@@ -236,7 +236,7 @@ footer img {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: $space-lg;
+  margin-bottom: $space-ml;
 }
 
 .page-home__copy-date {
@@ -537,6 +537,15 @@ table td {
 /**
  * Utils
  */
+
+.d-none {
+  display: none;
+}
+
+.db {
+  display: block;
+}
+
 .lh-copy {
   line-height: 1.5;
 }
@@ -968,6 +977,10 @@ table td {
 }
 .lh-copy {
   line-height: 1.5;
+}
+
+.grey-yellow {
+  color: $grey-yellow;
 }
 
 .grey-100 {
@@ -1421,5 +1434,13 @@ table td {
 
   .w-auto-ns {
     width: auto;
+  }
+
+  .db-ns {
+    display: block;
+  }
+
+  .d-none-ns {
+    display: none;
   }
 }
