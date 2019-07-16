@@ -74,6 +74,25 @@ a:active {
   transform: translateY(1px);
 }
 
+figure {
+  margin: 0;
+}
+
+blockquote {
+  border-left: 3px solid $yellow;
+  padding: 0.5em 10px;
+  color: $grey-600;
+  line-height: 1.5;
+  margin: $space-md 0 0;
+}
+
+figcaption {
+  font-size: italic;
+  text-align: right;
+  max-width: 30em;
+  font-size: $f6;
+}
+
 /**
  * $Header
  */
@@ -965,6 +984,10 @@ table td {
 }
 
 @media screen and (min-width: $breakpoint) {
+  .measure-ns {
+    max-width: 30em;
+  }
+
   .pa0-ns {
     padding: 0;
   }
