@@ -188,7 +188,11 @@ footer img {
 }
 
 .footer-spotify {
-  width: 110px;
+  width: 50px;
+}
+
+.footer-instagram {
+  width: 40px;
 }
 
 .footer-apple {
@@ -196,7 +200,7 @@ footer img {
 }
 
 .footer-bandcamp {
-  width: 160px;
+  width: 100px;
 }
 
 .footer-big-cartel {
@@ -204,7 +208,7 @@ footer img {
 }
 
 .footer-youtube {
-  width: 100px;
+  width: 55px;
 }
 
 /**
@@ -389,8 +393,20 @@ table td {
     width: 75px;
   }
 
+  .footer-youtube {
+    width: 30px;
+  }
+
+  .footer-instagram {
+    width: 30px;
+  }
+
   .footer-bandcamp {
-    width: 95px;
+    width: 50px;
+  }
+
+  .footer-spotify {
+    width: 30px;
   }
 
   .page {
