@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html && cp src/img/dig.png dist/dig.png"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
