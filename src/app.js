@@ -42,16 +42,7 @@ function fetchEvents() {
 }
 
 function buildTable(events) {
-  let support = [];
-  const rows = events.map(function(event) {
-    const eventSupport = parseEventSupport(event);
-
-    if (eventSupport) {
-      support.push(...eventSupport);
-    }
-
-    return buildRow(event, eventSupport);
-  });
+  const rows = events.map(buildRow);
   const thead = el(
     "thead",
     el("tr", [el("th", "Date"), el("th", "Location"), el("th", "Venue")])
@@ -63,15 +54,17 @@ function buildTable(events) {
   return el("div", [table]);
 }
 
-function buildRow(event, support) {
+function buildRow(event) {
+  const support = parseEventSupport(event);
   const date = formatDate(event.start.date);
   const location = event.location.city;
   const venue = event.venue.displayName;
   const link = event.uri;
-  const supportInfo =
-    support.length >= 1
-      ? el("div", { className: "support-row" }, joinSupport(support))
-      : null;
+  const supportInfo = el(
+    "div",
+    { className: "support-row" },
+    joinSupport(support)
+  );
   const a = el(
     "div",
     { className: "table-venue" },
@@ -105,9 +98,7 @@ function parseEventSupport(event) {
       const perf = performance[i];
       const artist = perf.artist;
       if (artist && artist.id !== artistId) {
-        support.push({
-          value: perf.artist.displayName,
-        });
+        support.push(perf.artist.displayName);
       }
     }
 
@@ -119,20 +110,21 @@ function parseEventSupport(event) {
 
 function joinSupport(supports) {
   let str = "";
-  let needsSeparator = supports.length > 1;
+  const count = supports.length;
+  const needsSeparator = count > 1;
 
-  for (let i = 0; i < supports.length; i++) {
+  for (let i = 0; i < count; i++) {
     const support = supports[i];
-    str += support.value;
+    str += support;
 
     if (needsSeparator) {
-      if (i + 2 === supports.length) {
+      if (i + 2 === count) {
         str += ", and ";
-      } else if (i + 1 < supports.length) {
+      } else if (i + 1 < count) {
         str += ",";
       }
     }
   }
 
-  return `w/ ${str}`;
+  return str.length > 0 ? `w/ ${str}` : "";
 }
