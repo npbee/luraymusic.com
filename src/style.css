@@ -61,7 +61,7 @@ a {
   font-weight: $fw-semibold;
   text-decoration: none;
   line-height: 0.95;
-  border-bottom: 2px solid $yellow;
+  text-decoration: underline;
   transition: all 0.15s ease;
   letter-spacing: 0.01em;
 }
@@ -304,7 +304,23 @@ table th {
 table th,
 table td {
   padding-top: $space-sm;
-  padding-bottom: $space-sm;
+  padding-bottom: $space-md;
+  vertical-align: top;
+}
+
+.table-venue {
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.table-venue a {
+  margin-right: $space-sm;
+}
+
+.support-row {
+  margin-top: $space-sm;
+  font-size: $f6;
+  color: $grey-800;
 }
 
 .contact-block {
