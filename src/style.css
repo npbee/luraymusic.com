@@ -304,7 +304,24 @@ table th {
 table th,
 table td {
   padding-top: $space-sm;
-  padding-bottom: $space-sm;
+  padding-bottom: $space-md;
+  vertical-align: top;
+}
+
+.table-venue {
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.table-venue a {
+  margin-right: $space-sm;
+}
+
+.support-row {
+  margin-top: $space-sm;
+  font-size: $f6;
+  color: $grey-800;
+  vertical-align: center;
 }
 
 .contact-block {
