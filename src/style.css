@@ -437,7 +437,7 @@ table td {
     max-width: $content-width;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
+    min-height: 100%;
     padding: $space-md;
   }
 
