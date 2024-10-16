@@ -1,7 +1,6 @@
 {
   "name": "luraymusic.com",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:npbee/luraymusic.com.git",
   "author": "Nick Ball <nicholaspball@gmail.com>",
   "license": "MIT",
