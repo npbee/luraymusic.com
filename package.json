@@ -10,14 +10,14 @@
     "build": "parcel build ./src/index.html && cp src/img/dig.png dist/dig.png"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
     "live-server": "^1.2.1",
-    "parcel-bundler": "^1.12.3",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.47",
     "postcss-simple-vars": "^5.0.2"
   },
   "dependencies": {
-    "redom": "^3.24.0",
-    "src": "^1.1.2"
-  },
-  "packageManager": "npm@10.8.1+sha512.0e9d42e92bd2318408ed81eaff2da5f78baf23ee7d12a6eed44a6e2901d0f29d7ab715d1b918ade601f72e769a824d9a5c322383f22bbbda5dd396e79de2a077"
+    "redom": "^3.29.1"
+  }
 }

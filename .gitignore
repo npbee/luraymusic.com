@@ -2,3 +2,4 @@
 yarn.lock
 dist
 .cache
+.parcel-cache
