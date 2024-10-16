@@ -1,6 +1,5 @@
 {
   plugins: {
-    autoprefixer: {},
     "postcss-simple-vars": true
   }
 }
